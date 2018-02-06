@@ -1,0 +1,68 @@
+//Styling for header area, logo and Travis County Archives, Austin, TX text
+
+.wf-loading {
+	.titleblock { 
+		visibility: hidden; 
+	}
+}
+.wf-active, 
+.wf-inactive { 
+	.titleblock {
+		visibility: visible; 
+		font-family: '$pathway'; 
+	}
+}
+
+.titleblock {
+	border-bottom:  2px solid #777;
+	background-color: #FFF;
+	 -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.hd_height{
+	height: 100px;
+}
+// positioning for logo and text
+.header {
+	padding-left: 0;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	-ms-transform: translateY(-50%); /* IE 9 */
+        -webkit-transform: translateY(-50%); /* Safari */ 	
+}
+
+// styling for text
+.headertext {
+
+	a{
+		color: $lightblue;	
+	}
+	h4 {
+		color: $black;	
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 24px;
+		font-family: $pathway;
+		margin: 0px;
+		line-height: 1;
+		letter-spacing: 1.5px;
+		box-shadow: 1px solid black;
+	}
+	h4:hover {
+		color: $lightblue;	
+	}
+	h5 {
+		color: $black;	
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: $pathway;
+		margin-top: 2px;
+		margin-bottom: 0px;
+		line-height: 1;
+	}
+}

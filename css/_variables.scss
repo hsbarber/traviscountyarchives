@@ -1,0 +1,60 @@
+//Fonts
+
+$bodyText: 'Open Sans', sans-serif;
+$pathway: 'Pathway Gothic One', sans-serif;
+$headings: 'Fjalla One', sans-serif;
+
+//////////////////////
+//Colors
+//////////////////////
+
+// $headings: ;
+$bodytextcolor: #373D3F;
+
+// BLUES
+$skyblue: #68BCFF;
+$lightblue: #107896;
+$darkblue: #18457B;
+$navyblue: #102d50;
+$hover: #f5b608;
+
+// GREYS
+$light-grey: #ececec;
+$bluegrey: #2c3e50; //#6C7A89
+$darkgrey: #5E5E5E;
+$darkergrey: #22313F;
+
+// BLACKS
+$almostblack: #383F38;
+$black: #000;
+
+// WHITE
+$white: #FFF;
+
+// Mixins
+@mixin vertical-flex {
+	   display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: center;
+	  -webkit-align-items: center;
+	      -ms-flex-align: center;
+	          align-items: center;
+	  -webkit-box-pack: center;
+	  -webkit-justify-content: center;
+	      -ms-flex-pack: center;
+	          justify-content: center;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	  -webkit-flex-direction: row;
+	      -ms-flex-direction: row;
+	          flex-direction: row;
+}
+@mixin button-vertical {
+	color: $bodytextcolor;
+	border-radius: 0;
+	text-align: center;
+	padding: 15px 0;
+
+}

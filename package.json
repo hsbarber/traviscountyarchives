@@ -1,0 +1,29 @@
+{
+  "name": "archives",
+  "version": "1.0.0",
+  "description": "archives gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/haganb/newtheme.git"
+  },
+  "keywords": [
+    "archives",
+    "travis",
+    "county"
+  ],
+  "author": "hagan",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/haganb/newtheme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  }
+}

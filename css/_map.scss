@@ -1,0 +1,68 @@
+$white_border: 2px solid #FFF;
+
+#map {
+	width:100%; 
+	height:400px; 
+	margin-bottom: 2em;
+}
+
+// Sidebar area 
+#mapsidebar {  
+	border: 2px solid $darkblue; 
+}
+
+#mapsidebar1 { 
+	@extend #mapsidebar;
+	margin-top:10px; 
+	
+}
+
+#mapsidebar ul, #mapsidebar1 ul {
+	  text-align: left; 
+	  cursor:pointer;
+	  background-color: $light-grey; 
+	  font-size: 12px/18px; 
+	  font-weight: 500;
+}
+
+#mapsidebar ul:focus, #mapsidebar1 ul:focus {
+	background-color: $darkblue;
+}
+
+#mapsidebar ul:hover, #mapsidebar1 ul:hover {
+	background-color: #FFF; 
+}
+
+.mapsidebar_item, .mapsidebar_item1 {
+	padding: 5px 10px;
+	margin: 0;
+	border-bottom: $white_border;
+	border-left: $white_border;
+	border-right: $white_border;
+	color: $darkblue;
+}
+
+.mapsidebar_item, .mapsidebar_item1 {
+	&:hover {
+		text-decoration: underline;
+		color: $lightblue;
+	}
+}
+
+.mapsidebarheader{
+	background-color: $darkblue;
+	color: #FFF;
+	margin: 0;
+	border-bottom: $white_border;
+	padding: 15px 10px;
+	
+}
+
+// Pop up boxes on Google Map
+.window {
+	padding-right: 5px;
+}
+
+.mapcaption {
+	font-size: 10px;
+}
