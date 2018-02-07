@@ -12,7 +12,7 @@ This README would normally document whatever steps are necessary to get your app
 
 * Summary of set up
 * Configuration
-* Dependencies
+* using git-auto-deploy right for deployment from bitbucket to server
 * Database configuration
 * How to run tests
 * Deployment instructions
