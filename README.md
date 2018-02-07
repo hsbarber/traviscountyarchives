@@ -15,7 +15,7 @@ This README would normally document whatever steps are necessary to get your app
 * using git-auto-deploy right for deployment from bitbucket to server
 * Database configuration
 * How to run tests
-* Deployment instructions - git-auto-deploy
+* Deployment instructions - git-auto-deploy #1
 
 ### Contribution guidelines ###
 
