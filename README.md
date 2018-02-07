@@ -25,6 +25,6 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
-* Hagan
+* Hagan Barber
 * hagan.barber@traviscountytx.org
 * Other community or team contact
