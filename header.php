@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Pathway+Gothic+One|Oswald|Fjalla+One|IM+Fell+English|Lovers+Quarrel" media="screen">
     <title>
       <?php wp_title( '|', true, 'right' ); ?>
       <?php bloginfo( 'name' ); ?>
-    </title> 
+    </title>
 
  </head>
 
@@ -32,8 +31,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-     
-    
+
+
     </div>
 
     <?php
@@ -50,7 +49,7 @@
             );
         ?>
 
-  
+
   </div><!-- / row-->
   </div><!-- /.container-->
 </nav>
@@ -58,6 +57,6 @@
 <?php wp_head(); ?>
   <body <?php body_class(); ?>>
 
-	
+
 
 
