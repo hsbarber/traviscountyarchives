@@ -4,6 +4,7 @@ textarea#comment {
 
 input#author, input#email, input#url {
     border-radius: 15px;
+    padding-left: 0.75rem;
     height: 3rem;
     border: 1px solid $bodytextcolor;
 }
