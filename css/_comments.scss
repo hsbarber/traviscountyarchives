@@ -1,6 +1,11 @@
+textarea#comment {
+    border: 1px solid $bodytextcolor;
+}
+
 input#author, input#email, input#url {
     border-radius: 15px;
     height: 3rem;
+    border: 1px solid $bodytextcolor;
 }
 p.form-submit input[type=submit] {
     border-radius: 15px;
