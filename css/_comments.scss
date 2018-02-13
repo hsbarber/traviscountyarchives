@@ -1,0 +1,14 @@
+input#author, input#email, input#url {
+    border-radius: 15px;
+    height: 3rem;
+}
+p.form-submit input[type=submit] {
+    border-radius: 15px;
+    border: 1px solid $bodytextcolor;
+    padding: 1rem;
+    color: $bodytextcolor;
+    &:hover {
+        background-color: $bodytextcolor;
+        color: white;
+    }
+}

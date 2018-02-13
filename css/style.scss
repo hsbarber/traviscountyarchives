@@ -13,8 +13,6 @@ Description: Third Version of Travis County Website
 @import 'footer';
 @import 'comments';
 
-//@import 'infiniteScroll';
-
 
 html, body {
     margin: 0 !important;
@@ -28,13 +26,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-/*@media (max-width: 371px) {
-
-	body {
-		padding-top: 140px;
-	}
-}*/
 
 .row {
 	margin: 0px;
