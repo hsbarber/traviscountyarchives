@@ -15,7 +15,7 @@ function theme_styles () {
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One', false );
+	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One', true );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
@@ -37,10 +37,10 @@ function theme_js() {
 			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/map.js', '', '', true  );
 		}
 		if ( is_page( 'county-clerk' ) ) {
-			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/portal.js',  array('jquery'), '1.1.0', false );
+			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/portal.js',  array('jquery'), '1.1.0', true );
 		}
 		if ( is_page( 'district-clerk' ) ) {
-			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/portal2.js',  array('jquery'), '1.1.0', false );
+			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/portal2.js',  array('jquery'), '1.1.0', true );
 		}
 	}
 }
