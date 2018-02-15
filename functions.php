@@ -33,7 +33,7 @@ function theme_js() {
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js');
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
-			wp_enqueue_script( 'google-map', 'http://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
+			wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
 			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/map.js', '', '', true  );
 		}
 		if ( is_page( 'county-clerk' ) ) {
