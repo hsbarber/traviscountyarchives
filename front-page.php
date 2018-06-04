@@ -7,47 +7,31 @@
 	<?php
 	  if ( has_post_thumbnail() ) {
 	  the_post_thumbnail();
-		} 
+		}
 	?>
-	
+
 </div>
-<div class="col-xs-12 front-capt col-md-6">
-		<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-		    <p class="front-caption-text"><?php echo $caption; ?></p>
-		<?php endif; ?>
-	</div> 
-<div class="jumbotron block-1">
-  <div class="container front">
-	  <div class="col-md-10 col-md-offset-1">
-        <?php if ( dynamic_sidebar( 'front0' ) ); ?>
-	  </div>
-	</div>
-</div>
-<div class="jumbotron block-2">
-  <div class="container">
-    <div class="col-md-5">
-        <?php if ( dynamic_sidebar( 'front1a' ) ); ?>
+<section class="container cards">
+  <div class="col-md-12 cards--front">
+    <div class="col-xs-12 col-sm-4 cards__single">
+      <img src="<?php the_field('card-1-image'); ?>" />
+      <h4><?php the_field('card-1-heading'); ?></h4>
+      <p><?php the_field('card-1-link-1'); ?></p>
+      <p><?php the_field('card-1-link-2'); ?></p>
+    </div >
+    <div class="col-xs-12 col-sm-4 cards__single">
+      <img src="<?php the_field('card-2-image'); ?>" />
+      <h4><?php the_field('card-2-heading'); ?></h4>
+      <p><?php the_field('card-2-link-1'); ?></p>
     </div>
-    <div class="col-md-5 col-md-offset-2 new-posts">
-        <?php if ( dynamic_sidebar( 'front1b' ) ); ?>
+    <div class="col-xs-12 col-sm-4 cards__single">
+      <img src="<?php the_field('card-3-image'); ?>" />
+      <h4><?php the_field('card-3-heading'); ?></h4>
+      <p><?php the_field('card-3-link-1'); ?></p>
+      <p><?php the_field('card-3-link-2'); ?></p>
     </div>
   </div>
-</div>
-<div class="jumbotron block-3">
-<div class="container front">
-        <?php if ( dynamic_sidebar( 'front2' ) ); ?>
-</div>
-</div>
-<div class="jumbotron block-4">
-<div class="container front">
-        <?php if ( dynamic_sidebar( 'front3' ) ); ?>
-</div>
-</div>
-<div class="jumbotron block-5">
-<div class="container front">
-        <?php if ( dynamic_sidebar( 'front4' ) ); ?>
-</div>
-</div>
+</section>
 
 <?php get_footer(); ?>
 
