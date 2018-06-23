@@ -35,13 +35,14 @@
         'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
       ) );
       ?>
-      <div class="search">
-        <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
-        <?php get_search_form(); ?>
-      </div>
+      <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
+
 	  </div>
 
 </nav>
+<div id="searchbar">
+  <?php get_search_form(); ?>
+</div>
 
 <?php wp_head(); ?>
   <body <?php body_class(); ?>>

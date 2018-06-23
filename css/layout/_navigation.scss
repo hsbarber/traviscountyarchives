@@ -1,9 +1,17 @@
 .navbar-expand-xl {
+	// @media (max-width: 480px) {
+	// 	justify-content: flex-end;
+	// }
 	justify-content: space-between;
 }
 .navbar {
+	// TC logo and Travis County Archives, Austin, TX text
+	padding: .5rem 0.25rem;
+	@media (min-width: $xl) {
+		padding: .5rem 1rem;
+	}
 	a.navbar-brand {
-		padding: 0 1rem;
+		padding: 0 0.25rem;
 		margin: 0;
 		display: flex;
 		> * {
@@ -22,7 +30,7 @@
 				color: darken($text-primary, 10%);
 				margin: 0 0 4px 4px;
 				padding: 0;
-				font-size: 18px;
+
 			}
 			h5 {
 				color: darken($text-primary, 10%);
@@ -35,14 +43,19 @@
 	}
 	.navbar-collapse {
 		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
 		@media (min-width: $xl) {
 			margin-right: 6rem;
 		}
+
 	}
 	.collapse.show {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 		@media (min-width: $xl) {
 			flex-direction: row;
 		}
@@ -54,7 +67,8 @@
 			align-items: center;
 			flex-direction: column;
 			@media (min-width: $xl) {
-				display: inline;
+				flex-direction: row;
+				justify-content: flex-end;
 			}
 			a {
 				font-family: $font-heading ;
@@ -66,280 +80,69 @@
 		}
 	}
 	.sub-menu {
+		margin-bottom: 1rem;
 		a {
 			font-size: 12px;
+		}
+		.dropdown-item {
+			padding: .5rem 1.5rem;
 		}
 	}
 
 }
 
-// Search styling
-.search {
-	#searchtoggle svg path {
+#searchtoggle {
+	svg path {
 		fill: darken($text-primary, 10%);
 	}
+}
+#searchbar {
+	display: none;
+	border-top: 1px solid #d8d8d8;
+	padding-left: 25px;
+	padding-right: 10px;
+	z-index: 9999;
+	background: #fff;
+	//this hides the screen reader text off screen, but is still usable by screen readers
+	.screen-reader-text {
+		position: absolute !important;
+		left: -999em;
+	}
 	.search-form {
-		display: none;
-		float: left;
+		display: flex;
+		justify-content: center;
+		margin: 2rem 0;
 		width: 100%;
-		height: 62px;
-		border-top: 1px solid #d8d8d8;
-		padding-left: 25px;
-		padding-right: 10px;
-		z-index: 9999;
-		background: #fff;
-		box-shadow: -1px 2px 2px rgba(0,0,0,0.2);
-	}
-
-	.search-field {
-		display: block;
-		width: 88%;
-		border: 0;
-		outline: none;
-		padding: 0;
-		height: 60px;
-		line-height: 60px;
-		font-size: 3.0em;
-		font-weight: bold;
-		color: #676767;
-	}
-
-	.search-submit {
-		display: block;
-		float: right;
-		margin-top: 6px;
-		background: none;
-		color: #717171;
-		border: 0;
-		outline: none;
-		cursor: pointer;
+		label {
+			margin-bottom: 0;
+		}
+		.search-field {
+			background: white;
+			border: 1px solid darken($text-primary, 10%);
+			box-sizing: border-box;
+			color: darken($text-primary, 10%);
+			font-size: 0.9em;
+			font-style: italic;
+			margin: 0 1rem 0 0;
+			padding: 0.5em 1rem;
+			border-radius: 8px;
+			height: 2rem;
+			width: 200px;
+			@media (min-width: $medium) {
+				width: 400px;
+			}
+		}
+		.search-submit {
+			height: 2rem;
+			border: 1px solid darken($text-primary, 10%);
+			border-radius: 8px;
+			cursor: pointer;
+			&:hover {
+				color: white;
+				background-color: darken($text-primary, 10%);
+			}
+		}
 	}
 }
 
-
-
-// // THE WHOLE NAVBAR BLOCK
-// .navbar {
-// 	height: 100px;
-// 	border-radius: 0;
-// 	margin-bottom: 0;
-// 	background-color: #FFF;
-// 	border: none;
-// 	border-bottom: 2px solid $light-grey;
-
-// }
-
-// // LOGO STYLING
-// a.navbar-brand.img {
-// 	padding: 0 25px 0 30px;
-
-// 	/* remove logo at 576px and less */
-// 	@media (max-width: 576px) {
-// 		display: none;
-// 	}
-// }
-
-// // TRAVIS COUNTY ARCHIVES TEXT STYLING
-// a.navbar-brand.text{
-// 	padding: 0 15px;
-// 	margin: 0;
-// 	color: $almostblack;
-// 	text-transform: uppercase;
-// 	font-weight: bold;
-// 	font-family: $headings;
-// 	line-height: 1;
-// 	letter-spacing: 1.5px;
-// 	h4 {
-// 		margin: 0 0 2px 0;
-// 		padding: 0;
-// 		font-size: 24px;
-// 	}
-// 	h5 {
-// 		margin: 0;
-// 		padding: 0;
-// 	    font-size: 16px;
-// 	}
-// 	//push text to right at 480px or less
-// 	@media (max-width: 480px) {
-// 		padding-left: 30px !important;
-// 	}
-// 	@media (max-width: 371px) {
-// 		h4 {
-// 			padding-top: 5px;
-// 			font-size: 18px;
-// 		}
-// 		h5 {
-// 			font-size: 14px;
-// 		}
-// 	}
-// }
-// // NAVIGATION STYLING
-
-// #menu-primary{
-
-// }
-
-// .navbar-default {
-// 	.navbar-nav {
-// 		padding-left: 50px;
-
-// 		// NAVIGATION TEXT STYLING
-// 		> .active > a {
-// 			background-color: white !important;
-// 			&:before {
-// 				content: "";
-// 				  position: absolute;
-// 				  width: 100%;
-// 				  height: 3px;
-// 				  bottom: 0;
-// 				  left: 0;
-// 				  background-color: #000;
-// 				  visibility: visible;
-// 				  -webkit-transform: none;
-// 				  transform: none;
-// 				  -webkit-transition: none;
-// 				  transition: none;
-// 				}
-// 		}
-
-// 		> li > a {
-// 			color: $almostblack;
-// 			line-height: 20px;
-// 			font-weight: 500;
-// 			font-family: $headings;
-// 			font-size: 16px;
-// 			padding: 10px 18px;
-// 			&:hover {
-// 				color: $black;
-// 			}
-// 			@media (min-width: 1200px) {
-// 			// ANIMATED LINK UNDERLINE
-// 				&:before {
-// 					content: "";
-// 					  position: absolute;
-// 					  width: 100%;
-// 					  height: 3px;
-// 					  bottom: 0;
-// 					  left: 0;
-// 					  background-color: #000;
-// 					  visibility: hidden;
-// 					  -webkit-transform: scaleX(0);
-// 					  transform: scaleX(0);
-// 					  -webkit-transition: all 0.3s ease-in-out 0s;
-// 					  transition: all 0.3s ease-in-out 0s;
-// 				}
-// 				&:hover:before {
-// 		  			visibility: visible;
-// 		  			-webkit-transform: scaleX(1);
-// 		  			transform: scaleX(1);
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// // CENTER VERTICALLY THE LOGO, TITLE TEXT, NAVIGATION, AND SEARCH
-// .banner {
-// 	padding: 25px 0;
-// }
-
-// // CHANGE STYLING ON NAVBAR HAMBURGER MENU
-// .navbar-toggle {
-// 	border-color: #FFF !important;
-// 	border: none;
-// }
-
-// @media (max-width: 480px) {
-// 	.navbar {
-// 		height: 125px;
-// 	}
-// 	.navbar-toggle {
-// 		clear: both;
-// 		float: left;
-// 		margin-left: 30px;
-// 	}
-// 	// .navbar-toggle {
-// 	// 	float: left;
-// 	// }
-// }
-// // MEDIUM SCREENS - TOGGLE HAMBURGER MENU AT 1200PX
-// @media (max-width: 1200px) {
-//     .navbar-header {
-//         float: none;
-//     }
-//     .navbar-toggle {
-//         display: block;
-//         margin-right: 4em;
-//     }
-//   	.navbar-collapse {
-//   		border-top: none;
-//   	}
-//     .navbar-collapse.collapse {
-//         display: none!important;
-//     }
-//     .navbar-default .navbar-nav {
-// 		padding-left: 0;
-// 		margin: 0;
-//     }
-//     .navbar-nav {
-//     	float: none !important;
-//         padding: 0;
-//         background-color: #FFF;
-//         z-index: 2000;
-//         position: relative;
-//         text-align: center;
-//         border: 1px solid $light-grey;
-//         border-top: 0;
-//         > li {
-//         	float: none;
-//     	}
-//         > li > a {
-// 	        padding-top: 10px;
-// 	        padding-bottom: 10px;
-// 	        &:before {
-// 	        	transition: none;
-// 	        	position: relative;
-// 	        	height: 100%;
-// 	        }
-//     	}
-//     }
-//     .collapse.in{
-//         display:block !important;
-//     }
-//    .navbar-nav .open .dropdown-menu {
-//        position: static;
-//        float: none;
-//        width: auto;
-//        margin-top: 0;
-//        background-color: transparent;
-//        border: 0;
-//        -webkit-box-shadow: none;
-//        box-shadow: none;
-//        text-align: center;
-//     }
-// }
-
-// // DROPDOWN MENU
-// .dropdown-menu {
-// 	width: 100%;
-
-// 	> li > a {
-// 		font-family: $pathway;
-// 		padding: 8px 20px;
-// 		font-size: 16px;
-// 		color: $darkgrey;
-// 		&:hover {
-// 			background-color: $light-grey;
-// 			color: $black;
-// 		}
-// 	}
-// 	> .active > a {
-// 		background-color: $light-grey;
-// 		color: $darkgrey;
-// 		&:hover {
-// 			background-color: $light-grey;
-// 			color: $black;
-// 		}
-// 	}
-// }
 

@@ -4,20 +4,6 @@ body {
 	margin: 0;
 }
 
-.heroBackground{
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	img {
-		width: 100%;
-	}
-	@media (max-width: 480px) {
-		margin-top: 25px;
-	}
-
-}
 
 .front-capt {
 	float: right;

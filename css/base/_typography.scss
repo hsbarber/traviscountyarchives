@@ -11,7 +11,7 @@ h1, h2, h3 {
     color: $text-primary;
     font-family: $font-heading;
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    //margin-bottom: 1.5rem;
     letter-spacing: 3px;
 }
 h4, h5 {
@@ -22,4 +22,58 @@ h4, h5 {
 p {
     color: $text-primary;
     font-family: $font-paragraph;
+}
+
+//FLUID TYPOGRAPHY MIXINS
+// https://www.sassmeister.com/gist/7f22e44ace49b5124eec
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+      #{$property}: $min-value;
+    }
+
+    @media (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      }
+    }
+
+    @media (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == "number" and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+
+ /* Single property */
+//   html {
+//     @include fluid-type(font-size, 320px, 1366px, 14px, 18px);
+//   }
+
+//   /* Multiple properties with same values */
+//   h1 {
+//     @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+//   }
+
+h1 {
+    @include fluid-type(font-size, $tiny, $xl, 22px, 32px);
+  }
+h2 {
+    @include fluid-type(font-size, $tiny, $xl, 20px, 24px);
+}
+h3 {
+    @include fluid-type(font-size, $tiny, $xl, 18px, 22px);
+}
+h4 {
+    @include fluid-type(font-size, $tiny, $xl, 16px, 20px);
+}
+p  {
+    @include fluid-type(font-size, $tiny, $xl, 12px, 16px);
 }

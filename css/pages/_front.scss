@@ -1,14 +1,18 @@
 
 .cards--front {
-    padding: 8rem 0;
+    // padding: 8rem 0;
+    @include fluid-type(padding-bottom padding-top, $tiny, $xl, 2rem, 8rem);
 }
 .cards--front_single {
-    padding-bottom: 4rem;
+    @include fluid-type(padding-bottom padding-top, $tiny, $large, 2rem, 0rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     img {
-        transform: scale(0.75);
+        transform: scale(0.5);
+        @media (min-width: $large) {
+            transform: scale(0.75);
+        }
     }
     h4 {
         padding: 1rem 0;
@@ -17,8 +21,11 @@
     a {
         color: $links-secondary;
     }
+    p {
+        margin-bottom: 0 !important;
+    }
     @media (min-width: $large) {
-        padding: 0 6rem;
+        padding: 0 4rem;
         align-items: left;
     }
 }
@@ -27,7 +34,7 @@
     .about--front {
             // display: flex;
             // align-items: center;
-            padding: 8rem 0;
+            @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
 
             .about--title {
                 display: flex;
@@ -38,7 +45,6 @@
                 }
                 h1 {
                     margin: 0;
-                    font-size: 2em;
                     line-height: 1.5;
 
                 }
@@ -69,11 +75,13 @@
 .contact {
     background-color: $background-primary;
     .contact--row {
-        padding: 8rem 0;
+        @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
         display: flex;
         align-items: center;
         .contact--block {
-            padding-bottom: 4rem;
+            h1 {
+                @include fluid-type(padding-bottom, $tiny, $large, 2rem, 3rem);
+            }
             @media (min-width: $large) {
                 padding-bottom: 0;
             }
@@ -86,20 +94,20 @@
 }
 .instagram {
     .instagram--row {
-        padding: 8rem 0;
+        @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
         h1 {
             text-align: center;
-            padding-bottom: 2rem;
+            @include fluid-type(padding-bottom, $tiny, $large, 2rem, 3rem);
         }
     }
 }
 .history {
     background-color: $background-secondary;
     .history--row {
-        padding: 8rem 0;
+        @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
         h1 {
             text-align: center;
-            padding-bottom: 4rem;
+            @include fluid-type(padding-bottom, $tiny, $large, 2rem, 3rem);
         }
     }
     .history--body {

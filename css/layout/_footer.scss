@@ -31,7 +31,6 @@ NEWSLETTER
 			padding: 1rem 0 2rem 0;
 			color: $heading-secondary;
 			text-transform: uppercase;
-			font-size: 2.25rem;
 		}
 		p {
 			color: $paragraph-secondary;
@@ -129,9 +128,14 @@ FOOTER
 				padding-right: 3rem;
 				a {
 					color: $paragraph-secondary;
-					.fa:hover {
-						color: $links-primary;
+					.svg-inline--fa{
+						height: 2rem;
+						width: 2rem;
 					}
+					.svg-inline--fa path:hover {
+						fill: $links-primary;
+					}
+
 				}
 			}
 		}

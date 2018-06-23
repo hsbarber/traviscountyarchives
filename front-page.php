@@ -18,7 +18,6 @@
         <img src="<?php the_field('card-1-image'); ?>" />
         <h4><?php the_field('card-1-heading'); ?></h4>
         <p><?php the_field('card-1-link-1'); ?></p>
-        <p><?php the_field('card-1-link-2'); ?></p>
       </div >
       <div class="col-lg-4 cards--front_single">
         <img src="<?php the_field('card-2-image'); ?>" />
@@ -29,7 +28,6 @@
         <img src="<?php the_field('card-3-image'); ?>" />
         <h4><?php the_field('card-3-heading'); ?></h4>
         <p><?php the_field('card-3-link-1'); ?></p>
-        <p><?php the_field('card-3-link-2'); ?></p>
       </div>
     </div>
   </div>
@@ -76,9 +74,8 @@
 <section class="container-fluid history">
   <div class="container">
     <div class="row history--row">
-        <div class="col-xs-12">
-          <h1><?php the_field('history-title'); ?></h1>
-        </div>
+    <div class="col-lg-12">
+        <h1><?php the_field('history-title'); ?></h1>
         <div class="history--body">
           <div class="col-md-5">
             <p class="history--body-intro"><?php the_field('history-text'); ?></p>
@@ -90,6 +87,7 @@
             <div class="history--body-links"><?php the_field('history-links'); ?></div>
           </div>
         </div>
+    </div>
     </div>
   </div>
 </section>
