@@ -5,7 +5,7 @@ Template Name: Search Page
 ?>
 
 <?php get_header(); ?>
-<div class="container-fluid">
+<div class="container-fluid bc-container">
   <div class="row">
     <div class="container">
      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">

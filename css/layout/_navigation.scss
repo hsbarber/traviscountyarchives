@@ -87,6 +87,10 @@
 		.dropdown-item {
 			padding: .5rem 1.5rem;
 		}
+		.dropdown-item.active {
+			background-color: $background-secondary;
+			color: $paragraph;
+		}
 	}
 
 }

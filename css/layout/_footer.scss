@@ -89,9 +89,9 @@ FOOTER
 		color: $paragraph-secondary;
 	}
 	a {
-		color: $links-primary;
+		color: $links-secondary;
 		&:hover {
-			color: $links-secondary;
+			color: $links-secondary-hover;
 		}
 	}
 	.footer--address {
@@ -135,7 +135,7 @@ FOOTER
 						width: 2rem;
 					}
 					.svg-inline--fa path:hover {
-						fill: $links-primary;
+						fill: $links-secondary;
 					}
 
 				}

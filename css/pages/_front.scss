@@ -23,7 +23,7 @@
         }
     }
     a {
-        color: $links-secondary;
+        color: $links-primary;
     }
     p {
         margin-bottom: 0 !important;
@@ -91,6 +91,12 @@
             }
             > * {
                 color: $paragraph-secondary;
+            }
+            a {
+                color: $links-secondary;
+                &:hover {
+                    color: $links-secondary-hover;
+                }
             }
         }
 

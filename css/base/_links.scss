@@ -1,0 +1,12 @@
+a {
+    color: $links-primary;
+    &:hover {
+        color: $links-hover;
+    }
+}
+.btn-link {
+    color: $links-primary;
+    &:hover {
+        color: $links-hover;
+    }
+}

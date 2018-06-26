@@ -75,7 +75,7 @@ h4 {
     @include fluid-type(font-size, $tiny, $xl, 16px, 20px);
 }
 h5 {
-    @include fluid-type(font-size, $tiny, $xl, 16px, 18px);
+    @include fluid-type(font-size, $tiny, $xl, 14px, 18px);
 }
 p  {
     @include fluid-type(font-size, $tiny, $xl, 12px, 16px);
