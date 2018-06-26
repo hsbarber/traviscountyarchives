@@ -156,8 +156,6 @@ create_widget( 'Front Page Hero', 'frontx', 'Front page Hero Container' );
 
 
 create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the side of pages with a sidebar' );
-create_widget( 'Page Sidebar bottom', 'page-bt', 'Displays on the side of pages with a sidebar' );
-create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of blog with a sidebar' );
-create_widget( 'Announcements Sidebar', 'Announcements', 'Displays on the side of Announcements Page with a sidebar' );
+
 
 ?>

@@ -4,10 +4,11 @@ Author: Hagan Barber
 Description: Third Version of Travis County Website
 */
 @import 'base/base_dir';
+@import 'variables';
 @import 'variables/variables_dir';
 @import 'pages/pages_dir';
+@import 'components/components_dir';
 @import 'layout/layout_dir';
-@import 'variables';
 @import 'map';
 @import 'header';
 @import 'front-page';

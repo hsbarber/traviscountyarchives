@@ -57,13 +57,15 @@ NEWSLETTER
 		}
 		.tnp-field-button {
 			input {
-				padding: 1rem 2rem;
+				padding-left: 1rem;
+				padding-right: 1rem;
 				border: 1px solid $heading-secondary;
 				background: transparent;
 				font-weight: bold;
 				&:hover {
 					color: $text-primary;
 					background: $heading-secondary;
+					cursor: pointer;
 				}
 			}
 		}
@@ -113,9 +115,9 @@ FOOTER
 		@media (min-width: $large) {
 			flex-direction: row;
 		}
-		h4 {
+		h5 {
 			margin-bottom: 3rem;
-			padding-right: 6rem;
+			padding-right: 4rem;
 			// padding-bottom: 2rem;
 		}
 	}

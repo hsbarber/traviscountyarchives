@@ -1,0 +1,52 @@
+#accordian {
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+
+.panel-group {
+	// .panel {
+	// 	box-shadow: none;
+	// 	border-radius: 0px;
+	// }
+	// .panel-heading {
+	// 	background-color: $light-grey;
+	// 	border: none;
+	// 	border-radius: 0px;
+	// }
+	// .panel-body {
+	// 	border: 1px solid $light-grey;
+	// 	ul {
+	// 		padding: 0 1rem;
+	// 		li {
+	// 			list-style-type: none;
+	// 			padding: 1rem 0;
+	// 			border-bottom: 1px solid $light-grey;
+	// 			&:last-child {
+	// 				border-bottom: none;
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+}
+.panel-title {
+	@media (max-width: 768px) {
+		text-align: center;
+	}
+	a:after {
+		content: "";
+	    display: inline-block;
+	    background: url("./css/down1.png") no-repeat top right;
+	    width: 20px;
+	    height: 20px;
+	    float: right;
+	    @media (max-width: 768px) {
+			float: none;
+			display: block;
+			margin: 10px auto 0 auto;
+	    }
+	}
+}
+

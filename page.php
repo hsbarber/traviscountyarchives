@@ -4,7 +4,7 @@
 <?php
   if ( has_post_thumbnail() ) {
   the_post_thumbnail();
-} 
+}
 ?>
 </div>
 <div class="container">
@@ -16,7 +16,7 @@
 <?php endif; ?>
 </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid bc-container">
   <div class="row">
     <div class="container">
      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
@@ -41,7 +41,7 @@
           <?php the_content(); ?>
           </div>
           <?php endwhile; else: ?>
-          
+
           <div class="page-header">
             <h1>Oh no!</h1>
           </div>
@@ -49,15 +49,15 @@
           <p>No content is appearing for this page!</p>
 
         <?php endif; ?>
-        
+
     </div>
 		<div class="col-md-3 sidebar">
-		
+
 		  <?php get_sidebar(); ?>
-		
-		</div>  
+
+		</div>
   </div>
-  
+
 </div>
 <?php get_footer(); ?>
 

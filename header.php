@@ -36,7 +36,6 @@
       ) );
       ?>
       <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
-
 	  </div>
 
 </nav>

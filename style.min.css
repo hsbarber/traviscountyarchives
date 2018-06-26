@@ -1,4 +1,3 @@
-.container-fluid{border-bottom:1px solid transparent !important}
 img{max-width:100%;height:auto}
 body{font-size:16px}
 h1,h2,.block-1 h4,h3{color:#676667;font-family:"Fjalla One",sans-serif;margin-top:0;letter-spacing:3px}
@@ -8,11 +7,12 @@ h1{font-size:22px}
 h2,.block-1 h4{font-size:20px}
 h3{font-size:18px}
 h4{font-size:16px}
+h5{font-size:16px}
 p{font-size:12px}
 .cards--front{padding-bottom:2rem;padding-top:2rem}
 .cards--front_single{padding-bottom:2rem;padding-top:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .cards--front_single img{-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5)}
-.cards--front_single h4{padding:1rem 0;text-align:center}
+.cards--front_single h4{margin-top:-0.5rem;padding:0 0 .5rem 0;text-align:center}
 .cards--front_single a{color:#cc3363}
 .cards--front_single p{margin-bottom:0 !important}
 .about{background-color:#f2f2f2}
@@ -35,6 +35,8 @@ p{font-size:12px}
 .history .history--body .history--body-intro{padding-bottom:2rem}
 .history .history--body .history--body-moreInfo{padding-bottom:1rem}
 .history .history--body .history--body-links{padding-left:1.5rem}
+#accordian .card{margin-bottom:1rem}
+.panel-title a:after{content:"";display:inline-block;background:url("./css/down1.png") no-repeat top right;width:20px;height:20px;float:right}
 .navbar-expand-xl{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .navbar{padding:.5rem .25rem}
 .navbar a.navbar-brand{padding:0 .25rem;margin:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -65,8 +67,8 @@ p{font-size:12px}
 .newsletter .newsletter-container .tnp-field label{color:white}
 .newsletter .newsletter-container .tnp-field input{border-radius:8px;border:0}
 .newsletter .newsletter-container .tnp-field .tnp-email{margin-bottom:2rem}
-.newsletter .newsletter-container .tnp-field-button input{padding:1rem 2rem;border:1px solid white;background:transparent;font-weight:bold}
-.newsletter .newsletter-container .tnp-field-button input:hover{color:#676667;background:white}
+.newsletter .newsletter-container .tnp-field-button input{padding-left:1rem;padding-right:1rem;border:1px solid white;background:transparent;font-weight:bold}
+.newsletter .newsletter-container .tnp-field-button input:hover{color:#676667;background:white;cursor:pointer}
 .footer{background-color:#252839}
 .footer .footer--container{padding-top:6rem;padding-bottom:6rem}
 .footer h3,.footer p{color:white}
@@ -77,7 +79,7 @@ p{font-size:12px}
 .footer .footer--address p{font-weight:300}
 .footer .footer--quickLinks h3{margin-bottom:3rem}
 .footer .footer--quickLinks-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
-.footer .footer--quickLinks-list h4{margin-bottom:3rem;padding-right:6rem}
+.footer .footer--quickLinks-list h5{margin-bottom:3rem;padding-right:4rem}
 .footer .footer--socialMedia ul{list-style-type:none;padding:0}
 .footer .footer--socialMedia ul li{display:inline;padding-right:3rem}
 .footer .footer--socialMedia ul li a{color:white}
@@ -86,6 +88,11 @@ p{font-size:12px}
 a span.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .footer-copyright{width:100%;padding:2em 0;background-color:#1b1d2a}
 .footer-copyright h3{font-size:12px;margin:0;color:white;letter-spacing:3px}
+.bc-container{margin-top:-2px;padding:0;border-top:1px solid #DDD;border-bottom:1px solid #DDD}
+.breadcrumbs{padding:1.5em 0 1.5em 30px}
+.breadcrumbs span a{color:#9a999a}
+.breadcrumbs svg{margin:0 10px}
+.breadcrumbs svg path{fill:#676667}
 #map{width:100%;height:400px;margin-bottom:2em}
 #mapsidebar,#mapsidebar1{border:2px solid #18457b}
 #mapsidebar1{margin-top:10px}
@@ -131,16 +138,13 @@ body{overflow-x:hidden;margin:0}
 .front-capt .front-caption-text{color:white;position:absolute;z-index:100;right:4rem;font-size:1rem;padding:5px 10px 5px}
 .page-banner img{max-height:400px;width:100%}
 .aligncenter{margin:0 auto;display:block}
-.container-fluid{margin:0;padding:0;border-bottom:1px solid #DDD}
-.breadcrumbs{padding:1.5em 0 1.5em 30px}
-.breadcrumbs a{color:#AAA}
-.breadcrumbs i{margin:0 10px;color:#18457b}
 div.col-md-3.capt{padding-left:0}
 p.caption{color:white;z-index:100;margin-top:-150px;position:absolute;background-color:rgba(24,68,123,0.8);padding:10px}
 .page-header{margin-top:0;margin-bottom:2.5em;border-bottom:1px solid #ececec}
 .page-header h2,.page-header .block-1 h4,.block-1 .page-header h4{font-size:32px;margin-top:0;margin-bottom:0;padding-bottom:5px;text-transform:none}
 div.col-md-9.page{margin-top:4em;padding-left:1.5em;padding-right:8em;padding-bottom:4em;overflow-x:hidden}
 div.col-md-12.page{margin-top:4em;padding-bottom:4em}
+p.genealogy{padding-bottom:2rem}
 div.col-md-3.sidebar{margin-top:4em;height:100%;padding:0}
 div.col-md-3.sidebar h3{font-size:24px;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:22px;text-transform:none}
 div.col-md-3.sidebar h3:last-child{border-top:0}
@@ -192,6 +196,7 @@ td{padding:0 4px}
 h2,.block-1 h4{font-size:calc(20px + 4 * (100vw - 320px) / 880)}
 h3{font-size:calc(18px + 4 * (100vw - 320px) / 880)}
 h4{font-size:calc(16px + 4 * (100vw - 320px) / 880)}
+h5{font-size:calc(16px + 2 * (100vw - 320px) / 880)}
 p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
 .cards--front{padding-bottom:calc(2rem + 6 * (100vw - 320px) / 880);padding-top:calc(2rem + 6 * (100vw - 320px) / 880)}
 .cards--front_single{padding-bottom:calc(2rem + -2 * (100vw - 320px) / 672);padding-top:calc(2rem + -2 * (100vw - 320px) / 672)}
@@ -211,6 +216,7 @@ p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
 .frontText-lft{padding-top:0;padding-right:6.2em}
 }@media(min-width:992px){.cards--front_single{padding-bottom:0;padding-top:0}
 .cards--front_single img{-webkit-transform:scale(0.75);-ms-transform:scale(0.75);transform:scale(0.75)}
+.cards--front_single h4{padding:1rem 0}
 .cards--front_single{padding:0 4rem;-webkit-box-align:left;-webkit-align-items:left;-ms-flex-align:left;align-items:left}
 .about .about--front .about--title{padding:auto}
 .about .about--front .about--line span{border-left:2px #676667 solid;position:absolute;left:50%;height:300px}
@@ -227,6 +233,7 @@ p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
 h2,.block-1 h4{font-size:24px}
 h3{font-size:22px}
 h4{font-size:20px}
+h5{font-size:18px}
 p{font-size:16px}
 .cards--front{padding-bottom:8rem;padding-top:8rem}
 .about .about--front{padding-bottom:8rem;padding-top:8rem}
@@ -241,7 +248,9 @@ p{font-size:16px}
 }@media(max-width:992px){div.col-md-5.new-posts{margin-top:4em}
 div.col-md-9.page{margin-top:2em;padding-left:1.5em;padding-right:1.5em;padding-bottom:4em}
 div.col-md-3.sidebar{padding-top:2em;padding-left:2em;padding-right:2em;margin-top:0}
-}@media(max-width:768px){.frontImage img{padding-bottom:1.5em}
+}@media(max-width:768px){.panel-title{text-align:center}
+.panel-title a:after{float:none;display:block;margin:10px auto 0 auto}
+.frontImage img{padding-bottom:1.5em}
 p.caption{display:none}
 .panel-title{text-align:center}
 .panel-title a:after{float:none;display:block;margin:10px auto 0 auto}
