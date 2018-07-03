@@ -9,7 +9,6 @@ function theme_styles () {
 	// wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap-4.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'iconic', get_template_directory_uri() . '/open-iconic/font/css/open-iconic-bootstrap.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
@@ -134,25 +133,10 @@ function pagination_bar() {
 
 
 
-create_widget( 'Header Right', 'top-right', 'Displays in the header on the right' );
-create_widget( 'Header Left', 'top-left', 'Displays in the header on the left' );
 create_widget( 'Newsletter', 'newsletter', 'newsletter display in footer' );
 create_widget( 'Newsletter-Image', 'newsletter image', 'newsletter background image in footer' );
-create_widget( 'Footer Center', 'footer-center', 'Displays in the footer in the center' );
 create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );
 create_widget( 'Footer Right', 'footer-right', 'Displays in the footer in the right' );
-create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );
-create_widget( 'Footer Bottom', 'footer-bottom', 'Displays in the footer in the bottom' );
-
-
-create_widget( 'Front Page 0', 'front0', 'Front page about section widget' );
-create_widget( 'Front Page 1a', 'front1a', 'First a widget homepage' );
-create_widget( 'Front Page 1b', 'front1b', 'First b widget homepage' );
-create_widget( 'Front Page 2', 'front2', 'Second widget homepage' );
-create_widget( 'Front Page 3', 'front3', 'Third widget homepage' );
-create_widget( 'Front Page 4', 'front4', 'Fourth widget homepage' );
-create_widget( 'Front Page 5', 'front5', 'Fourth widget homepage' );
-create_widget( 'Front Page Hero', 'frontx', 'Front page Hero Container' );
 
 
 create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the side of pages with a sidebar' );

@@ -1,13 +1,19 @@
 .hday {
     padding-top: 2rem;
     .nav {
-        border: 1px solid $lines-secondary;
+        // border: 1px solid $lines-secondary;
     }
     .nav-pills .nav-link {
+        border-left: 1px solid $lines-secondary;
+        border-right: 1px solid $lines-secondary;
         border-bottom: 1px solid $lines-secondary;
         border-radius: 0;
-        &:last-child {
-            border-bottom: none;
+        &:first-child {
+            border-top: 1px solid $lines-secondary;
+            margin-bottom: 1rem;
+        }
+        &:nth-child(2) {
+            border-top: 1px solid $lines-secondary;
         }
     }
     .nav-link.active {
