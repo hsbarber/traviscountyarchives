@@ -38,7 +38,7 @@
 </div>
 <div class="container">
   <div class="row">
-		<div class="col-md-9 page">
+		<div class="col-lg-9 page">
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -132,7 +132,7 @@
         <?php endif; ?>
 
     </div>
-		<div class="col-md-3 sidebar">
+		<div class="col-lg-3 sidebar">
 
 		  <?php get_sidebar(); ?>
 
