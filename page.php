@@ -30,7 +30,7 @@
 </div>
 <div class="container">
   <div class="row">
-		<div class="col-lg-9 page">
+		<div class="col-lg-9 page-container">
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

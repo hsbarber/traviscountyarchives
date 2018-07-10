@@ -14,7 +14,7 @@
 <div class="container">
       <div class="row">
 
-        <div class="col-md-9 page">
+        <div class="col-md-9 page-container">
 
           <div class="page-header">
             <h2><?php wp_title(''); ?></h2>

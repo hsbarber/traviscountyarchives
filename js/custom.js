@@ -24,7 +24,7 @@ var infoWindow = new google.maps.InfoWindow({
 });
 var markerBounds = new google.maps.LatLngBounds();
 var markerArray = [];
- 
+
 function makeMarker(options){
   var pushPin = new google.maps.Marker({map:map});
   pushPin.setOptions(options);
@@ -49,7 +49,7 @@ google.maps.event.addListener(map, "click", function(){
 
 
 /**
- * Creates an sidebar item 
+ * Creates an sidebar item
  * @constructor
  * @author Esa 2009
  * @param marker
@@ -59,7 +59,7 @@ function SidebarItem(marker, title){
   var tag = title.sidebarItemType || "ul";
   var row = document.createElement(tag);
   row.innerHTML = title.sidebarItem;
-  row.className = title.sidebarItemClassName || "mapsidebar_item";  
+  row.className = title.sidebarItemClassName || "mapsidebar_item";
   row.style.display = "block";
   row.onclick = function(){
     google.maps.event.trigger(marker, 'click');
@@ -90,7 +90,7 @@ SidebarItem.prototype.remove = function(){
 
 
 
-var contentString1 = '<div class="window"><h4>Kincheonville</h4><p>Kincheonville was a community located in southwest Austin.'+ 
+var contentString1 = '<div class="window"><h4>Kincheonville</h4><p>Kincheonville was a community located in southwest Austin.'+
 					'<p>It was bordered roughly by present-day Paisano Trail on the north, Davis Lane on the South, Brodie Lane on the west, and Longview Road'+
                     ' on the east.The community was established by Thomas Kincheon in June of 1865, and it developed into a thriving freedman community.</p>'+
 					' <p>Unlike other communities that were predominantly black, Kincheonville also had Hispanics and Anglo settlers. The community had several churches'+
@@ -102,13 +102,13 @@ var contentString1 = '<div class="window"><h4>Kincheonville</h4><p>Kincheonville
 					'<br><div class="mapcaption">Thomas Kincheon<br><i>Photo No. PICB 13450, Austin History Center, Austin Public Library</i></div></div>'
 var contentString2 = '<div class="window"><h4>Manda</h4><p>Manda was located four miles north of U.S. Highway 290 and two miles east of Farm Road 973 in northeastern Travis County.'+
 					 ' The earliest settlers included J.V. Morell in 1885 and Otto Bengston in 1888. Morell built a steam engine cotton gin in the area in 1886 and'+
-					 ' then moved his blacksmith shop there from New Sweden. In 1893, Bengston built a large general store with a residence in the rear, and a post office,'+ 
+					 ' then moved his blacksmith shop there from New Sweden. In 1893, Bengston built a large general store with a residence in the rear, and a post office,'+
 					 ' named for his sister Amanda, was established in the front part of the store building. By 1899, telephone lines were extended to Manda. In 1900, the population'+
 					 ' had reached 40, but it declined by the 1930s to 20.</p><p>A one-room school building was originally located in nearby New Sweden, but in 1915, a larger two-room schoolhouse'+
 					 ' was build in Manda to serve the children living in Manda, New Sweden, Carlson and Willow Ranch. In 1947, the small surrounding school districts were consolidated, and the'+
  					 ' Manda Common School District was founded. It remained a school district until 1963, when the last record of Manda\'s population was still 20.'+
 					 ' The 1915 school building still stands in Manda.</p>'+
-					 '</p><img src="http://www.traviscountyhistory.org/wp-content/uploads/2016/05/mandasmall.jpg" alt="Manda"><br><div class="mapcaption">1915 Manda school building,'+ 
+					 '</p><img src="http://www.traviscountyhistory.org/wp-content/uploads/2016/05/mandasmall.jpg" alt="Manda"><br><div class="mapcaption">1915 Manda school building,'+
 					 '<br>as shown in the 1936 publication <i>The Defender</i><br>'+
 					 '<i>- Travis County Archives</i></div></div>'
 
@@ -116,7 +116,7 @@ var contentString3 = '<div class="window"><h4>Mud</h4><p>Mud was a rural communi
 					 ' the community took its name from the moist lowlands along the river. A post office was established in 1887, and in the 1890s the community also'+
 					 ' reported a general store and ten residents. A second wave of settlement occurred around 1905, bringing many German settlers into the area. By 1913, '+
 					 ' the post office had moved to a site about three miles northeast of its first location, and it was eventually discontinued in 1934.</p><p> The population of Mud'+
-        			 ' was estimated at 100 in 1914, and had as many 254 residents from 23 families in 1920, but the population had fallen to 40 by 1939. No evidence of the'+   
+        			 ' was estimated at 100 in 1914, and had as many 254 residents from 23 families in 1920, but the population had fallen to 40 by 1939. No evidence of the'+
 					 ' community was shown on county highway maps in the late 1940s. In the 1980s, the former town site became part of Pace Bend Park.'+
 					 ' One of the few structures left from Mud is the school building, which has since been incorporated into the Moon River Bar.</p>'+
 					 ' <img src="http://www.traviscountyhistory.org/wp-content/uploads/2016/05/mudsmall.jpg" alt="Mud"><br><div class="mapcaption">Antonia and Adolf Rosenbusch, early Mud residents, in front of their homestead<br><i>-Courtesy of Bill Grace, Travis County Parks</i></div></div>'
@@ -124,7 +124,7 @@ var contentString4 = '<div class="window"><h4>Nameless</h4>'+
 					 '<p>Located in northwestern Travis County, Nameless was situated on Sandy Creek and just off Farm Road 1431, five miles northeast of Lago Vista.'+
 					 ' It was settled in 1869. When residents of the community applied for a post office, they had difficulty getting the post office department to accept the names they suggested.'+
 					 ' After six names were rejected, residents wrote back saying, "Let the post office be nameless and be damned!"</p><p> The department took them at their word, and a post office called'+
-					 ' Nameless was established in 1880. In 1884, Nameless reported a church, a district school, a general store, and 50 residents. Cotton, cedar posts, and rails were the principal'+ 
+					 ' Nameless was established in 1880. In 1884, Nameless reported a church, a district school, a general store, and 50 residents. Cotton, cedar posts, and rails were the principal'+
 					 ' commodities shipped from the area. The post office was discontinued in 1890, and mail for the community was sent to Leander. During the 1940s, two churches, a business, and a'+
 					 ' few scattered houses marked the community on county highway maps. Today, the location of the former community is marked by Nameless Road, the renovated school building, a cemetery,'+
 					 ' and a historical marker.</p>'+
@@ -143,7 +143,7 @@ var contentString5 = '<div class="window"><h4>Sprinkle</h4>'+
 					 ' to a typhoid fever epidemic, to World War I, to the lack of jobs during the Great Depression'+
 					 ' and the fall of cotton prices during the war. By the early 1930s the population of Sprinkle'+
 					 ' was at 10 residents. Buildings were torn down and today the only recognizable landmarks in Sprinkle'+
-					 ' are the Barr Mansion and Sprinkle Rd.</p> '+ 
+					 ' are the Barr Mansion and Sprinkle Rd.</p> '+
 					 '<img src="http://www.traviscountyhistory.org/wp-content/uploads/2016/05/sprinklestoresmall.jpg" alt="Sprinkle_tx">'+
                      '<br><div class="mapcaption"> Sprinkle general store, circa 1880s<br>'+
 					 '<i>-Photo No. PICA 03645, Austin History Center, Austin Public Library</i></div></div>'
@@ -189,31 +189,31 @@ makeMarker({
   title: "Manda",
   sidebarItem: "Manda",
   content: contentString2
-});  
+});
 makeMarker({
   position: new google.maps.LatLng(30.449854, -98.032040),
   title: "Mud",
   sidebarItem: "Mud",
   content: contentString3
-}); 
+});
 makeMarker({
   position: new google.maps.LatLng(30.525712, -97.927669),
   title: "Nameless",
   sidebarItem: "Nameless",
   content: contentString4
-}); 
+});
 makeMarker({
   position: new google.maps.LatLng(30.352334, -97.647272),
   title: "Sprinkle",
   sidebarItem: "Sprinkle",
   content: contentString5
-}); 
+});
 makeMarker({
   position: new google.maps.LatLng(30.288554, -97.747864),
   title: "Wheatville",
   sidebarItem: "Wheatville",
   content: contentString6
-});  
+});
 /**______________________________________________________________________*/
 function makeMarker1(options){
   var pushPin = new google.maps.Marker({map:map});
@@ -235,13 +235,13 @@ function makeMarker1(options){
 
 
 
-//Creates an sidebar item 
+//Creates an sidebar item
 
 function SidebarItem1(marker1, red){
   var tag = red.sidebarItem1Type || "ul";
   var row = document.createElement(tag);
   row.innerHTML = red.sidebarItem1;
-  row.className = red.sidebarItem1ClassName || "mapsidebar_item1";  
+  row.className = red.sidebarItem1ClassName || "mapsidebar_item1";
   row.style.display = "block";
   row.onclick = function(){
     google.maps.event.trigger(marker1, 'click');
@@ -269,7 +269,7 @@ SidebarItem1.prototype.remove = function(){
   this.div.removeChild(this.button);
   return true;
 }
-var contentString6 = '<div class="window"><h4>Austin-Travis County Tuberculosis Sanatorium</h4><p>Travis County and the City of Austin partnered to open a tubercular camp,'+ 
+var contentString6 = '<div class="window"><h4>Austin-Travis County Tuberculosis Sanatorium</h4><p>Travis County and the City of Austin partnered to open a tubercular camp,'+
 					' located about four miles northeast of Austin. Despite these modest efforts for the treatment of individuals'+
 					' suffering from tuberculosis, in 1921 the Travis County Humane Society issued a plea that more diligent and long-range'+
 					' efforts be taken to prevent the spread of the disease.</p><p>It wasn’t until 1938 that plans for a large-scale treatment'+
@@ -294,7 +294,7 @@ var contentString7 = '<div class="window"><h4>The Reuben Hornsby Home</h4>'+
 					 '<p>Hornsby Bend, also known as Hornsby or Hornsby\'s, is on Farm Road 969 and the Colorado River, nine miles east of Austin in eastern Travis County.'+
 					 ' It was named for Reuben Hornsby, who settled there in 1832 and served as postmaster during the Republic of Texas era.'+
 					 ' The community has been called the oldest settlement in Travis County. A United States post office was established at Hornsby Bend in 1856,'+
-					 ' but it was discontinued during the Civil War and not reopened until 1886. The community had two general stores in 1892.'+ 
+					 ' but it was discontinued during the Civil War and not reopened until 1886. The community had two general stores in 1892.'+
 					 ' Its post office was discontinued in 1901, and mail for Hornsby Bend was sent to Austin.  In 1905 the Hornsby Bend'+
 					 ' schools combined with those of Dunlap to form the Hornsby-Dunlap common school district. The Hornsby-Dunlap district'+
 					 ' was annexed to the Del Valle Independent School District in 1967. The population of Hornsby Bend was reported as ten in'+
@@ -314,7 +314,7 @@ var contentString9 = '<div class="window"><h4>The 1876 Travis County Courthouse<
                     ' The 1876 Courthouse, a three-story limestone building, was a breathtaking example of "Second Empire" architecture. Resplendent with ironwork'+
 					' cresting, decorative dormers, and Mansard roofs, the 1876 Courthouse stood proudly on the southwest corner of 11th Street'+
 					' and Congress Avenue, directly across from the Texas State Capitol Building. However, by 1927 it had become so infested with rats, bats, pigeons,'+
-					' and other vermin that it, too, needed to be replaced.</p>'+ 
+					' and other vermin that it, too, needed to be replaced.</p>'+
 					'<img src="http://www.traviscountyhistory.org/wp-content/uploads/2016/05/courthousesmall.jpg" alt="Travis County Courthouse"><br>'+
 					'<div class="mapcaption">Travis County Courthouse, 1876<br><i>Photo No. PICA 19698, Austin History Center, Austin Public Library</i></div></div>'
 var contentString10 = '<div class="window"><h4>Travis County Poor Farm</h4><p>Based on the tradition of the almshouse, county-established poor farms provided the means for destitute inhabitants'+
@@ -335,13 +335,13 @@ makeMarker1({
   title: "Austin-Travis County Tuberculosis Sanatorium",
   sidebarItem1: "Austin-Travis County Tuberculosis Sanatorium",
   content: contentString6
-});					
+});
 makeMarker1({
   position: new google.maps.LatLng(30.248544, -97.583506),
   title: "the Reuben Hornsby Home",
   sidebarItem1: "The Reuben Hornsby Home",
   content: contentString7
-});  
+});
 makeMarker1({
   position: new google.maps.LatLng(30.224456, -97.703648 ),
   title: "Montopolis Courthouse",
@@ -353,13 +353,13 @@ makeMarker1({
   title: "The 1876 Travis County Courthouse",
   sidebarItem1: "The 1876 Travis County Courthouse",
   content: contentString9
-});   
+});
 makeMarker1({
   position: new google.maps.LatLng(30.295499, -97.764417),
   title: "Travis County Poor Farm",
   sidebarItem1: "Travis County Poor Farm",
   content: contentString10
-});   
+});
 /**
  *   fit viewport to markers
  */

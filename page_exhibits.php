@@ -22,7 +22,7 @@
 <div class="container">
   <div class="row">
 
-        <div class="col-md-12 page">
+        <div class="col-md-12 page-container">
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

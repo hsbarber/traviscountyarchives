@@ -14,28 +14,40 @@
 <div class="container">
   <div class="row">
 
-        <div class="col-md-12 page-container">
+      <div class="col-md-12 page-container">
+
+          <div class="page-header">
+            <h2><?php wp_title(''); ?></h2>
+          </div>
+            <!--pagination-->
+
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-          <div class="page-header">
+          <article class="post">
 
-
-            <h2><?php the_title(); ?></h2>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <p><em>
-	      <?php echo the_time('l, F jS, Y'); ?>
+              <?php echo the_time('l, F jS, Y'); ?>
               in <?php the_category( ', ' ); ?>.
               <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
             </em></p>
-          </div>
 
-          <?php the_content(); ?>
+            <?php the_excerpt(); ?>
 
-          <hr>
+            <hr>
 
-          <?php comments_template(); ?>
+          </article>
 
-          <?php endwhile; else: ?>
+
+          <?php endwhile; ?>
+              <div class="pagination">
+                <?php pagination_bar(); ?>
+              </div>
+
+          <?php else : ?>
+
+
 
           <div class="page-header">
             <h1>Oh no!</h1>
@@ -45,7 +57,8 @@
 
         <?php endif; ?>
 
-        </div>
+      </div>
+
   </div>
 
 </div>

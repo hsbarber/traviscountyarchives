@@ -1,5 +1,17 @@
-$white_border: 2px solid #FFF;
-
+.map-container {
+	display: flex;
+	flex-direction: column;
+	@media (min-width: $large) {
+		flex-direction: row;
+	}
+}
+.sidebar-container {
+	display: flex;
+	flex-direction: column;
+	@media (min-width: $large) {
+		margin-left: 1rem;
+	}
+}
 #map {
 	width:100%;
 	height:400px;
@@ -9,51 +21,42 @@ $white_border: 2px solid #FFF;
 // Sidebar area
 #mapsidebar {
 	border: 2px solid $background-primary;
+	ul  {
+		text-align: left;
+		cursor:pointer;
+		background-color: $background-secondary;
+		font-size: 12px/18px;
+		font-weight: 500;
+		&:hover {
+			color: white;
+			background-color: $background-primary;
+		}
+	  }
 }
-
 #mapsidebar1 {
 	@extend #mapsidebar;
-	margin-top:10px;
-
+	margin-top: 10px;
 }
 
-#mapsidebar ul, #mapsidebar1 ul {
-	  text-align: left;
-	  cursor:pointer;
-	  background-color: $background-secondary;
-	  font-size: 12px/18px;
-	  font-weight: 500;
-}
 
-#mapsidebar ul:focus, #mapsidebar1 ul:focus {
-	background-color: $background-primary;
-}
-
-#mapsidebar ul:hover, #mapsidebar1 ul:hover {
-	background-color: #FFF;
-}
-
-.mapsidebar_item, .mapsidebar_item1 {
+ul.mapsidebar_item {
 	padding: 5px 10px;
 	margin: 0;
-	border-bottom: $white_border;
-	border-left: $white_border;
-	border-right: $white_border;
 	color: $background-primary;
-}
-
-.mapsidebar_item, .mapsidebar_item1 {
-	&:hover {
-		text-decoration: underline;
-		color: lighten($background-primary, 40%);
+	border-bottom: 1px solid $lines-secondary;
+	&:last-child {
+		border-bottom: none;
 	}
+
+}
+.mapsidebar_item1 {
+	@extend .mapsidebar_item;
 }
 
 .mapsidebarheader{
 	background-color: $background-primary;
 	color: #FFF;
 	margin: 0;
-	border-bottom: $white_border;
 	padding: 15px 10px;
 
 }
