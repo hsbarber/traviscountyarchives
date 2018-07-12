@@ -1,0 +1,152 @@
+.navbar-expand-xl {
+	// @media (max-width: 480px) {
+	// 	justify-content: flex-end;
+	// }
+	justify-content: space-between;
+}
+.navbar {
+	// TC logo and Travis County Archives, Austin, TX text
+	padding: .5rem 0.25rem;
+	@media (min-width: $xl) {
+		padding: .5rem 1rem;
+	}
+	a.navbar-brand {
+		padding: 0 0.25rem;
+		margin: 0;
+		display: flex;
+		> * {
+			line-height: 1;
+			letter-spacing: 1.5px;
+			font-family: $font-heading;
+		}
+		img {
+			transform: scale(0.8);
+		}
+		.site-title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h4 {
+				color: darken($text-primary, 10%);
+				margin: 0 0 4px 4px;
+				padding: 0;
+
+			}
+			h5 {
+				color: darken($text-primary, 10%);
+				margin: 0 0 0 4px;
+				padding: 0;
+				font-size: 14px;
+			}
+		}
+
+	}
+	.navbar-collapse {
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		@media (min-width: $xl) {
+			margin-right: 6rem;
+		}
+
+	}
+	.collapse.show {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		@media (min-width: $xl) {
+			flex-direction: row;
+		}
+	}
+	.navbar-nav {
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			@media (min-width: $xl) {
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+			a {
+				font-family: $font-heading ;
+				color: darken($text-primary, 10%);
+				@media (min-width: $xl) {
+					margin-right: 2rem;
+				}
+			}
+		}
+	}
+	.sub-menu {
+		margin-bottom: 1rem;
+		a {
+			font-size: 12px;
+		}
+		.dropdown-item {
+			padding: .5rem 1.5rem;
+		}
+		.dropdown-item.active, .dropdown-item:active {
+			background-color: $background-secondary;
+			color: $paragraph;
+		}
+	}
+
+}
+
+#searchtoggle {
+	svg path {
+		fill: darken($text-primary, 10%);
+	}
+}
+#searchbar {
+	display: none;
+	border-top: 1px solid #d8d8d8;
+	padding-left: 25px;
+	padding-right: 10px;
+	z-index: 9999;
+	background: #fff;
+	//this hides the screen reader text off screen, but is still usable by screen readers
+	.screen-reader-text {
+		position: absolute !important;
+		left: -999em;
+	}
+	.search-form {
+		display: flex;
+		justify-content: center;
+		margin: 2rem 0;
+		width: 100%;
+		label {
+			margin-bottom: 0;
+		}
+		.search-field {
+			background: white;
+			border: 1px solid darken($text-primary, 10%);
+			box-sizing: border-box;
+			color: darken($text-primary, 10%);
+			font-size: 0.9em;
+			font-style: italic;
+			margin: 0 1rem 0 0;
+			padding: 0.5em 1rem;
+			border-radius: 8px;
+			height: 2rem;
+			width: 200px;
+			@media (min-width: $medium) {
+				width: 400px;
+			}
+		}
+		.search-submit {
+			height: 2rem;
+			border: 1px solid darken($text-primary, 10%);
+			border-radius: 8px;
+			cursor: pointer;
+			&:hover {
+				color: white;
+				background-color: darken($text-primary, 10%);
+			}
+		}
+	}
+}
+
+

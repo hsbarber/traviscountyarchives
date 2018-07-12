@@ -1,3 +1,14 @@
 /node_modules
 /images
-/.DS_Store
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map

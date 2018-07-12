@@ -1,0 +1,19 @@
+
+.bc-container {
+    margin-top: -2px;
+	padding: 0;
+	border-top: 1px solid $lines-primary;
+	border-bottom: 1px solid $lines-primary;
+}
+.breadcrumbs {
+	padding: 1.5em 0 1.5em 30px;
+	span a {
+		color: lighten($text-primary, 20%);
+	}
+	svg {
+		margin: 0 10px;
+		path {
+			fill: $text-primary;
+		}
+	}
+}

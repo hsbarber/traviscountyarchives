@@ -3,15 +3,12 @@ Theme Name: Travis County Website 3.0
 Author: Hagan Barber
 Description: Third Version of Travis County Website
 */
+@import 'base/base_dir';
+@import 'variables/variables_dir';
+@import 'layout/layout_dir';
+@import 'pages/pages_dir';
 @import 'variables';
-@import 'navigation';
-@import 'map';
-@import 'header';
-@import 'front-page';
-@import 'frontHero';
-@import 'page';
-@import 'footer';
-@import 'comments';
+
 
 
 html, body {
@@ -20,9 +17,7 @@ html, body {
 }
 
 body {
-	font-family: $bodyText;
-	color: $bodytextcolor;
-	padding-top: 100px;
+	color: $text-primary;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -31,133 +26,6 @@ body {
 	margin: 0px;
 }
 
-a {
-	&:hover {
-		text-decoration: none;
-		color: $hover;
-	}
-}
 
-h1, h2, h3 {
-	margin-top: 0;
-	margin-bottom: 20px;
-	letter-spacing: 3px;
-	font-family: $headings;
-
-
-}
-
-h1, h2 {
-	color: $darkblue;
-}
-
-h3 {
-	text-transform: bold;
-}
-
-img {
-	max-width: 100%;
-	height: auto
-}
-
-
-/***************************
-****************************
-TABLES
-****************************
-***************************/
-
-table {
-	border-collapse: separate;
-}
-td {
-    padding: 0px 4px;
-}
-
-
-
-/***************************
-****************************
-EXHIBITS
-****************************
-***************************/
-.exhibits {
-	background-color: #EEE;
-
-}
-.image {
-	padding-bottom: 20px;
-}
-.image p{
-	margin: 0px;
-}
-
-/*@media (min-with: 768px) {
-	.vertical-align {
-	  display: flex;
-	  align-items: center;
-	  flex-direction: row;
-	}
-}*/
-.vertical-align h4{
-  font-family: $headings;
-  font-size: 20px;
-}
-/***************************
-****************************
-MEDIA QUERIES (MOBILE STYLING)
-****************************
-***************************/
-
-
-/* SIDEBAR RESPONSIVE */
-
-div.col-md-3.sidebar:last-child {
-		padding-bottom: 2em;
-	}
-
-
-@media (max-width: 991px) {
-
-div.col-md-6.about {
-	padding-top: 2em;
-	}
-
-}
-
-
-
-/* PAGE PADDING WHEN MOBILE */
-
-@media (max-width:992px) {
-
-div.col-md-9.page {
-    padding: 2em 2em 2em 2em;
-	}
-
-}
-
-@media (max-width:1000px) {
-
-
-	.front-left{
-		margin-bottom: 2em;
-		}
-	.front-center{
-		margin-bottom: 2em;
-		}
-	.front-right{
-		margin-bottom: 2em;
-		}
-}
-
-
-
-@media (min-width:780px) and (max-width:1200px) {
-	form.navbar-form.navbar-right {
-		float: left;
-	}
-
-}
 
 

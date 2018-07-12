@@ -1,13 +1,13 @@
 <?php
 /*
-  Template Name: Exhibits Template 
-  
- */ 
+  Template Name: Exhibits Template
+
+ */
 
 
 ?>
 <?php get_header(); ?>
-<div class="container-fluid">
+<div class="container-fluid bc-container">
   <div class="row">
     <div class="container">
      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
@@ -22,7 +22,7 @@
 <div class="container">
   <div class="row">
 
-        <div class="col-md-12 page">
+        <div class="col-md-12 page-container">
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -32,7 +32,7 @@
 
           <?php the_content(); ?>
           <?php endwhile; else: ?>
-          
+
           <div class="page-header">
             <h1>Oh no!</h1>
           </div>
@@ -43,7 +43,7 @@
 
         </div>
 
-        
+
       </div>
 </div>
 <?php get_footer(); ?>

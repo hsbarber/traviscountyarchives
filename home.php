@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container-fluid">
+<div class="container-fluid bc-container">
   <div class="row">
     <div class="container">
      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
@@ -14,13 +14,13 @@
 <div class="container">
   <div class="row">
 
-      <div class="col-md-9 page">
+      <div class="col-md-12 page-container">
 
           <div class="page-header">
             <h2><?php wp_title(''); ?></h2>
           </div>
             <!--pagination-->
-        
+
 
              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -47,8 +47,8 @@
 
           <?php else : ?>
 
-          
-          
+
+
           <div class="page-header">
             <h1>Oh no!</h1>
           </div>
@@ -56,9 +56,8 @@
           <p>No content is appearing for this page!</p>
 
         <?php endif; ?>
-        
+
       </div>
-      <?php get_sidebar( 'blog' ); ?>
 
   </div>
 

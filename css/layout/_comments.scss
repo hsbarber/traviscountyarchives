@@ -1,0 +1,26 @@
+
+.comment-form-comment {
+    display: flex;
+    flex-direction: column;
+}
+textarea#comment {
+    border: 1px solid $text-primary;
+}
+
+input#author, input#email, input#url {
+    border-radius: 15px;
+    padding-left: 0.75rem;
+    height: 3rem;
+    border: 1px solid $text-primary;
+}
+p.form-submit input[type=submit] {
+    border-radius: 15px;
+    border: 1px solid $text-primary;
+    padding: 1rem;
+    color: $text-primary;
+    &:hover {
+        background-color: $text-primary;
+        color: white;
+        cursor: pointer;
+    }
+}

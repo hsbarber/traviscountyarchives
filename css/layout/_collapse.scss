@@ -1,0 +1,60 @@
+#accordion {
+    .card {
+        margin-bottom: 0.5rem;
+        border: none;
+        border-radius: 0px;
+        .card-header {
+            border-bottom: none;
+            background-color: $lines-primary;
+            h5 {
+                .btn {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                    font-size: 12px;
+                    @media (min-width: $medium) {
+                        text-align: left;
+                        font-size: 16px;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        background: url("./css/icons/chevron-down.svg") no-repeat top right;
+                        width: 20px;
+                        height: 20px;
+                        margin: 10px auto 0 auto;
+                        @media (min-width: $medium) {
+                            float: right;
+                            display: inline-block;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .card-body {
+            border: 1px solid $lines-primary;
+            ul {
+                padding: 0 1rem;
+                li {
+                    list-style-type: none;
+                    padding: 1rem 0;
+                    border-bottom: 1px solid $lines-primary;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    a h4 {
+                        color: $links-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+// FOR FAQ PAGE
+.panel-title svg {
+    margin-left: 1rem;
+}
+
+
+

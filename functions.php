@@ -1,46 +1,42 @@
 <?php
-// //OVERRIDE AUTOPTIMIZER PLUGIN
-// add_filter('autoptimize_filter_css_replacetag','my_ao_override_css_replacetag',10,1);
-// function my_ao_override_css_replacetag($replacetag) {
-//         return array("<injectcss />","replace");
-//         }
+
 function theme_styles () {
 
-	// wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap-4.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css' );
-
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One', true );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One|Pathway+Gothic+One', true );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
-// function google_fonts() {
-// 	if (!is_admin()) {
-// 		wp_register_style('google', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Pathway+Gothic+One|Oswald|Fjalla+One', array(), null, 'all');
-// 		wp_enqueue_style('google');
-// 	}
-// }
-// add_action('wp_enqueue_scripts', 'google_fonts');
 
+function replace_core_jquery_version() {
+    wp_deregister_script( 'jquery-core' );
+    wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
+    wp_deregister_script( 'jquery-migrate' );
+    wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
+}
+add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 function theme_js() {
 	global $wp_scripts;
-	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js');
+	wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
+	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
+	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.0.13/js/all.js','', '', false);
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
-			wp_enqueue_script( 'google-map', 'http://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
-			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/map.js', '', '', true  );
+			wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
+			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/custom/map.js', '', '', true  );
 		}
 		if ( is_page( 'county-clerk' ) ) {
-			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/portal.js',  array('jquery'), '1.1.0', true );
+			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/custom/portal.js',  array('jquery'), '', false );
 		}
 		if ( is_page( 'district-clerk' ) ) {
-			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/portal2.js',  array('jquery'), '1.1.0', true );
+			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/custom/portal2.js',  array('jquery'), '', false );
 		}
 	}
 }
@@ -93,10 +89,10 @@ add_action( 'init', 'register_theme_menus' );
 
 
 // Register Custom Navigation Walker
-require_once('wp_bootstrap_navwalker.php');
+require_once get_template_directory() . '/bootstrap-navwalker.php';
 
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'Bootstrap to Wordpress' ),
+    'primary' => __( 'Primary Menu', 'archives-menu' ),
 ) );
 
 function create_widget( $name, $id, $description ) {
@@ -132,28 +128,13 @@ function pagination_bar() {
 
 
 
-create_widget( 'Header Right', 'top-right', 'Displays in the header on the right' );
-create_widget( 'Header Left', 'top-left', 'Displays in the header on the left' );
-create_widget( 'Footer Center', 'footer-center', 'Displays in the footer in the center' );
+create_widget( 'Newsletter', 'newsletter', 'newsletter display in footer' );
+create_widget( 'Newsletter-Image', 'newsletter image', 'newsletter background image in footer' );
 create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );
 create_widget( 'Footer Right', 'footer-right', 'Displays in the footer in the right' );
-create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );
-create_widget( 'Footer Bottom', 'footer-bottom', 'Displays in the footer in the bottom' );
-
-
-create_widget( 'Front Page 0', 'front0', 'Front page about section widget' );
-create_widget( 'Front Page 1a', 'front1a', 'First a widget homepage' );
-create_widget( 'Front Page 1b', 'front1b', 'First b widget homepage' );
-create_widget( 'Front Page 2', 'front2', 'Second widget homepage' );
-create_widget( 'Front Page 3', 'front3', 'Third widget homepage' );
-create_widget( 'Front Page 4', 'front4', 'Fourth widget homepage' );
-create_widget( 'Front Page 5', 'front5', 'Fourth widget homepage' );
-create_widget( 'Front Page Hero', 'frontx', 'Front page Hero Container' );
 
 
 create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the side of pages with a sidebar' );
-create_widget( 'Page Sidebar bottom', 'page-bt', 'Displays on the side of pages with a sidebar' );
-create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of blog with a sidebar' );
-create_widget( 'Announcements Sidebar', 'Announcements', 'Displays on the side of Announcements Page with a sidebar' );
+
 
 ?>

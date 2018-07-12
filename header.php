@@ -9,50 +9,39 @@
       <?php wp_title( '|', true, 'right' ); ?>
       <?php bloginfo( 'name' ); ?>
     </title>
-
  </head>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container banner">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="row">
-    <div class="navbar-header">
-      <a class="navbar-brand img" href="<?php echo get_home_url(); ?>">
-            <img src="<?php header_image(); ?>" height="50px" width="50px" alt="Travis County Seal" />
-      </a>
-      <a class="navbar-brand text" href="<?php echo get_home_url(); ?>">
-            <h4>Travis County Archives</h4>
-            <h5>Austin, TX</h5>
-      </a>
+<nav class="navbar navbar-expand-xl" role="navigation">
+    <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+        <img src="<?php echo esc_url( get_header_image() ); ?>" />
+        <div class="site-title">
+          <h4><?php bloginfo('name'); ?></h4>
+          <h5>Austin, TX</h5>
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'archives-menu' ); ?>">
+      <i class="fas fa-bars"></i>
+    </button>
 
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <?php
+      wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_id'        => 'primary-menu',
+        'container'      => 'false',
+        'depth'          => 2,
+        'menu_class'     => 'navbar-nav',
+        'walker'         => new Bootstrap_NavWalker(),
+        'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+      ) );
+      ?>
+      <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
+	  </div>
 
-
-    </div>
-
-    <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>
-
-
-  </div><!-- / row-->
-  </div><!-- /.container-->
 </nav>
+<div id="searchbar">
+  <?php get_search_form(); ?>
+</div>
 
 <?php wp_head(); ?>
   <body <?php body_class(); ?>>
