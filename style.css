@@ -154,7 +154,7 @@ FOOTER
 ***************************/
 .footer { background-color: #252839; }
 
-.page-banner img { max-height: 400px; width: 100%; }
+.footer .footer--container { padding-top: 6rem; padding-bottom: 6rem; }
 
 .footer h3, .footer p { color: white; }
 
