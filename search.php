@@ -20,7 +20,7 @@ Template Name: Search Page
 <div class="container">
   <div class="row">
 
-    <div class="col-md-9 page">
+    <div class="col-lg-9 page-container">
       <div class="page-header">
         <h2>
             <?php echo $wp_query->found_posts; ?> <?php _e( 'Search Results Found For', 'locale' ); ?>: "<?php the_search_query(); ?>"
@@ -34,11 +34,11 @@ Template Name: Search Page
 
       ?>
     </div>
-    <div class="col-md-3 sidebar">
+    <div class="col-lg-3 sidebar">
       <?php get_sidebar(); ?>
     </div>
-   
-   
+
+
   </div>
 
 </div>
