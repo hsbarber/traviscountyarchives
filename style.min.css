@@ -211,7 +211,7 @@ a.exhibit .exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:nor
 #accordion .card .card-header h5 .btn:after{float:right;display:inline-block;margin:0}
 .history .history--body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .history .history--body .history--body-intro{padding-bottom:0}
-p.caption{display:block;color:white;background-color:rgba(24,68,123,0.8);padding:10px;max-width:200px}
+p.caption{display:block;color:white;background-color:rgba(37,40,57,0.8);padding:10px;max-width:200px}
 }@media(min-width:992px){.newsletter .newsletter-container .tnp-widget form{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .newsletter .newsletter-container .tnp-field{margin-right:2rem}
 .newsletter .newsletter-container .tnp-field .tnp-email{width:300px;margin-bottom:0}

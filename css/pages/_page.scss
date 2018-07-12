@@ -39,7 +39,8 @@ p.caption{
 	@media (min-width: $medium) {
 		display: block;
 		color: white;
-		background-color:rgba(24, 68, 123, 0.8);
+		//background-color:rgba(24, 68, 123, 0.8);
+		background-color: rgba($background-primary, 0.8);
 		padding: 10px;
 		max-width: 200px;
 	}

@@ -9,7 +9,11 @@
 	  the_post_thumbnail();
 		}
 	?>
-
+  <div class="capt">
+    <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+      <p class="caption"><?php echo $caption; ?></p>
+    <?php endif; ?>
+  </div>
 </div>
 <section class="container-fluid">
   <div class="container">
