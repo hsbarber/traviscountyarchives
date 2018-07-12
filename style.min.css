@@ -79,6 +79,7 @@ a span.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !importan
 #accordion .card .card-body ul li{list-style-type:none;padding:1rem 0;border-bottom:1px solid #ececec}
 #accordion .card .card-body ul li:last-child{border-bottom:0}
 #accordion .card .card-body ul li a h4{color:#cc3363}
+.panel-title svg{margin-left:1rem}
 .comment-form-comment{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 textarea#comment{border:1px solid #676667}
 input#author,input#email,input#url{border-radius:15px;padding-left:.75rem;height:3rem;border:1px solid #676667}
@@ -140,10 +141,11 @@ ul.mapsidebar_item:last-child,ul.mapsidebar_item1:last-child{border-bottom:0}
 .history .history--body .history--body-links{padding-left:1.5rem}
 .history .history--body .history--body-links p svg{margin-right:.5rem}
 .history .history--body .history--body-links p svg path{fill:#cc3363}
+.page-banner{position:relative}
 .page-banner img{max-height:400px;width:100%}
 .aligncenter{margin:0 auto;display:block}
-div.col-md-3.capt{padding-left:0}
-p.caption{color:white;z-index:100;margin-top:-150px;position:absolute;background-color:rgba(24,68,123,0.8);padding:10px}
+.capt{position:absolute;right:0;margin-right:50px;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+p.caption{display:none;margin-bottom:0}
 .page-header{margin-top:0;margin-bottom:2.5em;border-bottom:1px solid #ececec}
 .page-container{margin-top:4em;padding-left:1.5em;padding-right:8em;padding-bottom:4em;overflow-x:hidden}
 div.col-md-12.page{margin-top:4em;padding-bottom:4em}
@@ -209,6 +211,7 @@ a.exhibit .exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:nor
 #accordion .card .card-header h5 .btn:after{float:right;display:inline-block;margin:0}
 .history .history--body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .history .history--body .history--body-intro{padding-bottom:0}
+p.caption{display:block;color:white;background-color:rgba(24,68,123,0.8);padding:10px;max-width:200px}
 }@media(min-width:992px){.newsletter .newsletter-container .tnp-widget form{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .newsletter .newsletter-container .tnp-field{margin-right:2rem}
 .newsletter .newsletter-container .tnp-field .tnp-email{width:300px;margin-bottom:0}
@@ -260,6 +263,5 @@ p{font-size:16px}
 .timeline .timeline__container .timeline__block .timeline__content .timeline__date{float:left;margin:10px 0 0 0;position:absolute;width:100%;opacity:.7;top:0;font-size:1.6rem}
 }@media(max-width:992px){.page-container{margin-top:2em;padding-left:1.5em;padding-right:1.5em;padding-bottom:4em}
 div.col-lg-3.sidebar{padding-top:2em;padding-left:2em;padding-right:2em;margin-top:0}
-}@media(max-width:768px){p.caption{display:none}
 }@media(max-width:480px){.page-banner{margin-top:25px}
 }

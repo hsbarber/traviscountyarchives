@@ -10,6 +10,9 @@ PAGE STYLING
 		margin-top: 25px;
 	}
 }
+.page-banner {
+	position: relative;
+}
 .page-banner img{
 	max-height: 400px;
 	width: 100%;
@@ -21,21 +24,24 @@ PAGE STYLING
 
 
 
-/*---------------*/
+//PAGE CAPTION ON HERO
 
-div.col-md-3.capt {
-	padding-left: 0;
+.capt {
+	position: absolute;
+	right: 0;
+	margin-right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 p.caption{
-
-	color: white;
-	z-index: 100;
-	margin-top: -150px;
-	position: absolute;
-	background-color:rgba(24, 68, 123, 0.8);
-	padding: 10px;
-	@media (max-width: 768px) {
-		display: none;
+	display: none;
+	margin-bottom: 0;
+	@media (min-width: $medium) {
+		display: block;
+		color: white;
+		background-color:rgba(24, 68, 123, 0.8);
+		padding: 10px;
+		max-width: 200px;
 	}
 }
 

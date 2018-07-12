@@ -5,6 +5,18 @@
  */
 ?>
 <?php get_header(); ?>
+<div class="page-banner">
+  <?php
+    if ( has_post_thumbnail() ) {
+    the_post_thumbnail();
+  }
+  ?>
+  <div class="capt">
+    <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+      <p class="caption"><?php echo $caption; ?></p>
+    <?php endif; ?>
+  </div>
+</div>
 <div class="container-fluid bc-container">
   <div class="row">
     <div class="container">

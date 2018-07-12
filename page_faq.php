@@ -9,11 +9,16 @@
 <?php get_header(); ?>
 
 <div class="page-banner">
-<?php
-  if ( has_post_thumbnail() ) {
-  the_post_thumbnail();
-}
-?>
+  <?php
+    if ( has_post_thumbnail() ) {
+    the_post_thumbnail();
+  }
+  ?>
+  <div class="capt">
+    <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+      <p class="caption"><?php echo $caption; ?></p>
+    <?php endif; ?>
+  </div>
 </div>
 <div class="container">
 <div class="col-md-9 capt col-xs-9">
@@ -53,7 +58,7 @@
           	    <div class="panel-heading" role="tab" id="headingOne">
           	      <h4 class="panel-title">
           	        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          	           <?php the_field('question1'); ?>
+          	           <?php the_field('question1'); ?><i class="fas fa-chevron-down"></i>
           	        </a>
           	      </h4>
           	    </div>
@@ -67,7 +72,7 @@
           	    <div class="panel-heading" role="tab" id="headingTwo">
           	      <h4 class="panel-title">
           	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          	          <?php the_field('question2'); ?>
+          	          <?php the_field('question2'); ?><i class="fas fa-chevron-down"></i>
           	        </a>
           	      </h4>
           	    </div>
@@ -81,7 +86,7 @@
           	    <div class="panel-heading" role="tab" id="headingThree">
           	      <h4 class="panel-title">
           	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          	          <?php the_field('question3'); ?>
+          	          <?php the_field('question3'); ?><i class="fas fa-chevron-down"></i>
           	        </a>
           	      </h4>
           	    </div>
@@ -95,7 +100,7 @@
 	      	    <div class="panel-heading" role="tab" id="headingFour">
 	      	      <h4 class="panel-title">
 	      	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-	      	          <?php the_field('question4'); ?>
+	      	          <?php the_field('question4'); ?><i class="fas fa-chevron-down"></i>
 	      	        </a>
 	      	      </h4>
 	      	    </div>
@@ -109,7 +114,7 @@
 	      	    <div class="panel-heading" role="tab" id="headingFive">
 	      	      <h4 class="panel-title">
 	      	        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-	      	          <?php the_field('question5'); ?>
+	      	          <?php the_field('question5'); ?><i class="fas fa-chevron-down"></i>
 	      	        </a>
 	      	      </h4>
 	      	    </div>
