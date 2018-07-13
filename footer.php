@@ -6,10 +6,7 @@
 
 <!-- <?php echo $img[0]; ?> -->
 <footer>
-	<section class="container-fluid newsletter" style="background: linear-gradient(
-	        rgba(45, 49, 70, 0.85),
-	        rgba(45, 49, 70, 0.85)),
-    		url('./wp-content/themes/traviscountyarchives/backgroundImg/travis_county-1932-map-bw.jpg') 50% 30% no-repeat; background-size: cover;" >
+	<section class="container-fluid newsletter">
 		<div class="container newsletter-container">
     		<div class="row">
 			<?php if ( dynamic_sidebar( 'newsletter' ) ); ?>
