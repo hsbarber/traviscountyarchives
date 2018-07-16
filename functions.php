@@ -78,22 +78,14 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 
-function register_theme_menus() {
-	register_nav_menus(
-			array(
-				'header-menu'   => __( 'Header Menu' )
-			)
-		);
-}
-add_action( 'init', 'register_theme_menus' );
-
-
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/bootstrap-navwalker.php';
 
+
 register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'archives-menu' ),
+    'nav-menu' => esc_html__( 'Primary', 'archives-menu' ),
 ) );
+
 
 function create_widget( $name, $id, $description ) {
 

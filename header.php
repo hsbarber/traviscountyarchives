@@ -26,9 +26,9 @@
     <div class="collapse navbar-collapse" id="navbar-content">
       <?php
       wp_nav_menu( array(
-        'theme_location' => 'primary',
-        'menu_id'        => 'primary-menu',
-        'container'      => 'false',
+        'theme_location' => 'nav-menu',
+        'menu_id'        => 'primary',
+        'container'      => 'div',
         'depth'          => 2,
         'menu_class'     => 'navbar-nav',
         'walker'         => new Bootstrap_NavWalker(),

@@ -3,8 +3,6 @@
   var searchbar  =  jQuery('#searchbar');
 
     jQuery('#navbar-content a').on('click', function(e){
-        e.preventDefault();
-            console.log("clicked");
         if(jQuery(this).attr('id') == 'searchtoggle') {
             if(!searchbar.is(":visible")) {
             // if invisible we switch the icon to appear collapsable
