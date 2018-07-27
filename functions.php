@@ -119,7 +119,7 @@ function pagination_bar() {
 }
 
 
-
+create_widget( 'Instagram', 'instagram', 'instagram display on home page' );
 create_widget( 'Newsletter', 'newsletter', 'newsletter display in footer' );
 create_widget( 'Newsletter-Image', 'newsletter image', 'newsletter background image in footer' );
 create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );

@@ -91,6 +91,9 @@
             }
             > * {
                 color: $paragraph-secondary;
+                &:last-child, &:nth-last-of-type() {
+                    margin-bottom: 0;
+                }
             }
             a {
                 color: $links-secondary;
@@ -109,10 +112,12 @@
             text-align: center;
             @include fluid-type(padding-bottom, $tiny, $large, 2rem, 3rem);
         }
+        p {
+            margin-bottom: 2rem;
+        }
     }
 }
 .history {
-    background-color: $background-secondary;
     .history--row {
         @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
         h1 {
@@ -136,10 +141,15 @@
        }
        .history--body-links {
             padding-left: 1.5rem;
-            p svg {
-                margin-right: 0.5rem;
-                path{
-                    fill: $links-primary;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                svg {
+                    margin-right: 0.5rem;
+                    path{
+                        fill: $links-primary;
+                    }
                 }
             }
         }

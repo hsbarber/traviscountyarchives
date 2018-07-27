@@ -2,7 +2,7 @@
 
 .sidebar  {
     .widget {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
     h3 {
 	font-size: 24px;
@@ -20,8 +20,9 @@
         list-style-type: none;
         margin-bottom: 0px;
         li {
-            padding: 10px 20px 10px 0px;
+            padding: 2rem 2rem 2rem 0px;
             border-top: 1px solid $lines-primary;
+            transition: 0.3s ease-in-out;
             &:hover {
                 background-color: $lines-primary;
             }
@@ -52,6 +53,12 @@
     }
     .rpwwt-post-date  {
         padding-left: 4.3em;
+    }
+    #sb_instagram #sbi_load {
+        text-align: left;
+        > * {
+            margin-left: 10px;
+        }
     }
 }
 
