@@ -1,6 +1,6 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a readme for the Travis County Archives site.
 
 ### What is this repository for? ###
 
@@ -12,7 +12,7 @@ This README would normally document whatever steps are necessary to get your app
 
 * Summary of set up
 * Configuration
-* 
+*
 * Database configuration
 * How to run tests
 * Deployment instructions
