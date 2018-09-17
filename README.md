@@ -9,7 +9,7 @@ This is a readme for the Travis County Archives site.
 
 ### How do I get set up? ###
 
-* Summary of set up
+* Clone repository
 * Configuration
 * run Wordpress locally
 * Database configuration
