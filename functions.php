@@ -126,7 +126,7 @@ create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left
 create_widget( 'Footer Right', 'footer-right', 'Displays in the footer in the right' );
 
 
-create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the side of pages with a sidebar' );
-
+create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the top side of pages with a sidebar' );
+create_widget( 'Page Sidebar bottom', 'page-bottom', 'Displays on the bottom side of pages with a sidebar' );
 
 ?>

@@ -135,8 +135,10 @@ ul.mapsidebar_item:last-child,ul.mapsidebar_item1:last-child{border-bottom:0}
 .contact .contact--row .contact--block a{color:#f2b632}
 .contact .contact--row .contact--block a:hover{color:#b37e0b}
 .instagram .instagram--row{padding-bottom:4rem;padding-top:4rem}
+.instagram .instagram--row .instagram--text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .instagram .instagram--row h1{text-align:center;padding-bottom:2rem}
-.instagram .instagram--row p{margin-bottom:2rem}
+.instagram .instagram--row p{margin-bottom:2rem;width:100%}
+.history{background-color:#f2f2f2}
 .history .history--row{padding-bottom:4rem;padding-top:4rem}
 .history .history--row h1{text-align:center;padding-bottom:2rem}
 .history .history--body{display:block}
@@ -214,6 +216,7 @@ a.exhibit .exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:nor
 }@media(min-width:768px){#searchbar .search-form .search-field{width:400px}
 #accordion .card .card-header h5 .btn{text-align:left;font-size:16px}
 #accordion .card .card-header h5 .btn:after{float:right;display:inline-block;margin:0}
+.instagram .instagram--row p{width:80%}
 .history .history--body{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .history .history--body .history--body-intro{padding-bottom:0}
 p.caption{display:block;color:white;background-color:rgba(37,40,57,0.8);padding:10px;max-width:200px}
@@ -233,6 +236,7 @@ p.caption{display:block;color:white;background-color:rgba(37,40,57,0.8);padding:
 .contact .contact--row .contact--block h1{padding-bottom:3rem}
 .contact .contact--row .contact--block{padding-bottom:0}
 .instagram .instagram--row h1{padding-bottom:3rem}
+.instagram .instagram--row p{width:60%}
 .history .history--row h1{padding-bottom:3rem}
 }@media(min-width:1200px){h1{font-size:32px}
 h2{font-size:24px}

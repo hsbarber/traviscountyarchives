@@ -108,16 +108,28 @@
 .instagram {
     .instagram--row {
         @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
+        .instagram--text {
+            display: flex;
+            justify-content: center;
+        }
         h1 {
             text-align: center;
             @include fluid-type(padding-bottom, $tiny, $large, 2rem, 3rem);
         }
         p {
             margin-bottom: 2rem;
+            width: 100%;
+            @media (min-width: $medium) {
+                width: 80%;
+            }
+            @media (min-width: $large) {
+                width: 60%;
+            }
         }
     }
 }
 .history {
+    background-color: $background-secondary;
     .history--row {
         @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
         h1 {

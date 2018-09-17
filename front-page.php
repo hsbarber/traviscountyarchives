@@ -65,17 +65,17 @@
     </div>
   </div>
 </section>
-<!-- <section class="container-fluid instagram">
+<section class="container-fluid instagram">
   <div class="container">
     <div class="row instagram--row">
         <div class="col-lg-12">
           <h1><?php the_field('instagram-title'); ?></h1>
-          <p><?php the_field('instagram-text'); ?></p>
+          <div class="instagram--text"><p><?php the_field('instagram-text'); ?></p></div>
           <?php if ( dynamic_sidebar( 'Instagram' ) ); ?>
         </div>
     </div>
   </div>
-</section> -->
+</section>
 <section class="container-fluid history">
   <div class="container">
     <div class="row history--row">
