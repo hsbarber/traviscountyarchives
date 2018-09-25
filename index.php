@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <div class="page-banner">
+
 <?php
   if ( has_post_thumbnail() ) {
   the_post_thumbnail();

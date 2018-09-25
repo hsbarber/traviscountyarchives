@@ -2,18 +2,22 @@
 
 <?php get_header(); ?>
 
+<div class="heroBackground" >
 
-<div class="heroBackground">
-	<?php
-	  if ( has_post_thumbnail() ) {
-	  the_post_thumbnail();
-		}
-	?>
-  <div class="capt">
-    <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-      <p class="caption"><?php echo $caption; ?></p>
-    <?php endif; ?>
-  </div>
+    <?php
+      if ( has_post_thumbnail() ) {
+      the_post_thumbnail();
+    }
+    ?>
+    <div class="banner-text" >
+      <div><?php the_field('banner-text-title'); ?></div>
+      <div><?php the_field('banner-text-sub'); ?></div>
+    </div>
+    <div class="capt">
+      <!-- CAPTION TEMPORARILY REMOVED<!-- <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?> -->
+        <p class="caption"><?php echo $caption; ?></p>
+      <?php endif; ?> -->
+    </div>
 </div>
 <section class="container-fluid">
   <div class="container">
