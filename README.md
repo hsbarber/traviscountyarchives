@@ -13,7 +13,7 @@ This is a readme for the Travis County Archives site.
 * Configuration
 * run Wordpress locally
 * Database configuration
-* How to run tests
+* How to run tests //
 * Deployment instructions
 
 
