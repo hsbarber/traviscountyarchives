@@ -117,7 +117,7 @@ ul.mapsidebar_item:last-child,ul.mapsidebar_item1:last-child{border-bottom:0}
 .banner-text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;background-color:#f2f2f2;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-top:0;padding:2rem}
 .banner-text>*>*{color:#414041;font-family:'Alice',serif}
 .banner-text h4{margin-top:1rem;margin-bottom:0}
-.banner-text>div:nth-child(2){border-left:1px solid #414041;height:100%}
+.banner-text>div:nth-child(2){border-left:1px solid #414041}
 .banner-text>div:nth-child(2) p:last-child{margin-bottom:0}
 .banner-text div{padding:0 2rem}
 .banner-text button{padding:.75rem;color:white;cursor:pointer;border-radius:8px;border:0;background-color:#cc3363;-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out}
