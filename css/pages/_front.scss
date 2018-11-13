@@ -1,77 +1,78 @@
 
-.banner-text {
-    display: flex;
-    position: relative;
-    background-color: $background-secondary;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    padding: 2rem;
-    > * > *{
-        color: darken($text-primary, 15%);
-        font-family: 'Alice', serif;
-    }
-    @media (max-width: $small) {
-        padding: 1rem;
-    }
-    h4 {
-        margin-top: 1rem;
-        margin-bottom: 0;
-    }
-    > div:nth-child(2) {
-        border-left: 1px solid darken($text-primary, 15%);
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-    div {
-        padding: 0 2rem;
-    }
-    button {
-        padding: 0.75rem;
-        color: white;
-        cursor: pointer;
-        border-radius: 8px;
-        border: none;
-        background-color: $links-primary;
-        transition: 0.5s ease-in-out;
-        &:hover {
-            background-color: darken($links-primary, 20%);
-        }
-    }
-    @media (min-width: $large) and (max-width: $xl) {
-        display: block;
-        background-color: transparent;
-        position: absolute;
-        left: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: -50px;
-        padding: 1rem;
-        h4 {
-            margin-bottom: 2rem;
-        }
-        > div:nth-child(2) {
-            border-left: none;
+//banner text for history day banner on front page
+// .banner-text {
+//     display: flex;
+//     position: relative;
+//     background-color: $background-secondary;
+//     justify-content: center;
+//     align-items: center;
+//     margin-top: 0;
+//     padding: 2rem;
+//     > * > *{
+//         color: darken($text-primary, 15%);
+//         font-family: 'Alice', serif;
+//     }
+//     @media (max-width: $small) {
+//         padding: 1rem;
+//     }
+//     h4 {
+//         margin-top: 1rem;
+//         margin-bottom: 0;
+//     }
+//     > div:nth-child(2) {
+//         border-left: 1px solid darken($text-primary, 15%);
+//         p:last-child {
+//             margin-bottom: 0;
+//         }
+//     }
+//     div {
+//         padding: 0 2rem;
+//     }
+//     button {
+//         padding: 0.75rem;
+//         color: white;
+//         cursor: pointer;
+//         border-radius: 8px;
+//         border: none;
+//         background-color: $links-primary;
+//         transition: 0.5s ease-in-out;
+//         &:hover {
+//             background-color: darken($links-primary, 20%);
+//         }
+//     }
+//     @media (min-width: $large) and (max-width: $xl) {
+//         display: block;
+//         background-color: transparent;
+//         position: absolute;
+//         left: 25px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         margin-top: -50px;
+//         padding: 1rem;
+//         h4 {
+//             margin-bottom: 2rem;
+//         }
+//         > div:nth-child(2) {
+//             border-left: none;
 
-        }
-    }
-    @media (min-width: $xl) {
-        display: block;
-        background-color: transparent;
-        position: absolute;
-        left: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: 25px;
-        h4 {
-            margin-bottom: 2rem;
-        }
-        > div:nth-child(2) {
-            border-left: none;
-        }
-    }
-}
+//         }
+//     }
+//     @media (min-width: $xl) {
+//         display: block;
+//         background-color: transparent;
+//         position: absolute;
+//         left: 25px;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         margin-top: 25px;
+//         h4 {
+//             margin-bottom: 2rem;
+//         }
+//         > div:nth-child(2) {
+//             border-left: none;
+//         }
+//     }
+// }
 .cards--front {
     // padding: 8rem 0;
     @include fluid-type(padding-bottom padding-top, $tiny, $xl, 2rem, 8rem);

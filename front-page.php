@@ -9,14 +9,10 @@
       the_post_thumbnail();
     }
     ?>
-    <div class="banner-text" >
-      <div><?php the_field('banner-text-title'); ?></div>
-      <div><?php the_field('banner-text-sub'); ?></div>
-    </div>
     <div class="capt">
       <!-- CAPTION TEMPORARILY REMOVED<!-- <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?> -->
         <p class="caption"><?php echo $caption; ?></p>
-      <?php endif; ?> -->
+      <?php endif; ?>
     </div>
 </div>
 <section class="container-fluid">
