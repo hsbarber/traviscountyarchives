@@ -74,8 +74,8 @@
 //     }
 // }
 .cards--front {
-    // padding: 8rem 0;
-    @include fluid-type(padding-bottom padding-top, $tiny, $xl, 2rem, 8rem);
+//    align-items: flex-start;
+    @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
 }
 .cards--front_single {
     @include fluid-type(padding-bottom padding-top, $tiny, $large, 2rem, 0rem);
@@ -84,8 +84,11 @@
     align-items: center;
     img {
         transform: scale(0.5);
+        margin-top: -28px;
         @media (min-width: $large) {
             transform: scale(0.75);
+            margin-top: -15px;
+
         }
     }
     h4 {
@@ -104,14 +107,14 @@
     }
     @media (min-width: $large) {
         padding: 0 4rem;
-        align-items: left;
+        //align-items: left;
     }
 }
 .about {
     background-color: $background-secondary;
     .about--front {
-            // display: flex;
-            // align-items: center;
+            //display: flex;
+            //align-items: center;
             @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
 
             .about--title {
@@ -134,8 +137,8 @@
                 span {
                     @media (min-width: $large) {
                         border-left:2px $text-primary solid;
-                        position:absolute;
-                        left:50%;
+                        //position:absolute;
+                        margin-left:50%;
                         height:300px;
                     }
                 }
