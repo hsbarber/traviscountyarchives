@@ -18,18 +18,18 @@
 <section class="container-fluid">
   <div class="container">
     <div class="row cards--front">
-      <div class="col-lg-4 cards--front_single">
-        <img src="<?php the_field('card-1-image'); ?>" />
+      <div class="col-lg-4 cards--front-single">
+        <div class="cards--front-img"><img src="<?php the_field('card-1-image'); ?>" /></div>
         <h4><?php the_field('card-1-heading'); ?></h4>
         <p><?php the_field('card-1-link-1'); ?></p>
       </div >
-      <div class="col-lg-4 cards--front_single">
-        <img src="<?php the_field('card-2-image'); ?>" />
+      <div class="col-lg-4 cards--front-single">
+        <div class="cards--front-img"><img src="<?php the_field('card-2-image'); ?>" /></div>
         <h4><?php the_field('card-2-heading'); ?></h4>
         <p><?php the_field('card-2-link-1'); ?></p>
       </div>
-      <div class="col-lg-4 cards--front_single">
-        <img src="<?php the_field('card-3-image'); ?>" />
+      <div class="col-lg-4 cards--front-single">
+        <div class="cards--front-img"><img src="<?php the_field('card-3-image'); ?>" /></div>
         <h4><?php the_field('card-3-heading'); ?></h4>
         <p><?php the_field('card-3-link-1'); ?></p>
       </div>

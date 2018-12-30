@@ -19,15 +19,14 @@ NEWSLETTER
 		display: flex;
 		justify-content: center;
 		.tnp-widget {
-			// width: auto;
 			 form {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
 
 				@media (min-width: $large) {
-					flex-direction: row;
-					align-items: flex-end;
+					.tnp-field {
+						display: inline-block;
+						vertical-align: bottom;
+					}
+
 				}
 			 }
 		}
