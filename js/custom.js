@@ -366,35 +366,39 @@ makeMarker1({
 map.fitBounds(markerBounds);
 
 // COUNTY CLERK AJAX REQUEST TO PORTAL TO GET XML RECORDS
-(function($)  {
-      $.ajax({
-          url: 'https://texashistory.unt.edu/explore/partners/TCCO/oai/?verb=ListRecords&metadataPrefix=untl',
-          type: "GET",
-          dataType: "xml",
-          data: "",
-          cache: true,
-          success: function(xml){
-            
+(function ($) {
+    $("#MyDropDownID").change(function () {
+        $('#loading-image').show();
+    })
+    $.ajax({
+        url: 'https://texashistory.unt.edu/explore/partners/TCCO/oai/?verb=ListRecords&metadataPrefix=untl',
+        type: "GET",
+        dataType: "xml",
+        async: true,
+        data: "",
+        cache: true,
+        success: function (xml) {
+
             var record = $(xml).find('record');
-            
-              record.each(function(){
-            
+
+            record.each(function () {
+
                 var newTitle = $(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text();
-                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();           
+                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();
                 var series = $(this).find("title[qualifier='seriestitle'], untl\\:title[qualifier='seriestitle']").text();
                 var dates = $(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text();
-        
+
                 function sortUL(selector) {
-                  var $li = '<li>' + "<a href='" + address + "'>" + '<h4>' + newTitle + '</h4>' + '</a>' + dates + '</li>';
-                  var $ul = $(selector);
-                  $ul.append($li);
+                    var $li = '<li>' + "<a href='" + address + "'>" + '<h4>' + newTitle + '</h4>' + '</a>' + dates + '</li>';
+                    var $ul = $(selector);
+                    $ul.append($li);
                     $ul.find('li').sort(function (a, b) {
                         var upA = $(a).text().toUpperCase();
                         var upB = $(b).text().toUpperCase();
-                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;    
+                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
                     }).appendTo(selector);
                 };
-    
+
                 // if (newTitle.indexOf("Travis County Clerk Records") != -1 && series != "Travis County Commissioners Court Records") {
                 //     sortUL('#genClerk');
                 // }
@@ -410,35 +414,40 @@ map.fitBounds(markerBounds);
                 else if (newTitle.indexOf("Criminal Minutes") != -1) {
                     sortUL('#criminal');
                 }
-                else if  (newTitle.indexOf("Travis County Deed Records") != -1 ) {          
+                else if (newTitle.indexOf("Travis County Deed Records") != -1) {
                     sortUL('#deeds');
                 }
-                else if  (newTitle.indexOf("Travis County Election Records") != -1 ) {     
-                   sortUL('#election');
+                else if (newTitle.indexOf("Election") != -1) {
+                    sortUL('#election');
                 }
-                else if  (newTitle.indexOf("Travis County Naturalization Records") != -1 ) {               
+                else if (newTitle.indexOf("Travis County Naturalization Records") != -1) {
                     sortUL('#naturalization');
                 }
-                else if  (series === "Travis County Probate Records") {                  
+                else if (newTitle.indexOf("Travis County Probate Records") != -1) {
                     sortUL('#probate');
                 }
-                else if  (newTitle.indexOf("Travis County Survey Records") != -1 ) {                    
+                else if (newTitle.indexOf("Road Book") != -1) {
+                    sortUL('#road');
+                }
+                else if (newTitle.indexOf("Travis County Survey Records") != -1) {
                     sortUL('#survey');
                 }
                 else {
-                  sortUL('#genClerk');
+                    sortUL('#genClerk');
                 }
-               
-              })
-            },
-                
-          error: function(error){
-              alert("The XML File could not be processed correctly.");
-          }
-      });
-  
-})( jQuery );
 
+            })
+            $('#loading-image').hide();
+        },
+
+        error: function (error) {
+            alert("The XML File could not be processed correctly.");
+        }
+    });
+
+})(jQuery);
+
+!function (i) { i("#MyDropDownID").change(function () { i("#loading-image").show() }), i.ajax({ url: "https://texashistory.unt.edu/explore/partners/TCCO/oai/?verb=ListRecords&metadataPrefix=untl", type: "GET", dataType: "xml", async: !0, data: "", cache: !0, success: function (e) { i(e).find("record").each(function () { var e = i(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text(), t = i(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text(), n = i(this).find("title[qualifier='seriestitle'], untl\\:title[qualifier='seriestitle']").text(), r = i(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text(); function a(n) { var a = "<li><a href='" + t + "'><h4>" + e + "</h4></a>" + r + "</li>", o = i(n); o.append(a), o.find("li").sort(function (e, t) { var n = i(e).text().toUpperCase(), r = i(t).text().toUpperCase(); return n < r ? -1 : n > r ? 1 : 0 }).appendTo(n) } -1 != e.indexOf("Civil Minutes") ? a("#civil") : "Travis County Commissioners Court Records" === n ? a("#commCourt") : -1 != e.indexOf("Commissioners Court Minutes") || -1 != e.indexOf("Commissioners Court Road Minutes") ? a("#commMinutes") : -1 != e.indexOf("Criminal Minutes") ? a("#criminal") : -1 != e.indexOf("Travis County Deed Records") ? a("#deeds") : -1 != e.indexOf("Election") ? a("#election") : -1 != e.indexOf("Travis County Naturalization Records") ? a("#naturalization") : -1 != e.indexOf("Travis County Probate Records") ? a("#probate") : -1 != e.indexOf("Travis County Survey Records") ? a("#survey") : a("#genClerk") }), i("#loading-image").hide() }, error: function (i) { alert("The XML File could not be processed correctly.") } }) }(jQuery);
 // DISTRICT CLERK AJAX REQUEST TO PORTAL TO GET XML RECORDS
 (function($) {
       $.ajax({

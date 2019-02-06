@@ -33,10 +33,10 @@ function theme_js() {
 			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/custom/map.js', '', '', true  );
 		}
 		if ( is_page( 'county-clerk' ) ) {
-			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/custom/portal.js',  array('jquery'), '', false );
+			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/custom/portal.min.js',  array('jquery'), '', false );
 		}
 		if ( is_page( 'district-clerk' ) ) {
-			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/custom/portal2.js',  array('jquery'), '', false );
+			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/custom/portal2.min.js',  array('jquery'), '', false );
 		}
 	}
 }
