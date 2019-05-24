@@ -1,14 +1,14 @@
 <?php
 
 function theme_styles () {
-
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap-4.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
+
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One|Alice', true );
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic|Fjalla+One|Alice', true );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
@@ -26,7 +26,7 @@ function theme_js() {
 	wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
 	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
-	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/js/all.js','', '', false);
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js','', '', false);
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
 			wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
