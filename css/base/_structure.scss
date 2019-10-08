@@ -10,6 +10,15 @@ $xl: 1200px;
 
 //images
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+//lazy loading images
+.lazy-load {
+  transition: opacity 0.15s;
+  opacity: 0;
+}
+
+.lazy-load.is-loaded {
+  opacity: 1;
 }

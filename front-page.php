@@ -4,15 +4,25 @@
 
 <div class="heroBackground" >
 
-    <?php
-      if ( has_post_thumbnail() ) {
-      the_post_thumbnail();
-    }
-    ?>
+
+    <div class="left-banner">
+      <?php
+        if ( has_post_thumbnail() ) {
+        the_post_thumbnail();
+      }
+      ?>
+    </div>
+    <div class="right-banner">
+        <div class="right-banner-inner">
+          <?php the_field('banner-text-title'); ?>
+          <?php the_field('banner-text-sub'); ?>
+        </div>
+    </div>
     <div class="capt">
-      <!-- CAPTION TEMPORARILY REMOVED<!-- <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?> -->
+       <!-- CAPTION TEMPORARILY REMOVED
+       <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
         <p class="caption"><?php echo $caption; ?></p>
-      <?php endif; ?>
+      <?php endif; ?> -->
     </div>
 </div>
 <section class="container-fluid">
@@ -60,7 +70,7 @@
           <p><?php the_field('contact-links'); ?></p>
         </div>
         <div class="col-lg-4 contact--image">
-          <img src="<?php the_field('contact-image'); ?>" />
+          <img class="lazy-load" src="<?php the_field('contact-image'); ?>" />
         </div>
     </div>
   </div>

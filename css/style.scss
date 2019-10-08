@@ -3,29 +3,24 @@ Theme Name: Travis County Website 3.0
 Author: Hagan Barber
 Description: Third Version of Travis County Website
 */
-@import 'base/base_dir';
-@import 'variables/variables_dir';
-@import 'layout/layout_dir';
-@import 'pages/pages_dir';
-@import 'variables';
+@import "base/base_dir";
+@import "variables/variables_dir";
+@import "layout/layout_dir";
+@import "pages/pages_dir";
+@import "variables";
 
-
-
-html, body {
-    margin: 0 !important;
-	width: 100%;
+html,
+body {
+  margin: 0 !important;
+  width: 100%;
 }
 
 body {
-	color: $text-primary;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  color: $text-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .row {
-	margin: 0px;
+  margin: 0px;
 }
-
-
-
-
