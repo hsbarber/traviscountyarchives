@@ -26,9 +26,7 @@ PAGE STYLING
 
 .capt {
   position: relative;
-  margin-top: 300px;
   @media (min-width: $large) {
-    margin-top: 0;
     position: absolute;
     right: 0;
     margin-right: 50px;

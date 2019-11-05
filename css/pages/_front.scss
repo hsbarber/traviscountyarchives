@@ -11,7 +11,12 @@
     height: 400px;
   }
 }
-
+.front-capt {
+  margin-top: 300px;
+  @media (min-width: $large) {
+    margin-top: 0;
+  }
+}
 .cards--front {
   @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
 }

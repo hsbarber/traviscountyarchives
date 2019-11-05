@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 <?php $thumb = get_the_post_thumbnail_url(); ?>
 <div class="heroBackground" style="background-image: url('<?php echo $thumb;?>')">
-    <div class="capt">
+    <div class="capt front-capt">
        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
         <p class="caption"><?php echo $caption; ?></p>
       <?php endif; ?>
