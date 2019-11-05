@@ -1,28 +1,12 @@
 
 
 <?php get_header(); ?>
-
-<div class="heroBackground" >
-
-
-    <div class="left-banner">
-      <?php
-        if ( has_post_thumbnail() ) {
-        the_post_thumbnail();
-      }
-      ?>
-    </div>
-    <div class="right-banner">
-        <div class="right-banner-inner">
-          <?php the_field('banner-text-title'); ?>
-          <?php the_field('banner-text-sub'); ?>
-        </div>
-    </div>
+<?php $thumb = get_the_post_thumbnail_url(); ?>
+<div class="heroBackground" style="background-image: url('<?php echo $thumb;?>')">
     <div class="capt">
-       <!-- CAPTION TEMPORARILY REMOVED
        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
         <p class="caption"><?php echo $caption; ?></p>
-      <?php endif; ?> -->
+      <?php endif; ?>
     </div>
 </div>
 <section class="container-fluid">
