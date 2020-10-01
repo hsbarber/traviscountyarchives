@@ -20,7 +20,7 @@
 <div class="container">
   <div class="row">
 
-        <div class="col-lg-9 page-container">
+        <div class="col-md-12 page-container-full-width">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
             <div class="page-header">

@@ -161,6 +161,7 @@ ul.mapsidebar_item:last-child,ul.mapsidebar_item1:last-child{border-bottom:0}
 p.caption{background-color:rgba(37,40,57,0.8);color:white;padding:10px;text-align:right;-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out;margin:0}
 .page-header{margin-top:0;margin-bottom:2.5em;border-bottom:1px solid #ececec}
 .page-container{margin-top:4em;padding-left:1.5em;padding-right:8em;padding-bottom:4em;overflow-x:hidden}
+.page-container-full-width{margin-top:4em;padding-bottom:4em;overflow-x:hidden}
 div.col-md-12.page{margin-top:4em;padding-bottom:4em}
 p.genealogy{padding-bottom:2rem}
 div.col-lg-3.sidebar{margin-top:4em;height:100%;padding:0}
