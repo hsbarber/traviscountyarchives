@@ -1,11 +1,11 @@
-.timeline {
+.hd-timeline {
   overflow: hidden;
   margin: 2em auto;
   @media (min-width: $xl) {
     margin-top: 3em;
     margin-bottom: 3em;
   }
-  .timeline__container {
+  .hd-timeline__container {
     position: relative;
     width: 95%;
     max-width: 1170px;
@@ -25,7 +25,7 @@
         margin-left: -2px;
       }
     }
-    .timeline__block {
+    .hd-timeline__block {
       position: relative;
       margin: 4rem 0;
       &:after {
@@ -40,13 +40,13 @@
       &:last-child {
         margin-bottom: 0;
       }
-      &:nth-child(odd) .timeline__img,
-      &:nth-child(even) .timeline__img {
+      &:nth-child(odd) .hd-timeline__img,
+      &:nth-child(even) .hd-timeline__img {
         left: 0;
         margin-left: -50px;
       }
       @media (min-width: $xl) {
-        &:nth-child(odd) .timeline__content {
+        &:nth-child(odd) .hd-timeline__content {
           &:before,
           &:after {
             top: 30px;
@@ -70,7 +70,7 @@
             margin-top: -10px;
           }
         }
-        &:nth-child(even) .timeline__content {
+        &:nth-child(even) .hd-timeline__content {
           float: right;
           &:after,
           &:before {
@@ -97,33 +97,47 @@
             margin-top: -10px;
           }
         }
-        &:nth-child(odd) .timeline__content .timeline__date {
+        &:nth-child(odd) .hd-timeline__content .timeline__date {
           left: 122%;
         }
-        &:nth-child(even) .timeline__content .timeline__date {
+        &:nth-child(even) .hd-timeline__content .timeline__date {
           left: auto;
           right: 122%;
           text-align: right;
         }
-        &:nth-child(odd) .timeline__img {
+        &:nth-child(odd) .hd-timeline__img {
           left: 100%;
-          margin-left: 26px;
+          margin-left: 46px;
         }
-        &:nth-child(even) .timeline__img {
+        &:nth-child(even) .hd-timeline__img {
           left: 0;
-          margin-left: -42px;
+          margin-left: -60px;
         }
       }
-      .timeline__content {
+      .hd-timeline__content {
         position: relative;
         margin-left: 60px;
         background: white;
         border-radius: 0.25em;
-        padding: 1em;
+        // padding: 1em;
         border: 2px solid $background-secondary;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 2rem;
+          transition: 0.5s ease-in-out;
+          &:hover {
+            text-decoration: none;
+            background-color: $background-secondary;
+          }
+          p {
+            padding-top: 1rem;
+          }
+        }
         @media (min-width: $xl) {
           margin-left: 0;
-          padding: 1.6em;
+          //   padding: 1.6em;
           width: 45%;
         }
         &:after,
@@ -152,7 +166,7 @@
         p {
           margin-bottom: 0;
         }
-        .timeline__img {
+        .hd-timeline__img {
           position: absolute;
           top: 21px;
           width: 15px;

@@ -1,0 +1,43 @@
+.intro-page-bg {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $xl) {
+    height: 500px;
+  }
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.hd-page-bg {
+  background-color: $heading-primary;
+
+  //height: 100vh;
+}
+.hd-page-container {
+  background-color: white;
+}
+.hd-subtitle {
+  color: white;
+  background-color: $heading-primary;
+  padding: 1rem;
+}
+.hd-paragraph {
+  padding: 1rem 0;
+}
+.hd-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.hd-content {
+  h4 {
+    margin-bottom: 2rem;
+  }
+}
