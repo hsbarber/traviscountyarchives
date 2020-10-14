@@ -6,9 +6,9 @@ name: Deployment
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,10 +21,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        
+
       - name: Sync
         env:
-          dest: 'hagan@traviscountyhistory.org:/var/www/html/wp-content/themes/traviscountyarchives'
+          dest: "root@traviscountyhistory.org:/var/www/html/wp-content/themes/traviscountyarchives"
         run: |
           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
           chmod 600 ./deploy_key
@@ -35,4 +35,3 @@ jobs:
             --exclude /.github/ \
             --exclude /node_modules/ \
             ./ ${{env.dest}}
-      
