@@ -21,18 +21,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Sync
-      - uses: actions/setup-node@v1.1.0
-        with:
-          version: 12.x
-
-      - name: Install dependencies
-        run: |
-          composer install -o
-          npm install
-
-      - name: Build
-        run: npm run build
         
       - name: Sync
         env:
