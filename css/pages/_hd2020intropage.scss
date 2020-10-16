@@ -1,0 +1,16 @@
+.intro-page-bg {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $xl) {
+    height: 500px;
+  }
+  h1 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
