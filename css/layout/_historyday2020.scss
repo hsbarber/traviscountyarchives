@@ -32,6 +32,15 @@
     margin-top: 0;
     margin-bottom: 2rem;
   }
+  .blocks-gallery-item figure {
+    display: block;
+  }
+  .blocks-gallery-item figcaption {
+    position: relative;
+    background: none;
+    color: $heading-primary;
+    padding: 1rem 0;
+  }
 }
 p.hd-timeline-2008 {
   margin: 0;
