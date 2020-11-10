@@ -132,7 +132,13 @@ p.hd-timeline-2008{margin:0;padding:0}
 .hd-paragraph{padding:1rem 0}
 .hd-header{margin-top:0;margin-bottom:0;text-align:center;padding-bottom:4rem}
 .hd-content h4{margin-bottom:2rem}
-.heroBackground{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:300px;background-position:center center;background-repeat:no-repeat;background-size:cover}
+.banner-text-title{margin:2rem 0}
+.banner-text-title h1{margin-bottom:1rem}
+.banner-text-sub{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0 2rem 2rem 2rem}
+.banner-text-sub>div{max-width:400px}
+.banner-text-sub>div button{background:transparent;cursor:pointer;border-radius:8px;padding:.5rem;border:1px solid #676667;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;font-family:"Open Sans",sans-serif}
+.banner-text-sub>div button:hover{color:white;background:#676667;cursor:pointer}
+.heroBackground{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:200px;background-position:center center;background-repeat:no-repeat;background-size:contain;background-color:#252839}
 .front-capt{margin-top:300px}
 .cards--front{padding-bottom:4rem;padding-top:4rem}
 .cards--front-single{padding-bottom:2rem;padding-top:2rem;display:block}
