@@ -125,13 +125,12 @@ ul.mapsidebar_item:last-child,ul.mapsidebar_item1:last-child{border-bottom:0}
 .hd-page-container .wp-block-image figcaption{margin-bottom:0}
 .hd-page-container .wp-block-gallery{padding-bottom:2rem}
 .hd-page-container hr{margin-top:0;margin-bottom:2rem}
-.hd-page-container .blocks-gallery-item figure{display:block}
-.hd-page-container .blocks-gallery-item figcaption{position:relative;background:0;color:#676667;padding:1rem 0}
 p.hd-timeline-2008{margin:0;padding:0}
 .hd-subtitle{color:white;background-color:#676667;padding:1rem}
 .hd-paragraph{padding:1rem 0}
 .hd-header{margin-top:0;margin-bottom:0;text-align:center;padding-bottom:4rem}
 .hd-content h4{margin-bottom:2rem}
+.hd-video{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .banner-text-title{margin:2rem 0}
 .banner-text-title h1{margin-bottom:1rem}
 .banner-text-sub{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0 2rem 2rem 2rem}
