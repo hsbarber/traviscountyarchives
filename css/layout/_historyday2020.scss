@@ -55,10 +55,15 @@ p.hd-timeline-2008 {
   padding: 1rem 0;
 }
 .hd-header {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto 4rem auto;
   text-align: center;
-  padding-bottom: 4rem;
+  padding: 2rem 0;
+  border-bottom: 2px solid $lines-primary;
+  border-top: 2px solid $lines-primary;
+  max-width: 300px;
+  @media (min-width: $medium) {
+    max-width: 400px;
+  }
 }
 .hd-content {
   h4 {

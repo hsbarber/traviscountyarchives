@@ -11,17 +11,19 @@
   > div {
     max-width: 400px;
     button {
-      background: transparent;
+      background: $background-primary;
       cursor: pointer;
-      border-radius: 8px;
-      padding: 0.5rem;
-      border: 1px solid $text-primary;
+      border-radius: 16.5px;
+      padding: 0.7rem;
+      border: 1px solid transparent;
       transition: 0.3s ease-in-out;
       font-family: $font-paragraph;
+      color: $paragraph-secondary;
       &:hover {
-        color: $paragraph-secondary;
-        background: $text-primary;
+        color: $text-primary;
+        background: transparent;
         cursor: pointer;
+        border: 1px solid $text-primary;
       }
     }
   }
