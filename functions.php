@@ -32,6 +32,10 @@ function theme_js() {
 			wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
 			wp_enqueue_script( 'map_js', get_template_directory_uri() . '/js/custom/map.js', '', '', true  );
 		}
+		if ( is_page( 'history-day-2017' ) ) {
+			wp_enqueue_script( 'google-map2', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB1LkeZuDwLTrm2CtTpUKoWUzkp4AarUCc', '', '', true);
+			wp_enqueue_script( 'hauntedmap_js', get_template_directory_uri() . '/js/custom/hauntedplaces.js', '', '', true  );
+		}
 		if ( is_page( 'county-clerk' ) ) {
 			wp_enqueue_script( 'portal_js', get_template_directory_uri() . '/js/custom/portal.min.js',  array('jquery'), '', false );
 		}
