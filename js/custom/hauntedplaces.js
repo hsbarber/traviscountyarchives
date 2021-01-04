@@ -176,33 +176,3 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-// function initialize() {
-//   const driskill = { lat: 30.26833390879523, lng: -97.74174575714143 };
-//   const map = new google.maps.Map(document.getElementById("map"), {
-//     zoom: 15,
-//     center: driskill,
-//   });
-//   const contentString =
-//     '<div>' +
-//     '<h5 id="firstHeading" class="firstHeading">The Driskill Bar</h5>' +
-//     '<div id="bodyContent">' +
-//     "<p>The palatial Driskill Hotel, opened in 1886, is said to house more ghosts than can be listed here." +
-//     "Sightings are reported in the hotel to the present day, including that of a former housekeeper" +
-//     "in a long Victorian dress who appears to be still fussing with flower arrangements in the lobby," +
-//     "a longtime resident from the turn of the century who checks his pocket watch on the elevator," +
-//     "and a woman who carries shopping bags into a fourth-floor room where a wealthy Houston woman" +
-//     "committed suicide in the early 1990s, after her fiancé canceled their wedding. </p>" +
-//     "</div>";
-//   const infowindow = new google.maps.InfoWindow({
-//     content: contentString,
-//   });
-//    const marker = new google.maps.Marker({
-//     position: driskill,
-//     map,
-//     title: "The Driskill Hotel and Bar",
-//   });
-//   marker.addListener("click", () => {
-//     infowindow.open(map, marker);
-//   });
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);

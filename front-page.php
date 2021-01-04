@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <?php $thumb = get_the_post_thumbnail_url(); ?>
-<section>
+<!-- <section>
   <div class="banner-text-title"><h4><?php the_field('banner-text-title'); ?></h4></div>
   <div class="banner-text-sub"><?php the_field('banner-text-sub'); ?></div>
-</section>
+</section> -->
 <div class="heroBackground" style="background-image: url('<?php echo $thumb;?>')">
     <div class="capt front-capt">
        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
