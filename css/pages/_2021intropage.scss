@@ -1,0 +1,41 @@
+.hd2021header {
+  height: 600px;
+  width: 100vw;
+  display: flex;
+}
+.hd2021title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: #004000;
+  border-width: 20px;
+  background-color: #004000;
+  height: 100%;
+
+  > div {
+    background-color: white;
+    padding: 4rem;
+    border-style: solid;
+    border-color: #ffc200;
+    border-width: 5px;
+    h2 {
+      padding-bottom: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    h4 {
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+.hd2021slideshow {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-color: #004000;
+  border-width: 20px;
+  border-left: none;
+}

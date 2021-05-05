@@ -133,4 +133,51 @@ create_widget( 'Footer Right', 'footer-right', 'Displays in the footer in the ri
 create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the top side of pages with a sidebar' );
 create_widget( 'Page Sidebar bottom', 'page-bottom', 'Displays on the bottom side of pages with a sidebar' );
 
+// Create Custom Post Type for Sliders
+
+
+function create_slider_post_type() {
+
+	$labels = array(
+		'name' => __( 'Sliders' ),
+		'singular_name' => __( 'Sliders' ),
+		'all_items'           => __( 'All Sliders' ),
+		'view_item'           => __( 'View Slider' ),
+		'add_new_item'        => __( 'Add New Slider' ),
+		'add_new'             => __( 'Add New Slider' ),
+		'edit_item'           => __( 'Edit Slider' ),
+		'update_item'         => __( 'Update Slider' ),
+		'search_items'        => __( 'Search Slider' ),
+		'search_items' => __('Sliders')
+	);
+	$args = array(
+		'labels' => $labels,
+		'description' => 'Add New Slider contents',
+		'menu_position' => 27,
+		'public' => true,
+		'has_archive' => true,
+		'map_meta_cap' => true,
+		'capability_type' => 'post',
+		'hierarchical' => true,
+		'rewrite' => array('slug' => false),
+		'menu_icon'=>'dashicons-format-image',
+		'supports' => array(
+			'title',
+			'thumbnail','excerpt'
+		),
+	);
+	register_post_type( 'slider', $args);
+}
+add_action( 'init', 'create_slider_post_type' );
+add_action( 'init', function() {
+    remove_post_type_support( 'slider', 'editor' );
+    remove_post_type_support( 'slider', 'slug' );
+} );
+function cih_theme_support() {
+
+   add_theme_support( 'post-thumbnails' );
+   add_image_size( 'slider_image','1024','720',true);
+
+}
+add_action('after_setup_theme','cih_theme_support');
 ?>
