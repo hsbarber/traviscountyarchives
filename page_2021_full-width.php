@@ -28,39 +28,32 @@
       );
       $slider = new WP_Query($arg);
 ?>
-<div class="row">
-    <div class="col-md-12 hd2021header">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="hd2021title col-md-6" style="background:
-        linear-gradient(
-	        rgba(0, 64, 0, 0.6),
-	        rgba(0, 64, 0, 0.85)),
-        url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
-            <div>
-                <h2><?php the_title(); ?></h2>
-                <h4><?php the_field('subtitle'); ?></h4>
-            </div>
-        </div>
-        <div class="hd2021slideshow col-md-6">
-            <div class="slide">
-            <?php while($slider->have_posts()) : $slider->the_post(); ?>
 
-                <?php if ( get_the_post_thumbnail() ) : /* Show the featured image if there is one */ ?>
-                <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-                echo '<div style="background: url('. $url.') 50% 50% no-repeat; background-size: cover; background-attachment: fixed;">';
-                ?>
-                    <?php the_excerpt(); ?>
-                    <?php endif; ?>
-                </div>
-                    <?php
-                        endwhile;
-                    ?>
-            <?php wp_reset_postdata();  ?>
-            </div>
+<div class=" hd2021header">
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="hd2021title " style="background:
+    linear-gradient(
+        rgba(0, 64, 0, 0.6),
+        rgba(0, 64, 0, 0.85)),
+    url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
+        <div>
+            <h2><?php the_title(); ?></h2>
+            <h4><?php the_field('subtitle'); ?></h4>
         </div>
     </div>
+    <div class="img-container" data-slideshow>
+    <?php if ($slider->have_posts()) {
+            while($slider->have_posts()){
+            $slider->the_post();
+            // Post's featured image
+            the_post_thumbnail('large');
+            the_excerpt();
+            }
+    }
+    wp_reset_postdata();
+    ?>
+    </div>
 </div>
-
     <div class="container hd-page-container">
         <div class="row">
 

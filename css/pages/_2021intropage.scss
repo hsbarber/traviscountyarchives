@@ -1,24 +1,37 @@
 .hd2021header {
-  height: 600px;
-  width: 100vw;
-  display: flex;
+  // height: 600px;
+  // width: 100vw;
+  display: block;
+  @media (min-width: $xl) {
+    display: flex;
+  }
+  margin: 0;
 }
 .hd2021title {
+  flex: 0 0 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-style: solid;
   border-color: #004000;
-  border-width: 20px;
+  border-width: 5px;
   background-color: #004000;
-  height: 100%;
+  height: 300px;
+  margin: 0;
+  @media (min-width: $xl) {
+    flex: 0 0 50%;
+    height: 600px;
+  }
 
   > div {
     background-color: white;
-    padding: 4rem;
+    padding: 2rem;
     border-style: solid;
     border-color: #ffc200;
     border-width: 5px;
+    @media (min-width: $xl) {
+      padding: 4rem;
+    }
     h2 {
       padding-bottom: 1rem;
       text-align: center;
@@ -29,13 +42,4 @@
       font-style: italic;
     }
   }
-}
-.hd2021slideshow {
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  border-style: solid;
-  border-color: #004000;
-  border-width: 20px;
-  border-left: none;
 }
