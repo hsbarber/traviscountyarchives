@@ -233,6 +233,21 @@ div.col-lg-3.sidebar{margin-top:4em;height:100%;padding:0}
 .hd2021title>div{background-color:white;padding:2rem;border-style:solid;border-color:#ffc200;border-width:5px}
 .hd2021title>div h2{padding-bottom:1rem;text-align:center;font-weight:bold}
 .hd2021title>div h4{text-align:center;font-style:italic}
+.navigation-container{background-color:#004000}
+.navigation-container h4.navigation-title{color:white;text-align:center;padding:4rem 0 2rem 0}
+.navigation{padding:2rem 4rem 4rem;display:-ms-grid;display:grid;-ms-grid-columns:(minmax(250px,1fr))[auto-fill];grid-template-columns:repeat(auto-fill,minmax(250px,1fr));grid-gap:40px}
+.navigation .nav-box{background-color:white;text-decoration:none;-webkit-transition:ease-in-out .3s;transition:ease-in-out .3s}
+.navigation .nav-box:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+.navigation .nav-box img{width:100%}
+.navigation .nav-box h4{padding:2rem 2rem 1rem 2rem}
+.navigation .nav-box p{font-size:12px;padding:0 2rem 2rem 2rem}
+.hd-2021-container{padding:6rem 0}
+.hd-2021-container h4{padding:2rem 0;text-align:center}
+.timeline-item{padding:3em 2em 2em;position:relative;color:rgba(0,0,0,0.7);border-left:2px solid #004000}
+.timeline-item p{font-size:1rem}
+.timeline-item::before{content:attr(date-is);position:absolute;left:2em;font-weight:bold;top:1em;display:block;font-family:"Roboto",sans-serif;font-weight:700;font-size:.785rem}
+.timeline-item::after{width:10px;height:10px;display:block;top:1em;position:absolute;left:-7px;border-radius:10px;content:"";border:2px solid #004000;background:white}
+.timeline-item:last-child{-webkit-border-image:-webkit-linear-gradient(top,#004000 60%,rgba(0,64,0,0)) 1 100%;-o-border-image:linear-gradient(to bottom,#004000 60%,rgba(0,64,0,0)) 1 100%;border-image:linear-gradient(to bottom,#004000 60%,rgba(0,64,0,0)) 1 100%}
 .hday{padding-top:2rem}
 .hday .nav-pills .nav-link{border-left:1px solid #b9b9b9;border-right:1px solid #b9b9b9;border-bottom:1px solid #b9b9b9;border-radius:0}
 .hday .nav-pills .nav-link:first-child{border-top:1px solid #b9b9b9;margin-bottom:1rem}
