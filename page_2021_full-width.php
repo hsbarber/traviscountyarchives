@@ -1,4 +1,4 @@
-d<?php
+<?php
 /*
   Template Name: History Day 2021 Full Width Template
 
