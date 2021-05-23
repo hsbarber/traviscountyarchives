@@ -1,4 +1,5 @@
 $darkgreen: #004000;
+$gold: #ffc200;
 
 .hd2021header {
   // height: 600px;
@@ -29,7 +30,7 @@ $darkgreen: #004000;
     background-color: white;
     padding: 2rem;
     border-style: solid;
-    border-color: #ffc200;
+    border-color: $gold;
     border-width: 5px;
     @media (min-width: $xl) {
       padding: 4rem;
@@ -45,19 +46,29 @@ $darkgreen: #004000;
     }
   }
 }
+
 .navigation-container {
-  background-color: $darkgreen;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   h4.navigation-title {
     color: white;
     text-align: center;
-    padding: 4rem 0 2rem 0;
+    margin: 4rem 0 2rem 0;
+    padding: 1rem;
   }
 }
+.navigation-flex {
+  display: flex;
+  justify-content: center;
+  max-width: $xl;
+}
 .navigation {
-  padding: 2rem 4rem 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 30px;
 
   .nav-box {
     // border-style: solid;
@@ -65,10 +76,31 @@ $darkgreen: #004000;
     // border-width: 0;
     background-color: white;
     text-decoration: none;
-    //padding: 2rem;
-    transition: ease-in-out 0.3s;
+    position: relative; /* For positioning the pseudo-element */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s;
+    &::before {
+      /* Position the pseudo-element. */
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      /* Create the box shadow at expanded size. */
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+
+      /* Hidden by default. */
+      opacity: 0;
+      transition: opacity 500ms;
+    }
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+    }
+    &:hover::before {
+      /* Show the pseudo-element on hover. */
+      opacity: 1;
     }
     img {
       width: 100%;
@@ -89,19 +121,30 @@ $darkgreen: #004000;
     text-align: center;
   }
 }
+.parkrangers-container {
+  background-color: $background-secondary;
+}
 // Parks Department History
 
 // Timeline
-#hd-2021-timeline {
+.timeline-container {
+  background-color: $darkgreen;
+  h4 {
+    color: white;
+  }
+}
+.timeline-flex {
+  display: block;
 }
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
-  color: rgba(black, 0.7);
-  border-left: 2px solid $darkgreen;
+  color: white;
+  border-left: 2px solid white;
 
   p {
     font-size: 1rem;
+    color: white;
   }
 
   &::before {
@@ -122,19 +165,37 @@ $darkgreen: #004000;
     display: block;
     top: 1em;
     position: absolute;
-    left: -7px;
+    left: -6px;
     border-radius: 10px;
     content: "";
-    border: 2px solid $darkgreen;
+    border: 2px solid white;
     background: white;
   }
 
   &:last-child {
-    border-image: linear-gradient(
-        to bottom,
-        $darkgreen 60%,
-        rgba($darkgreen, 0)
-      )
-      1 100%;
+    border-image: linear-gradient(to bottom, white 60%, rgba(white, 0)) 1 100%;
   }
+}
+.parks-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 30px;
+
+  li {
+    list-style-type: none;
+    border: 1px solid $darkgreen;
+    background-color: $darkgreen;
+    border-radius: 5px;
+    text-align: center;
+    a {
+      display: block;
+      padding: 0.5rem;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+.storymap-container {
+  background-color: $background-secondary;
 }

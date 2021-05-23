@@ -26,7 +26,9 @@ function theme_js() {
 	wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
 	wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
+	wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js');
 	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendors/modernizr.js');
 	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js','', '', false);
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
@@ -89,6 +91,7 @@ require_once get_template_directory() . '/bootstrap-navwalker.php';
 
 register_nav_menus( array(
     'nav-menu' => esc_html__( 'Primary', 'archives-menu' ),
+		'hd2021-menu' => __( 'hd2021-menu' )
 ) );
 
 
