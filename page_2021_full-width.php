@@ -28,38 +28,38 @@
       );
       $slider = new WP_Query($arg);
 ?>
-
-<div class=" hd2021header">
-     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="hd2021title " style="background:
-    linear-gradient(
-        rgba(0, 64, 0, 0.6),
-        rgba(0, 64, 0, 0.85)),
-    url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
-        <div>
-            <h2><?php the_title(); ?></h2>
-            <h4><?php the_field('subtitle'); ?></h4>
+<main id="historyday2021">
+    <div class=" hd2021header">
+        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        <div class="hd2021title " style="background:
+        linear-gradient(
+            rgba(0, 64, 0, 0.6),
+            rgba(0, 64, 0, 0.85)),
+        url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
+            <div>
+                <h2><?php the_title(); ?></h2>
+                <h4><?php the_field('subtitle'); ?></h4>
+            </div>
+        </div>
+        <?php endwhile; else: ?>
+        <div class="page-header">
+            <h1>Oh no!</h1>
+        </div>
+        <p>No content is appearing for this page!</p>
+        <?php endif; ?>
+        <div class="img-container" data-slideshow>
+        <?php if ($slider->have_posts()) {
+                while($slider->have_posts()){
+                $slider->the_post();
+                // Post's featured image
+                the_post_thumbnail('large');
+                the_excerpt();
+                }
+        }
+        wp_reset_postdata();
+        ?>
         </div>
     </div>
-    <?php endwhile; else: ?>
-    <div class="page-header">
-        <h1>Oh no!</h1>
-    </div>
-    <p>No content is appearing for this page!</p>
-    <?php endif; ?>
-    <div class="img-container" data-slideshow>
-    <?php if ($slider->have_posts()) {
-            while($slider->have_posts()){
-            $slider->the_post();
-            // Post's featured image
-            the_post_thumbnail('large');
-            the_excerpt();
-            }
-    }
-    wp_reset_postdata();
-    ?>
-    </div>
-</div>
     <div class="container hd-page-container">
         <div class="row">
             <div class="col-md-12 page-container-full-width">
@@ -153,15 +153,22 @@
                 </div>
             </div>
     </div>
-    <div class="container hd-2021-container cd-section" id="section1">
+    <section class="interstitial-video">
+        <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
+        <header class="viewport-header">
+            <h1>
+                Parks Department History
+            </h1>
+        </header>
+    </section>
+    <section class="container hd-2021-container cd-section" id="section1">
         <div class="row">
             <div class="col-md-12 parksdepartmenthistory">
-                <h4><?php the_field('parkhistoryoverview-title'); ?></h4>
                 <?php the_field('parkhistoryoverview-text'); ?>
             </div>
         </div>
         <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </div>
+    </section>
     <section class="parkrangers-container cd-section" id="section2">
         <div class="container hd-2021-container" >
             <div class="row">
@@ -381,7 +388,8 @@
         </div>
     </section>
 
-</div>
+    </div>
+</main>
 <?php get_footer(); ?>
 
 

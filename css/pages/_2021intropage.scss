@@ -1,6 +1,14 @@
 $darkgreen: #004000;
 $gold: #ffc200;
 
+#historyday2021 {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Noto Serif JP", serif;
+  }
+}
 .hd2021header {
   // height: 600px;
   // width: 100vw;
@@ -119,6 +127,32 @@ $gold: #ffc200;
   h4 {
     padding: 2rem 0;
     text-align: center;
+  }
+}
+.interstitial-video {
+  position: relative;
+  video {
+    //height: auto;
+    //vertical-align: middle;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+}
+.viewport-header {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 6vw;
+    color: white;
   }
 }
 .parkrangers-container {
