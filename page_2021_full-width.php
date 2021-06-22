@@ -28,25 +28,21 @@
       );
       $slider = new WP_Query($arg);
 ?>
-<main id="historyday2021">
-    <div class=" hd2021header">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="hd2021title " style="background:
-        linear-gradient(
-            rgba(0, 64, 0, 0.6),
-            rgba(0, 64, 0, 0.85)),
-        url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
+<div id="historyday2021">
+    <div class=" hd2021header" >
+        <div class="hd2021title" style="background:
+            linear-gradient(
+	        rgba(	0, 64, 0, 0.5),
+	        rgba(	0, 64, 0, 0.5)),
+            url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover;">
             <div>
-                <h2><?php the_title(); ?></h2>
-                <h4><?php the_field('subtitle'); ?></h4>
+                <h3><?php the_field('subtitle'); ?></h3>
+                <h1><?php the_field('title'); ?></h1>
+                <a href="#intro"><h4>Start here</h4>
+                 </a>
+
             </div>
         </div>
-        <?php endwhile; else: ?>
-        <div class="page-header">
-            <h1>Oh no!</h1>
-        </div>
-        <p>No content is appearing for this page!</p>
-        <?php endif; ?>
         <div class="img-container" data-slideshow>
         <?php if ($slider->have_posts()) {
                 while($slider->have_posts()){
@@ -60,130 +56,75 @@
         ?>
         </div>
     </div>
-    <div class="container hd-page-container">
+<!-- Intro Section -->
+    <div class="container" id="intro">
         <div class="row">
-            <div class="col-md-12 page-container-full-width">
-                <div class="the_content">
-                    <h4><?php the_field('intro_title'); ?></h4>
-                    <p><?php the_field('intro_text'); ?></p>
+            <div class="the_content col-12 col-md-6">
+                <h1><?php the_field('intro_title'); ?></h1>
+                <p><?php the_field('intro_text'); ?></p>
+            </div>
+            <div class="nav-sections col-12 col-md-6">
+                <div class="nav-flex">
+                    <h3>Sections</h3>
+                    <a href="#section1"><h5>I. <?php the_field('nav-box-1-title'); ?></h5></a>
+                    <a href="#section2"><h5>II. <?php the_field('nav-box-2-title'); ?></h5></a>
+                    <a href="#section3"><h5>III. <?php the_field('nav-box-3-title'); ?></h5><a>
+                    <a href="#section4"><h5>IV. <?php the_field('nav-box-4-title'); ?></h5></a>
+                    <a href="#section5"><h5>V. <?php the_field('nav-box-5-title'); ?></h5></a>
+                    <a href="#section6"><h5>VI. <?php the_field('nav-box-6-title'); ?></h5></a>
                 </div>
             </div>
-            <!--end page__container#### -->
+        </div>
+    </div>
 
-        </div>
-    </div>
-    <nav id="cd-vertical-nav">
-		<ul>
-			<li>
-				<a href="#section1" data-number="1">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-1-title'); ?></span>
-				</a>
-			</li>
-			<li>
-				<a href="#section2" data-number="2">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-2-title'); ?></span>
-				</a>
-			</li>
-			<li>
-				<a href="#section3" data-number="3">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-3-title'); ?></span>
-				</a>
-			</li>
-			<li>
-				<a href="#section4" data-number="4">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-4-title'); ?></span>
-				</a>
-			</li>
-			<li>
-				<a href="#section5" data-number="5">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-5-title'); ?></span>
-				</a>
-			</li>
-			<li>
-				<a href="#section6" data-number="6">
-					<span class="cd-dot"></span>
-					<span class="cd-label"><?php the_field('nav-box-6-title'); ?></span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-    <div class="navigation-container"  style="background:
-    linear-gradient(
-        rgba(0, 64, 0, 1),
-        rgba(0, 64, 0, 0.2)),
-    url('<?php the_field('navigation-bg-image') ?>') 50% 50% no-repeat; background-size: cover; background-position: center;">
-            <h4 class="navigation-title"><?php the_field('navigation-title'); ?></h4>
-            <div class="navigation-flex">
-                <div class="navigation">
-                    <a class="nav-box" href="#section1">
-                        <img src="<?php the_field('nav-box-1-image'); ?>" />
-                        <h4><?php the_field('nav-box-1-title'); ?></h4>
-                        <p><?php the_field('nav-box-1-text'); ?></p>
-                    </a>
-                    <a class="nav-box" href="#section2">
-                        <img src="<?php the_field('nav-box-2-image'); ?>" />
-                        <h4><?php the_field('nav-box-2-title'); ?></h4>
-                        <p><?php the_field('nav-box-2-text'); ?></p>
-                    </a>
-                    <a class="nav-box" href="#hd-2021-timeline">
-                        <img src="<?php the_field('nav-box-3-image'); ?>" />
-                        <h4><?php the_field('nav-box-3-title'); ?></h4>
-                        <p><?php the_field('nav-box-3-text'); ?></p>
-                    </a>
-                    <a class="nav-box" href="#historystorymap">
-                        <img src="<?php the_field('nav-box-4-image'); ?>" />
-                        <h4><?php the_field('nav-box-4-title'); ?></h4>
-                        <p><?php the_field('nav-box-4-text'); ?></p>
-                    </a>
-                    <a class="nav-box" href="#historystorymap">
-                        <img src="<?php the_field('nav-box-5-image'); ?>" />
-                        <h4><?php the_field('nav-box-5-title'); ?></h4>
-                        <p><?php the_field('nav-box-5-text'); ?></p>
-                    </a>
-                    <a class="nav-box" href="#historystorymap">
-                        <img src="<?php the_field('nav-box-6-image'); ?>" />
-                        <h4><?php the_field('nav-box-6-title'); ?></h4>
-                        <p><?php the_field('nav-box-6-text'); ?></p>
-                    </a>
+<!-- Main Section -->
+    <div class="row no-gutters">
+
+        <main id="mainSections" class="col-12 col-md-9 order-12 order-md-1">
+            <section id="section1" class="cd-section">
+                <header class="interstitial-video" >
+                    <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
+                    <header class="viewport-header">
+                        <h1>
+                            <?php the_field('parkhistoryoverview-title'); ?>
+                        </h1>
+                    </header>
+                </header>
+                <div class="parksdepartmenthistory">
+                    <div class="imagewrap-left">
+                        <img src="<?php the_field('paragraphimage1'); ?>" />
+                        <p>Tom B. Hughes</p>
+                    </div>
+                    <?php the_field('parkhistoryoverview-text'); ?>
                 </div>
-            </div>
-    </div>
-    <section class="interstitial-video">
-        <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
-        <header class="viewport-header">
-            <h1>
-                Parks Department History
-            </h1>
-        </header>
-    </section>
-    <section class="container hd-2021-container cd-section" id="section1">
-        <div class="row">
-            <div class="col-md-12 parksdepartmenthistory">
-                <?php the_field('parkhistoryoverview-text'); ?>
-            </div>
-        </div>
-        <a href="#section2" class="cd-scroll-down cd-img-replace">scroll down</a>
-    </section>
-    <section class="parkrangers-container cd-section" id="section2">
-        <div class="container hd-2021-container" >
-            <div class="row">
-                <div class="col-md-12 parksrangers">
-                    <h4><?php the_field('parkrangers-title'); ?></h4>
-                    <?php the_field('parkrangers-text'); ?>
+            </section>
+            <section id="section2" class="cd-section">
+                <header  class="HD2021-header">
+
+                    <img src="<?php the_field('parkrangers-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('parkrangers-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="parkrangers-container">
+                    <div class="parksrangers">
+                        <?php the_field('parkrangers-text'); ?>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class=" timeline-container cd-section" id="section3">
-        <div class="container hd-2021-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4><?php the_field('timeline-title'); ?></h4>
+            </section>
+            <section id="section3" class="cd-section">
+                <header  class="HD2021-header">
+                    <img src="<?php the_field('timeline-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('timeline-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class=" timeline-container">
+
                     <div class="timeline-item" date-is='<?php the_field('date-1'); ?>'>
                         <p>
                         <?php the_field('text-1'); ?>
@@ -340,56 +281,135 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="storymap-container cd-section" id="section4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 page-container-full-width">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <div class="the_content" id="historystorymap">
-                        <?php the_content(); ?>
-                    </div>
-                    <?php endwhile; else: ?>
-                    <div class="page-header">
-                        <h1>Oh no!</h1>
-                    </div>
-                    <p>No content is appearing for this page!</p>
-                    <?php endif; ?>
+            </section>
+            <section id="section4" class="cd-section">
+                <div class="storymap-container">
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <div class="the_content" id="historystorymap">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php endwhile; else: ?>
+                        <div class="page-header">
+                            <h1>Oh no!</h1>
+                        </div>
+                        <p>No content is appearing for this page!</p>
+                        <?php endif; ?>
                 </div>
-                <!--end page__container#### -->
+            </section>
+            <section id="section5" class="cd-section">
+                <div class="historyeachpark">
+                    <h4><?php the_field('historyofeachpark-title'); ?></h4>
+                    <p><?php the_field('historyofeachpark-text'); ?></p>
+                    <div class="parks-list">
+                        <?php
+                        $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                                            // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
 
-            </div>
-        </div>
-    </section>
-    <section class="container hd-page-container cd-section" id="section5">
-        <div class="row">
-            <div class="col-md-12 page-container-full-width">
-                <h4><?php the_field('historyofeachpark-title'); ?></h4>
-                <p><?php the_field('historyofeachpark-text'); ?></p>
-                <div class="parks-list">
-                    <?php
-                    $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-                                                        // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
+                        $menuID = $menuLocations['hd2021-menu']; // Get the parks menu ID
 
-                    $menuID = $menuLocations['hd2021-menu']; // Get the parks menu ID
+                        $parksNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
 
-                    $parksNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
+                        foreach ( $parksNav as $navItem ) {
 
-                    foreach ( $parksNav as $navItem ) {
+                        echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></li>';
 
-                    echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></li>';
-
-                    }
-                    ?>
+                        }
+                        ?>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </main>
+
+            <!-- Mobile Nav -->
+            <nav id="mobileNavID" class="mobileNav navbar">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">Sections Navigation</a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                        class="fas fa-bars fa-1x"></i></span></button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section1">
+                                <?php the_field('nav-box-1-title'); ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">
+                                <?php the_field('nav-box-2-title'); ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">
+                                <?php the_field('nav-box-3-title'); ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">
+                                <?php the_field('nav-box-4-title'); ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5">
+                                <?php the_field('nav-box-5-title'); ?>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section6">
+                                <?php the_field('nav-box-6-title'); ?>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+            <!-- Collapsible content -->
+            </nav>
+            <!--/.Navbar-->
+        <nav id="fixednav" class="verticalnav col-12 col-md-3 order-1 order-md-12">
+            <ul>
+                <li>
+                    <a href="#section1" data-number="1">
+                        <?php the_field('nav-box-1-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section2" data-number="2">
+                        <?php the_field('nav-box-2-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section3" data-number="3">
+                        <?php the_field('nav-box-3-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section4" data-number="4">
+                        <?php the_field('nav-box-4-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section5" data-number="5">
+                        <?php the_field('nav-box-5-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section6" data-number="6">
+                        <?php the_field('nav-box-6-title'); ?>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </div>
-</main>
+</div>
 <?php get_footer(); ?>
 
 
