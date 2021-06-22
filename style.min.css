@@ -136,7 +136,6 @@ p.hd-timeline-2008{margin:0;padding:0}
 .hd-header{margin:0 auto 4rem auto;text-align:center;padding:2rem 0;border-bottom:2px solid #ececec;border-top:2px solid #ececec;max-width:300px}
 .hd-content h4{margin-bottom:2rem}
 .hd-video{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
-html{scroll-behavior:smooth}
 nav.verticalnav{display:none}
 nav.verticalnav ul li a{display:block;padding:.5rem 1rem;color:white;text-decoration:none}
 nav.verticalnav ul li a.is-selected{background-color:#004000}
