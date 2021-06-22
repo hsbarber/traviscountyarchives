@@ -783,7 +783,7 @@ $('#menu-item-791').html('Search');
 });
 jQuery(document).ready(function($){
 	var contentSections = $('.cd-section'),
-		navigationItems = $('#cd-vertical-nav a');
+		navigationItems = $('#fixednav a');
 
 	updateNavigation();
 	$(window).on('scroll', function(){
@@ -804,7 +804,7 @@ jQuery(document).ready(function($){
     //open-close navigation on touch devices
     $('.touch .cd-nav-trigger').on('click', function(){
     	$('.touch #cd-vertical-nav').toggleClass('open');
-  
+
     });
     //close navigation on touch devices when selectin an elemnt from the list
     $('.touch #cd-vertical-nav a').on('click', function(){
@@ -814,7 +814,7 @@ jQuery(document).ready(function($){
 	function updateNavigation() {
 		contentSections.each(function(){
 			$this = $(this);
-			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			var activeSection = $('#fixednav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
 			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
 				navigationItems.eq(activeSection).addClass('is-selected');
 			}else {

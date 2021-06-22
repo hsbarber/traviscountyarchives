@@ -5,9 +5,14 @@ $gold: #ffc200;
   h1,
   h2,
   h3,
-  h4 {
-    font-family: "Noto Serif JP", serif;
+  h4,
+  h5 {
+    font-family: "Sawarabi Gothic", sans-serif;
+    font-weight: bold;
   }
+
+  /* this breaks position sticky in Firefox */
+  /* overflow-x: hidden; */
 }
 .hd2021header {
   // height: 600px;
@@ -23,10 +28,7 @@ $gold: #ffc200;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: solid;
-  border-color: #004000;
-  border-width: 5px;
-  background-color: $darkgreen;
+  background-color: #ede8e0;
   height: 300px;
   margin: 0;
   @media (min-width: $xl) {
@@ -35,22 +37,66 @@ $gold: #ffc200;
   }
 
   > div {
-    background-color: white;
-    padding: 2rem;
-    border-style: solid;
-    border-color: $gold;
-    border-width: 5px;
     @media (min-width: $xl) {
       padding: 4rem;
     }
-    h2 {
-      padding-bottom: 1rem;
-      text-align: center;
-      font-weight: bold;
+    h1 {
+      line-height: 1.5;
+      color: white;
+    }
+    h3 {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding: 0.5rem 0 0.5rem 0;
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-family: "Open Sans", sans-serif !important;
+      color: white;
     }
     h4 {
+      margin-top: 2rem;
+      color: white;
+      border-radius: 100px;
+      border: 2px solid white;
+      display: inline-block;
+      padding: 0.5em 2em;
       text-align: center;
-      font-style: italic;
+      text-decoration: none;
+      text-transform: none;
+      transition: transform 0.3s;
+      white-space: nowrap;
+    }
+  }
+}
+//INTRO SECTION
+#intro {
+  padding: 4rem 0;
+}
+.the_content {
+  padding-bottom: 2rem;
+  h1 {
+    padding-bottom: 30px;
+    font-size: 2rem;
+    margin: 0;
+  }
+  @media (min-width: $medium) {
+    padding-bottom: 0;
+  }
+}
+.nav-sections {
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .nav-flex {
+    border: 2px solid $text-primary;
+    padding: 2rem;
+    h5 {
+      padding-bottom: 2rem;
+    }
+    h3 {
+      padding-bottom: 30px;
+      margin: 0;
     }
   }
 }
@@ -71,57 +117,7 @@ $gold: #ffc200;
   justify-content: center;
   max-width: $xl;
 }
-.navigation {
-  padding: 2rem 4rem 4rem 4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 30px;
 
-  .nav-box {
-    // border-style: solid;
-    // border-color: #ffc200;
-    // border-width: 0;
-    background-color: white;
-    text-decoration: none;
-    position: relative; /* For positioning the pseudo-element */
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s;
-    &::before {
-      /* Position the pseudo-element. */
-      content: " ";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      /* Create the box shadow at expanded size. */
-      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
-
-      /* Hidden by default. */
-      opacity: 0;
-      transition: opacity 500ms;
-    }
-    &:hover {
-      transform: scale(1.05);
-    }
-    &:hover::before {
-      /* Show the pseudo-element on hover. */
-      opacity: 1;
-    }
-    img {
-      width: 100%;
-    }
-    h4 {
-      padding: 2rem 2rem 1rem 2rem;
-    }
-    p {
-      font-size: 12px;
-      padding: 0 2rem 2rem 2rem;
-    }
-  }
-}
 .hd-2021-container {
   padding: 6rem 0;
   h4 {
@@ -129,6 +125,7 @@ $gold: #ffc200;
     text-align: center;
   }
 }
+// SECTION1
 .interstitial-video {
   position: relative;
   video {
@@ -150,19 +147,62 @@ $gold: #ffc200;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (min-width: $medium) {
+    padding-left: 4rem;
+  }
   h1 {
     font-size: 6vw;
     color: white;
   }
 }
-.parkrangers-container {
-  background-color: $background-secondary;
+
+.parksdepartmenthistory {
+  padding: 4rem 2rem;
+  .imagewrap-left {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .imagewrap-right {
+    float: right;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    max-width: 300px;
+  }
 }
-// Parks Department History
+//SECTION2
+.HD2021-header {
+  position: relative;
+  img {
+    filter: brightness(50%);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .HD2021-header-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 6vw;
+      color: white;
+    }
+  }
+}
+.parkrangers-container {
+  padding: 4rem 2rem;
+}
+// SECTION3
 
 // Timeline
 .timeline-container {
   background-color: $darkgreen;
+  padding: 4rem 2rem;
   h4 {
     color: white;
   }
@@ -209,6 +249,10 @@ $gold: #ffc200;
   &:last-child {
     border-image: linear-gradient(to bottom, white 60%, rgba(white, 0)) 1 100%;
   }
+}
+//SECTION5
+.historyeachpark {
+  padding: 4rem 2rem;
 }
 .parks-list {
   display: grid;
