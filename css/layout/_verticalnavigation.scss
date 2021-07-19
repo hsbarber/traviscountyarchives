@@ -3,6 +3,99 @@ $darkgreen: #004000;
 // html {
 //   scroll-behavior: smooth;
 // }
+
+//SLIDE OUT NAVIGATION
+#slideoutnav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  .active {
+    width: 400px;
+  }
+}
+.disappear {
+  background-color: blue;
+}
+.appear {
+  background-color: red;
+}
+button.open-nav-btn {
+  z-index: 1000;
+  font-size: 1.5rem;
+  background-color: white;
+  margin: 20px;
+  width: 65px;
+  height: 65px;
+  border-radius: 200%;
+  will-change: transform, opacity;
+  //transform: translateY(-100%);
+  transform-origin: top left;
+  //transition: all 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  border: transparent;
+  cursor: pointer;
+}
+
+.slide-content {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: $darkgreen;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  padding-top: 60px;
+  visibility: hidden;
+}
+
+.slide-content a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f5f5f5;
+  display: block;
+}
+
+.slide-content a:focus,
+.slide-content button:focus {
+  outline: 2px solid orange;
+}
+
+.close-btn {
+  font-size: 25px;
+  color: #f5f5f5;
+  background-color: transparent;
+  border: none;
+}
+
+.slide-content a:hover,
+.slide-content a:focus {
+  text-decoration: underline;
+}
+
+.slide-content .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+#link-list li {
+  list-style-type: none;
+}
+
+#slideoutnav ul li a.is-selected {
+  background-color: black;
+}
+
 nav.verticalnav {
   display: none;
   @media (min-width: 768px) {

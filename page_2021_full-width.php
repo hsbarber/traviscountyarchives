@@ -68,313 +68,19 @@
                     <h3>Sections</h3>
                     <a href="#section1"><h5>I. <?php the_field('nav-box-1-title'); ?></h5></a>
                     <a href="#section2"><h5>II. <?php the_field('nav-box-2-title'); ?></h5></a>
-                    <a href="#section3"><h5>III. <?php the_field('nav-box-3-title'); ?></h5><a>
-                    <a href="#section4"><h5>IV. <?php the_field('nav-box-4-title'); ?></h5></a>
-                    <a href="#section5"><h5>V. <?php the_field('nav-box-5-title'); ?></h5></a>
-                    <a href="#section6"><h5>VI. <?php the_field('nav-box-6-title'); ?></h5></a>
+                    <a href="#section2"><h5>II. <?php the_field('nav-box-3-title'); ?></h5></a>
+                    <a href="#section3"><h5>III. <?php the_field('nav-box-4-title'); ?></h5><a>
+                    <a href="#section4"><h5>IV. <?php the_field('nav-box-5-title'); ?></h5></a>
+                    <a href="#section5"><h5>V. <?php the_field('nav-box-6-title'); ?></h5></a>
                 </div>
             </div>
         </div>
     </div>
-
-<!-- Main Section -->
-    <div class="row no-gutters">
-
-        <main id="mainSections" class="col-12 col-md-9 order-12 order-md-1">
-            <section id="section1" class="cd-section">
-                <header class="interstitial-video" >
-                    <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
-                    <header class="viewport-header">
-                        <h1>
-                            <?php the_field('parkhistoryoverview-title'); ?>
-                        </h1>
-                    </header>
-                </header>
-                <div class="parksdepartmenthistory">
-                    <div class="imagewrap-left">
-                        <img src="<?php the_field('paragraphimage1'); ?>" />
-                        <p>Tom B. Hughes</p>
-                    </div>
-                    <?php the_field('parkhistoryoverview-text'); ?>
-                </div>
-            </section>
-            <section id="section2" class="cd-section">
-                <header  class="HD2021-header">
-
-                    <img src="<?php the_field('parkrangers-header-img'); ?>" />
-                    <div class="HD2021-header-title">
-                        <h1>
-                        <?php the_field('parkrangers-title'); ?>
-                        </h1>
-                    </div>
-                </header>
-                <div class="parkrangers-container">
-                    <div class="parksrangers">
-                        <?php the_field('parkrangers-text'); ?>
-                    </div>
-                </div>
-            </section>
-            <section id="section3" class="cd-section">
-                <header  class="HD2021-header">
-                    <img src="<?php the_field('timeline-header-img'); ?>" />
-                    <div class="HD2021-header-title">
-                        <h1>
-                        <?php the_field('timeline-title'); ?>
-                        </h1>
-                    </div>
-                </header>
-                <div class=" timeline-container">
-
-                    <div class="timeline-item" date-is='<?php the_field('date-1'); ?>'>
-                        <p>
-                        <?php the_field('text-1'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-2'); ?>'>
-                        <p>
-                        <?php the_field('text-2'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-3'); ?>'>
-                        <p>
-                        <?php the_field('text-3'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-4'); ?>'>
-                        <p>
-                        <?php the_field('text-4'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-5'); ?>'>
-                        <p>
-                        <?php the_field('text-5'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-6'); ?>'>
-                        <p>
-                        <?php the_field('text-6'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-7'); ?>'>
-                        <p>
-                        <?php the_field('text-7'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-8'); ?>'>
-                        <p>
-                        <?php the_field('text-8'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-9'); ?>'>
-                        <p>
-                        <?php the_field('text-9'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-10'); ?>'>
-                        <p>
-                        <?php the_field('text-10'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-11'); ?>'>
-                        <p>
-                        <?php the_field('text-11'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-12'); ?>'>
-                        <p>
-                        <?php the_field('text-12'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-13'); ?>'>
-                        <p>
-                        <?php the_field('text-13'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-14'); ?>'>
-                        <p>
-                        <?php the_field('text-14'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-15'); ?>'>
-                        <p>
-                        <?php the_field('text-15'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-16'); ?>'>
-                        <p>
-                        <?php the_field('text-16'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-17'); ?>'>
-                        <p>
-                        <?php the_field('text-17'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-18'); ?>'>
-                        <p>
-                        <?php the_field('text-18'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-19'); ?>'>
-                        <p>
-                        <?php the_field('text-19'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-20'); ?>'>
-                        <p>
-                        <?php the_field('text-20'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-21'); ?>'>
-                        <p>
-                        <?php the_field('text-21'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-22'); ?>'>
-                        <p>
-                        <?php the_field('text-22'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-23'); ?>'>
-                        <p>
-                        <?php the_field('text-23'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-24'); ?>'>
-                        <p>
-                        <?php the_field('text-24'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-25'); ?>'>
-                        <p>
-                        <?php the_field('text-25'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-26'); ?>'>
-                        <p>
-                        <?php the_field('text-26'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-27'); ?>'>
-                        <p>
-                        <?php the_field('text-27'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-28'); ?>'>
-                        <p>
-                        <?php the_field('text-28'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-29'); ?>'>
-                        <p>
-                        <?php the_field('text-29'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-30'); ?>'>
-                        <p>
-                        <?php the_field('text-30'); ?>
-                        </p>
-                    </div>
-                    <div class="timeline-item" date-is='<?php the_field('date-31'); ?>'>
-                        <p>
-                        <?php the_field('text-31'); ?>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section id="section4" class="cd-section">
-                <div class="storymap-container">
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                        <div class="the_content" id="historystorymap">
-                            <?php the_content(); ?>
-                        </div>
-                        <?php endwhile; else: ?>
-                        <div class="page-header">
-                            <h1>Oh no!</h1>
-                        </div>
-                        <p>No content is appearing for this page!</p>
-                        <?php endif; ?>
-                </div>
-            </section>
-            <section id="section5" class="cd-section">
-                <div class="historyeachpark">
-                    <h4><?php the_field('historyofeachpark-title'); ?></h4>
-                    <p><?php the_field('historyofeachpark-text'); ?></p>
-                    <div class="parks-list">
-                        <?php
-                        $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
-                                                            // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
-
-                        $menuID = $menuLocations['hd2021-menu']; // Get the parks menu ID
-
-                        $parksNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
-
-                        foreach ( $parksNav as $navItem ) {
-
-                        echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></li>';
-
-                        }
-                        ?>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-            <!-- Mobile Nav -->
-            <nav id="mobileNavID" class="mobileNav navbar">
-
-                <!-- Navbar brand -->
-                <a class="navbar-brand" href="#">Sections Navigation</a>
-
-                <!-- Collapse button -->
-                <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-                    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-                        class="fas fa-bars fa-1x"></i></span></button>
-
-                <!-- Collapsible content -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-
-                    <!-- Links -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section1">
-                                <?php the_field('nav-box-1-title'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section2">
-                                <?php the_field('nav-box-2-title'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section3">
-                                <?php the_field('nav-box-3-title'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section4">
-                                <?php the_field('nav-box-4-title'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section5">
-                                <?php the_field('nav-box-5-title'); ?>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section6">
-                                <?php the_field('nav-box-6-title'); ?>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- Links -->
-
-                </div>
-            <!-- Collapsible content -->
-            </nav>
-            <!--/.Navbar-->
-        <nav id="fixednav" class="verticalnav col-12 col-md-3 order-1 order-md-12">
-            <ul>
+    <nav id="slideoutnav">
+        <button type="button" id="hamburger-menu" class="open-nav-btn" aria-label="open navigation" aria-controls="link-list" aria-expanded="false">&#9776;</button>
+        <div id="slide-nav" class="slide-content">
+            <button type="button" id="close" class="close-btn" aria-label="close navigation">&times;</button>
+            <ul id="link-list">
                 <li>
                     <a href="#section1" data-number="1">
                         <?php the_field('nav-box-1-title'); ?>
@@ -406,7 +112,443 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+<!-- Main Section -->
+    <div class="row no-gutters">
+
+        <main id="mainSections">
+            <section id="section1" class="cd-section">
+                <header class="interstitial-video" >
+                    <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
+                    <header class="viewport-header">
+                        <h1>
+                            Parks Videos
+                        </h1>
+                    </header>
+                </header>
+                <div class="row">
+                    <div class="container">
+                        <ul class="video-block-container">
+                            <li class="video-block"
+                                data-toggle="modal"
+                                data-target="#exampleModal1"
+                                data-whatever="item 1"
+                                style="background-image:
+                                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                                url('<?php the_field('video-1-thumbnail'); ?>')">
+                                <a href="#">
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-1-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            data-toggle="modal"
+                            data-target="#exampleModal2"
+                            data-whatever="item 2"
+                            style="background-image:
+                            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('<?php the_field('video-2-thumbnail'); ?>')">
+                                <a href="#">
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-2-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            style="background-image:
+                            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('<?php the_field('nav-box-3-image'); ?>')">
+                                <a  href="#">
+                                    <h2>video-3</h2>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            style="background-image: url('<?php the_field('nav-box-4-image'); ?>')">
+                                <a  href="#">
+                                    <h2>video-4</h2>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
+                                <a >
+                                    <h2>video-5</h2>
+                                </a>
+                            </li>
+                            <li class="video-block"
+
+                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
+                                <a  href="#">
+                                    <h2>video-6</h2>
+                                </a>
+                            </li>
+                            <li class="video-block"
+
+                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
+                                <a href="#">
+                                    <h2>video-7</h2>
+                                </a>
+                            </li>
+                            <li class="video-block"
+
+                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')" >
+                                <a href="#">
+                                    <h2>video-8</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- First Video Modal -->
+                <div class="modal fade" id="exampleModal1"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-1-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-1-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-1-description'); ?>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Video Modal -->
+                <div class="modal fade" id="exampleModal2"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-2-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="video-wrapper">
+                                    <?php the_field('video-2-iframe'); ?>
+                                </div>
+                                <?php the_field('video-2-description'); ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section2" class="cd-section">
+                <header class="HD2021-header">
+                    <img src="<?php the_field('parkhistoryoverview-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                            <?php the_field('parkhistoryoverview-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="HD2021-vertical-padding row">
+                    <div class="container">
+                        <div class="imagewrap-left">
+                            <img src="<?php the_field('paragraphimage1'); ?>" />
+                            <p>Tom B. Hughes</p>
+                        </div>
+                        <?php the_field('parkhistoryoverview-text'); ?>
+                    </div>
+                </div>
+            </section>
+            <section id="section3" class="cd-section">
+                <header  class="HD2021-header">
+
+                    <img src="<?php the_field('parkrangers-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('parkrangers-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="HD2021-vertical-padding row">
+                    <div class="container">
+                        <?php the_field('parkrangers-text'); ?>
+                    </div>
+                </div>
+            </section>
+            <section id="section4" class="cd-section">
+                <header  class="HD2021-header">
+                    <img src="<?php the_field('timeline-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('timeline-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="timeline-flex">
+                    <input type="checkbox" class="read-more-state" id="post-2" />
+                    <div class=" timeline-container read-more-wrap">
+                        <div class="timeline-item" date-is='<?php the_field('date-1'); ?>'>
+                            <p>
+                            <?php the_field('text-1'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-2'); ?>'>
+                            <p>
+                            <?php the_field('text-2'); ?>
+                            </p>
+                            <a href="<?php the_field('photo-1'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-1'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-1-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-3'); ?>'>
+                            <p>
+                            <?php the_field('text-3'); ?>
+                            </p>
+                            <a href="<?php the_field('photo-2'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-2'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-2-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-4'); ?>'>
+                            <p>
+                            <?php the_field('text-4'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-5'); ?>'>
+                            <p>
+                            <?php the_field('text-5'); ?>
+                            </p>
+                            <a href="<?php the_field('photo-3'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-3'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-3-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-6'); ?>'>
+                            <p>
+                            <?php the_field('text-6'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-7'); ?>'>
+                            <p>
+                            <?php the_field('text-7'); ?>
+                            </p>
+                            <a href="<?php the_field('photo-4'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-4'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-4-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-8'); ?>'>
+                            <p>
+                            <?php the_field('text-8'); ?>
+                            </p>
+                           <a href="<?php the_field('photo-5'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-5'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-5-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-9'); ?>'>
+                            <p>
+                            <?php the_field('text-9'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-10'); ?>'>
+                            <p>
+                            <?php the_field('text-10'); ?>
+                            </p>
+                            <a href="<?php the_field('photo-6'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-6'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-6-caption'); ?></p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-11'); ?>'>
+                            <p>
+                            <?php the_field('text-11'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-12'); ?>'>
+                            <p>
+                            <?php the_field('text-12'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-13'); ?>'>
+                            <p>
+                            <?php the_field('text-13'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-14'); ?>'>
+                            <p>
+                            <?php the_field('text-14'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-15'); ?>'>
+                            <p>
+                                <?php the_field('text-15'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-16'); ?>'>
+                            <p>
+                            <?php the_field('text-16'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-17'); ?>'>
+                            <p>
+                            <?php the_field('text-17'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-18'); ?>'>
+                            <p>
+                            <?php the_field('text-18'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-19'); ?>'>
+                            <p>
+                            <?php the_field('text-19'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-20'); ?>'>
+                            <p>
+                            <?php the_field('text-20'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-21'); ?>'>
+                            <p>
+                            <?php the_field('text-21'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item" date-is='<?php the_field('date-22'); ?>'>
+                            <p>
+                            <?php the_field('text-22'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-23'); ?>'>
+                            <p>
+                            <?php the_field('text-23'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-24'); ?>'>
+                            <p>
+                            <?php the_field('text-24'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-25'); ?>'>
+                            <p>
+                            <?php the_field('text-25'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-26'); ?>'>
+                            <p>
+                            <?php the_field('text-26'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-27'); ?>'>
+                            <p>
+                            <?php the_field('text-27'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-28'); ?>'>
+                            <p>
+                            <?php the_field('text-28'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-29'); ?>'>
+                            <p>
+                            <?php the_field('text-29'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-30'); ?>'>
+                            <p>
+                            <?php the_field('text-30'); ?>
+                            </p>
+                        </div>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-31'); ?>'>
+                            <p>
+                            <?php the_field('text-31'); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <label for="post-2" class="read-more-trigger"></label>
+                </div>
+            </section>
+            <section id="section5" class="cd-section">
+                <div class="storymap-container">
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <div class="the_content" id="historystorymap">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php endwhile; else: ?>
+                        <div class="page-header">
+                            <h1>Oh no!</h1>
+                        </div>
+                        <p>No content is appearing for this page!</p>
+                        <?php endif; ?>
+                </div>
+            </section>
+            <section id="section6" class="cd-section">
+                 <header  class="HD2021-header">
+                    <img src="<?php the_field('historyofeachpark-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('historyofeachpark-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="row HD2021-vertical-padding">
+                    <div class="container">
+                        <p><?php the_field('historyofeachpark-text'); ?></p>
+                        <div class="parks-list">
+                            <?php
+                            $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
+                                                                // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
+
+                            $menuID = $menuLocations['hd2021-menu']; // Get the parks menu ID
+
+                            $parksNav = wp_get_nav_menu_items($menuID); // Get the array of wp objects, the nav items for our queried location.
+
+                            foreach ( $parksNav as $navItem ) {
+                            $id = $navItem->object_id;
+                            echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">';
+                            echo get_the_post_thumbnail($id);
+                            echo '<h4>'.$navItem->title.'</h4></a></li>';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
 
     </div>
 </div>

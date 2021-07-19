@@ -1,13 +1,11 @@
-
-
 //palette
-$palette-primary:#252839;
-$palette-secondary: #CC3363 ;
-$palette-tertiary: #F2B632 ;
-$palette-quaternary: #F2F2F2;
+$palette-primary: #252839;
+$palette-secondary: #cc3363;
+$palette-tertiary: #f2b632;
+$palette-quaternary: #f2f2f2;
 
 //Text
-$text-primary:#676667;
+$text-primary: #676667;
 $paragraph: $text-primary;
 $paragraph-secondary: white;
 $heading-primary: $text-primary;
@@ -26,4 +24,7 @@ $links-secondary-hover: darken($links-secondary, 20%);
 //backgrounds
 $background-primary: $palette-primary;
 $background-secondary: $palette-quaternary;
-$background-tertiary: darken($palette-primary, 30%) ; //212433
+$background-tertiary: darken($palette-primary, 30%); //212433
+
+//2021 colors
+$darkgreen: #004000;

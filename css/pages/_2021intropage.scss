@@ -1,6 +1,10 @@
 $darkgreen: #004000;
 $gold: #ffc200;
 
+html {
+  scroll-behavior: smooth;
+}
+
 #historyday2021 {
   h1,
   h2,
@@ -68,6 +72,11 @@ $gold: #ffc200;
     }
   }
 }
+//VERTICAL PADDING FOR EACH SECTION
+.HD2021-vertical-padding {
+  padding: 8rem 0;
+}
+
 //INTRO SECTION
 #intro {
   padding: 4rem 0;
@@ -125,7 +134,124 @@ $gold: #ffc200;
     text-align: center;
   }
 }
-// SECTION1
+//SECTION 1 PARKS VIDEOS
+.video-block-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0;
+  @media (min-width: $medium) {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.video-block {
+  display: inline-block;
+  background-size: 180%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: gray;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  list-style-type: none;
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    color: white;
+    margin-bottom: 2rem;
+  }
+  @media (min-width: $medium) {
+    margin-bottom: 0;
+  }
+}
+// .video-block:hover {
+//   background-size: 125%;
+// }
+.video-block-content {
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: flex-end;
+  // height: 100%;
+  // width: 100%;
+  // padding-left: 2rem;
+  // padding-bottom: 2rem;
+  z-index: 0;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  &:before {
+    background-color: rgba(52, 73, 94, 0.75);
+  }
+}
+.video-block:nth-child(2) {
+  @media (min-width: $medium) {
+    margin-top: 140px;
+  }
+}
+.video-block:nth-child(n + 2):nth-child(odd) {
+  @media (min-width: $medium) {
+    margin-top: -140px;
+  }
+}
+svg#video-play-button {
+  transform: 30%;
+}
+
+// FULL SCREEN MODALS
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+  //padding-bottom: calc(var(--aspect-ratio, 0.5625) * 100%);
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.modal {
+  padding: 0 !important; // override inline padding-right added from js
+  transition: 0.4s ease-in-out;
+}
+.modal .modal-dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+}
+.modal .modal-content {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+.modal-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal .modal-body {
+  overflow-y: auto;
+  max-width: 1200px;
+}
+
+// SECTION2
 .interstitial-video {
   position: relative;
   video {
@@ -156,28 +282,36 @@ $gold: #ffc200;
   }
 }
 
-.parksdepartmenthistory {
-  padding: 4rem 2rem;
-  .imagewrap-left {
-    float: left;
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .imagewrap-right {
-    float: right;
-    margin-left: 2rem;
-    margin-top: 0.5rem;
-    max-width: 300px;
-  }
+.imagewrap-left {
+  float: left;
+  max-width: 40%;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  width: Auto;
+  height: Auto;
+  display: inline-block;
+}
+.imagewrap-right {
+  float: right;
+  max-width: 40%;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  width: Auto;
+  height: Auto;
+  display: inline-block;
+}
+.resize {
+  width: 40%;
 }
 //SECTION2
 .HD2021-header {
   position: relative;
   img {
     filter: brightness(50%);
-    width: 100%;
+    width: 100vw;
     height: 300px;
     object-fit: cover;
+    object-position: 40% 20%;
   }
   .HD2021-header-title {
     position: absolute;
@@ -189,27 +323,73 @@ $gold: #ffc200;
     align-items: center;
     justify-content: center;
     h1 {
-      font-size: 6vw;
+      font-size: 4vw;
       color: white;
     }
   }
 }
-.parkrangers-container {
-  padding: 4rem 2rem;
-}
+// .parkrangers-container {
+//   padding: 4rem 2rem;
+// }
 // SECTION3
 
 // Timeline
+#section4 {
+  background-color: #004000;
+}
+.timeline-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .timeline-container {
-  background-color: $darkgreen;
-  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 4rem 2rem;
   h4 {
     color: white;
   }
+
+  .btn-primary {
+    background-color: white;
+    border-color: $darkgreen;
+    color: $darkgreen;
+    padding: 1rem 4rem;
+  }
 }
-.timeline-flex {
-  display: block;
+// READMORE BUTTON
+.read-more-state {
+  display: none;
 }
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
+}
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+.read-more-state ~ .read-more-trigger:before {
+  content: "Show more";
+}
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: "Show less";
+}
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 2;
+  border: 1px solid $darkgreen;
+  border-radius: 0.25em;
+  background-color: white;
+  color: $darkgreen;
+  padding: 1rem 4rem;
+  margin-bottom: 4rem;
+}
+/////////////////////
 .timeline-item {
   padding: 3em 2em 2em;
   position: relative;
@@ -249,6 +429,12 @@ $gold: #ffc200;
   &:last-child {
     border-image: linear-gradient(to bottom, white 60%, rgba(white, 0)) 1 100%;
   }
+  .timeline-photo {
+    max-width: 60%;
+  }
+  .timeline-caption {
+    font-style: italic;
+  }
 }
 //SECTION5
 .historyeachpark {
@@ -256,23 +442,70 @@ $gold: #ffc200;
 }
 .parks-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: auto;
   grid-gap: 30px;
 
   li {
     list-style-type: none;
-    border: 1px solid $darkgreen;
-    background-color: $darkgreen;
-    border-radius: 5px;
+    // border: 1px solid $darkgreen;
+    // background-color: $darkgreen;
+    // border-radius: 5px;
     text-align: center;
+    position: relative;
+    display: block;
+    overflow: hidden;
+
     a {
       display: block;
-      padding: 0.5rem;
       color: white;
       text-decoration: none;
+      position: relative;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      //object-position: 20% 20%;
+      z-index: -1;
+      transition: transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.2s;
+    }
+    h4 {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      //align-items: flex-end;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+      //padding: 22px 45px 15px;
+      z-index: 1;
+      color: white;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.8) 92%
+      );
+      pointer-events: none;
+      z-index: 1;
+      transition: transform cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.2s;
     }
   }
+}
+.parks-list li:hover img {
+  transform: scale(1.1);
 }
 .storymap-container {
   background-color: $background-secondary;
