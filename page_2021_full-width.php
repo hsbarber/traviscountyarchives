@@ -72,6 +72,7 @@
                     <a href="#section4"><h5>III. <?php the_field('nav-box-4-title'); ?></h5><a>
                     <a href="#section5"><h5>IV. <?php the_field('nav-box-5-title'); ?></h5></a>
                     <a href="#section6"><h5>V. <?php the_field('nav-box-6-title'); ?></h5></a>
+                    <a href="#section7"><h5>VI. <?php the_field('nav-box-7-title'); ?></h5></a>
                 </div>
             </div>
         </div>
@@ -109,6 +110,11 @@
                 <li>
                     <a href="#section6" data-number="6">
                         <?php the_field('nav-box-6-title'); ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section7" data-number="7">
+                        <?php the_field('nav-box-7-title'); ?>
                     </a>
                 </li>
             </ul>
@@ -741,6 +747,22 @@
                             }
                             ?>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Parks Classifications -->
+            <section id="section7" class="cd-section">
+                <header  class="HD2021-header">
+                    <img src="<?php the_field('parksclassifications-header-img'); ?>" />
+                    <div class="HD2021-header-title">
+                        <h1>
+                        <?php the_field('parksclassifications-title'); ?>
+                        </h1>
+                    </div>
+                </header>
+                <div class="row HD2021-vertical-padding">
+                    <div class="container">
+                        <?php the_field('parksclassifications-text'); ?>
                     </div>
                 </div>
             </section>
