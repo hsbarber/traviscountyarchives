@@ -132,7 +132,7 @@
                         <ul class="video-block-container">
                             <li class="video-block"
                                 data-toggle="modal"
-                                data-target="#exampleModal1"
+                                data-target="#Modal1"
                                 data-whatever="item 1"
                                 style="background-image:
                                 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -146,7 +146,7 @@
                             </li>
                             <li class="video-block"
                             data-toggle="modal"
-                            data-target="#exampleModal2"
+                            data-target="#Modal2"
                             data-whatever="item 2"
                             style="background-image:
                             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -159,51 +159,66 @@
                                 </a>
                             </li>
                             <li class="video-block"
+                            data-toggle="modal"
+                            data-target="#Modal3"
+                            data-whatever="item 3"
                             style="background-image:
                             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                            url('<?php the_field('nav-box-3-image'); ?>')">
-                                <a  href="#">
-                                    <h2>video-3</h2>
-                                </a>
-                            </li>
-                            <li class="video-block"
-                            style="background-image: url('<?php the_field('nav-box-4-image'); ?>')">
-                                <a  href="#">
-                                    <h2>video-4</h2>
-                                </a>
-                            </li>
-                            <li class="video-block"
-                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
-                                <a >
-                                    <h2>video-5</h2>
-                                </a>
-                            </li>
-                            <li class="video-block"
-
-                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
-                                <a  href="#">
-                                    <h2>video-6</h2>
-                                </a>
-                            </li>
-                            <li class="video-block"
-
-                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')">
+                            url('<?php the_field('video-3-thumbnail'); ?>')">
                                 <a href="#">
-                                    <h2>video-7</h2>
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-3-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
                                 </a>
                             </li>
                             <li class="video-block"
-
-                            style="background-image: url('<?php the_field('nav-box-5-image'); ?>')" >
+                            data-toggle="modal"
+                            data-target="#Modal4"
+                            data-whatever="item 4"
+                            style="background-image:
+                            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('<?php the_field('video-4-thumbnail'); ?>')">
                                 <a href="#">
-                                    <h2>video-8</h2>
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-4-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            data-toggle="modal"
+                            data-target="#Modal5"
+                            data-whatever="item 5"
+                            style="background-image:
+                            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('<?php the_field('video-5-thumbnail'); ?>')">
+                                <a href="#">
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-5-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="video-block"
+                            data-toggle="modal"
+                            data-target="#Modal6"
+                            data-whatever="item 6"
+                            style="background-image:
+                            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                            url('<?php the_field('video-6-thumbnail'); ?>')">
+                                <a href="#">
+                                    <div class="video-block-content">
+                                        <h2><?php the_field('video-6-title'); ?></h2>
+                                        <?php the_field('video-svg'); ?>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- First Video Modal -->
-                <div class="modal fade" id="exampleModal1"
+                <div class="modal fade" id="Modal1"
                     tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -237,7 +252,7 @@
                     </div>
                 </div>
                 <!-- Second Video Modal -->
-                <div class="modal fade" id="exampleModal2"
+                <div class="modal fade" id="Modal2"
                     tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -253,11 +268,149 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <div class="video-wrapper">
-                                    <?php the_field('video-2-iframe'); ?>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-2-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-2-description'); ?>
                                 </div>
-                                <?php the_field('video-2-description'); ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Video Modal -->
+                <div class="modal fade" id="Modal3"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-3-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-3-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-3-description'); ?>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth Video Modal -->
+                <div class="modal fade" id="Modal4"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-4-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-4-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-4-description'); ?>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fifth Video Modal -->
+                <div class="modal fade" id="Modal5"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-5-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-5-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-5-description'); ?>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class=
+                                    "btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sixth Video Modal -->
+                <div class="modal fade" id="Modal6"
+                    tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="exampleModalLabel">
+                                    <?php the_field('video-6-title'); ?>
+                                </h5>
+                                <button type="button" class="close"
+                                    data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body-wrapper">
+                                <div class="modal-body">
+                                    <div class="video-wrapper" >
+                                        <?php the_field('video-6-iframe'); ?>
+                                    </div>
+                                    <?php the_field('video-6-description'); ?>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class=
@@ -394,11 +547,19 @@
                             <p>
                             <?php the_field('text-11'); ?>
                             </p>
+                            <a href="<?php the_field('photo-7'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-7'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-7-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-12'); ?>'>
                             <p>
                             <?php the_field('text-12'); ?>
                             </p>
+                            <a href="<?php the_field('photo-8'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-8'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-8-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-13'); ?>'>
                             <p>
@@ -409,16 +570,28 @@
                             <p>
                             <?php the_field('text-14'); ?>
                             </p>
+                            <a href="<?php the_field('photo-9'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-9'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-9-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-15'); ?>'>
                             <p>
                                 <?php the_field('text-15'); ?>
                             </p>
+                            <a href="<?php the_field('photo-10'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-10'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-10-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-16'); ?>'>
                             <p>
                             <?php the_field('text-16'); ?>
                             </p>
+                            <a href="<?php the_field('photo-11'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-11'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-11-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-17'); ?>'>
                             <p>
@@ -429,6 +602,10 @@
                             <p>
                             <?php the_field('text-18'); ?>
                             </p>
+                            <a href="<?php the_field('photo-12'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-12'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-12-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-19'); ?>'>
                             <p>
@@ -444,6 +621,10 @@
                             <p>
                             <?php the_field('text-21'); ?>
                             </p>
+                            <a href="<?php the_field('photo-13'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-13'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-13-caption'); ?></p>
                         </div>
                         <div class="timeline-item" date-is='<?php the_field('date-22'); ?>'>
                             <p>
@@ -454,11 +635,19 @@
                             <p>
                             <?php the_field('text-23'); ?>
                             </p>
+                            <a href="<?php the_field('photo-14'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-14'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-14-caption'); ?></p>
                         </div>
                         <div class="timeline-item read-more-target" date-is='<?php the_field('date-24'); ?>'>
                             <p>
                             <?php the_field('text-24'); ?>
                             </p>
+                            <a href="<?php the_field('photo-15'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-15'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-15-caption'); ?></p>
                         </div>
                         <div class="timeline-item read-more-target" date-is='<?php the_field('date-25'); ?>'>
                             <p>
@@ -484,6 +673,10 @@
                             <p>
                             <?php the_field('text-29'); ?>
                             </p>
+                            <a href="<?php the_field('photo-16'); ?>">
+                                <img class="timeline-photo" src="<?php the_field('photo-16'); ?>" />
+                            </a>
+                            <p class="timeline-caption"><?php the_field('photo-16-caption'); ?></p>
                         </div>
                         <div class="timeline-item read-more-target" date-is='<?php the_field('date-30'); ?>'>
                             <p>

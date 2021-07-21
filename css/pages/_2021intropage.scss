@@ -35,6 +35,7 @@ html {
   background-color: #ede8e0;
   height: 300px;
   margin: 0;
+  padding: 2rem;
   @media (min-width: $xl) {
     flex: 0 0 50%;
     height: 600px;
@@ -74,7 +75,10 @@ html {
 }
 //VERTICAL PADDING FOR EACH SECTION
 .HD2021-vertical-padding {
-  padding: 8rem 0;
+  padding: 4rem 0;
+  @media (min-width: $xl) {
+    padding: 6rem 0;
+  }
 }
 
 //INTRO SECTION
@@ -168,6 +172,7 @@ html {
   h2 {
     color: white;
     margin-bottom: 2rem;
+    padding: 0 2rem;
   }
   @media (min-width: $medium) {
     margin-bottom: 0;
@@ -243,8 +248,9 @@ svg#video-play-button {
 }
 .modal-body-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  // flex-direction: column;
+  // align-items: center;
+  justify-content: center;
 }
 .modal .modal-body {
   overflow-y: auto;
@@ -388,6 +394,7 @@ svg#video-play-button {
   color: $darkgreen;
   padding: 1rem 4rem;
   margin-bottom: 4rem;
+  z-index: 1;
 }
 /////////////////////
 .timeline-item {
@@ -395,7 +402,9 @@ svg#video-play-button {
   position: relative;
   color: white;
   border-left: 2px solid white;
-
+  a {
+    z-index: -1;
+  }
   p {
     font-size: 1rem;
     color: white;
@@ -431,6 +440,7 @@ svg#video-play-button {
   }
   .timeline-photo {
     max-width: 60%;
+    z-index: -1;
   }
   .timeline-caption {
     font-style: italic;
