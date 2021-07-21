@@ -68,10 +68,10 @@
                     <h3>Sections</h3>
                     <a href="#section1"><h5>I. <?php the_field('nav-box-1-title'); ?></h5></a>
                     <a href="#section2"><h5>II. <?php the_field('nav-box-2-title'); ?></h5></a>
-                    <a href="#section2"><h5>II. <?php the_field('nav-box-3-title'); ?></h5></a>
-                    <a href="#section3"><h5>III. <?php the_field('nav-box-4-title'); ?></h5><a>
-                    <a href="#section4"><h5>IV. <?php the_field('nav-box-5-title'); ?></h5></a>
-                    <a href="#section5"><h5>V. <?php the_field('nav-box-6-title'); ?></h5></a>
+                    <a href="#section3"><h5>II. <?php the_field('nav-box-3-title'); ?></h5></a>
+                    <a href="#section4"><h5>III. <?php the_field('nav-box-4-title'); ?></h5><a>
+                    <a href="#section5"><h5>IV. <?php the_field('nav-box-5-title'); ?></h5></a>
+                    <a href="#section6"><h5>V. <?php the_field('nav-box-6-title'); ?></h5></a>
                 </div>
             </div>
         </div>
@@ -118,6 +118,7 @@
     <div class="row no-gutters">
 
         <main id="mainSections">
+            <!-- Videos Section -->
             <section id="section1" class="cd-section">
                 <header class="interstitial-video" >
                     <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
@@ -422,6 +423,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Parks Department History Section -->
             <section id="section2" class="cd-section">
                 <header class="HD2021-header">
                     <img src="<?php the_field('parkhistoryoverview-header-img'); ?>" />
@@ -441,6 +443,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Parks Rangers History Section -->
             <section id="section3" class="cd-section">
                 <header  class="HD2021-header">
 
@@ -457,6 +460,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Parks Timeline Section -->
             <section id="section4" class="cd-section">
                 <header  class="HD2021-header">
                     <img src="<?php the_field('timeline-header-img'); ?>" />
@@ -692,6 +696,7 @@
                     <label for="post-2" class="read-more-trigger"></label>
                 </div>
             </section>
+            <!-- Interactive Map Section -->
             <section id="section5" class="cd-section">
                 <div class="storymap-container">
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -706,6 +711,7 @@
                         <?php endif; ?>
                 </div>
             </section>
+            <!-- History of Each Park Section -->
             <section id="section6" class="cd-section">
                  <header  class="HD2021-header">
                     <img src="<?php the_field('historyofeachpark-header-img'); ?>" />
