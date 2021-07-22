@@ -608,7 +608,7 @@
                             <?php the_field('text-17'); ?>
                             </p>
                         </div>
-                        <div class="timeline-item" date-is='<?php the_field('date-18'); ?>'>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-18'); ?>'>
                             <p>
                             <?php the_field('text-18'); ?>
                             </p>
@@ -617,17 +617,17 @@
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-12-caption'); ?></p>
                         </div>
-                        <div class="timeline-item" date-is='<?php the_field('date-19'); ?>'>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-19'); ?>'>
                             <p>
                             <?php the_field('text-19'); ?>
                             </p>
                         </div>
-                        <div class="timeline-item" date-is='<?php the_field('date-20'); ?>'>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-20'); ?>'>
                             <p>
                             <?php the_field('text-20'); ?>
                             </p>
                         </div>
-                        <div class="timeline-item" date-is='<?php the_field('date-21'); ?>'>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-21'); ?>'>
                             <p>
                             <?php the_field('text-21'); ?>
                             </p>
@@ -636,7 +636,7 @@
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-13-caption'); ?></p>
                         </div>
-                        <div class="timeline-item" date-is='<?php the_field('date-22'); ?>'>
+                        <div class="timeline-item read-more-target" date-is='<?php the_field('date-22'); ?>'>
                             <p>
                             <?php the_field('text-22'); ?>
                             </p>

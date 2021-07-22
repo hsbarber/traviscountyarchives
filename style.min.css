@@ -156,6 +156,11 @@ nav.verticalnav ul li a.is-selected{background-color:#004000}
 .mobileNav{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:-webkit-sticky;position:sticky;top:0;width:100%;background:#fff}
 .mobileNav li{display:inline-block;padding:24px 10px}
 .fixed{position:fixed;top:0;height:70px;z-index:1}
+.parks-page-navigation{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:4rem}
+.parks-page-navigation h4{border:1px solid #676667;padding:1rem;-webkit-transition:all .3s cubic-bezier(0.68,-0.55,0.265,1.55);transition:all .3s cubic-bezier(0.68,-0.55,0.265,1.55)}
+.parks-page-navigation a:hover{text-decoration:none}
+.parks-page-navigation h4:hover{color:white;background-color:#676667}
+.parks-page-header{margin-bottom:2rem}
 .banner-text-title{margin:2rem 0}
 .banner-text-title h1{margin-bottom:1rem}
 .banner-text-sub{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0 2rem 2rem 2rem}

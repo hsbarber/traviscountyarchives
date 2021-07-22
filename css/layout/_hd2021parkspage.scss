@@ -1,0 +1,21 @@
+.parks-page-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  h4 {
+    border: 1px solid $text-primary;
+    padding: 1rem;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h4:hover {
+    color: white;
+    background-color: $text-primary;
+  }
+}
+.parks-page-header {
+  margin-bottom: 2rem;
+}
