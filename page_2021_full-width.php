@@ -30,31 +30,14 @@
 ?>
 <div id="historyday2021">
     <div class=" hd2021header" >
-        <div class="hd2021title" style="background:
-            linear-gradient(
-	        rgba(	0, 64, 0, 0.5),
-	        rgba(	0, 64, 0, 0.5)),
-            url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover;">
-            <div>
+        <header class="header-video">
+            <video src="<?php the_field('header-video'); ?>" autoplay loop playsinline muted></video>
+            <header class="header-text-overlay">
                 <h3><?php the_field('subtitle'); ?></h3>
                 <h1><?php the_field('title'); ?></h1>
-                <a href="#intro"><h4>Start here</h4>
-                 </a>
-
-            </div>
-        </div>
-        <div class="img-container" data-slideshow>
-        <?php if ($slider->have_posts()) {
-                while($slider->have_posts()){
-                $slider->the_post();
-                // Post's featured image
-                the_post_thumbnail('large');
-                the_excerpt();
-                }
-        }
-        wp_reset_postdata();
-        ?>
-        </div>
+                <a href="#intro"><h4>Start here</h4></a>
+            </header>
+        </header>
     </div>
 <!-- Intro Section -->
     <div class="container" id="intro">

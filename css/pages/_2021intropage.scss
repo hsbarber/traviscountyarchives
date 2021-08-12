@@ -18,6 +18,65 @@ html {
   /* this breaks position sticky in Firefox */
   /* overflow-x: hidden; */
 }
+// ALTERNATIVE HEADER
+.header-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  video {
+    //height: auto;
+    //vertical-align: middle;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(40%);
+  }
+}
+.header-text-overlay {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 2rem;
+  max-width: 400px;
+  @media (min-width: $medium) {
+    padding-left: 8rem;
+    max-width: 1000px;
+  }
+  h1 {
+    line-height: 1.5;
+    color: white;
+  }
+  h3 {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif !important;
+    color: white;
+  }
+  h4 {
+    margin-top: 2rem;
+    color: white;
+    border-radius: 100px;
+    border: 2px solid white;
+    display: inline-block;
+    padding: 0.5em 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: transform 0.3s;
+    white-space: nowrap;
+  }
+}
+
 .hd2021header {
   // height: 600px;
   // width: 100vw;
@@ -413,13 +472,11 @@ svg#video-play-button {
   &::before {
     content: attr(date-is);
     position: absolute;
-    left: 2em;
+    left: 1em;
     font-weight: bold;
-    top: 1em;
+    top: 0;
     display: block;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 0.785rem;
+    font-size: 2rem;
   }
 
   &::after {
