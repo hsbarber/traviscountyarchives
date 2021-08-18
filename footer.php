@@ -8,9 +8,7 @@
 <footer>
 	<section class="container-fluid newsletter">
 		<div class="container newsletter-container">
-    		<div class="row">
 			<?php if ( dynamic_sidebar( 'newsletter' ) ); ?>
-			</div>
 		</div>
 	</section>
 	<section class="container-fluid footer">
