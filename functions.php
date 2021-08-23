@@ -126,7 +126,8 @@ function pagination_bar() {
     }
 }
 
-
+create_widget( 'Giveaway', 'giveaway', 'giveaway for history day 2021' );
+create_widget( 'Giveaway-Photos', 'giveaway-photos', 'giveaway photos for history day 2021' );
 create_widget( 'Instagram', 'instagram', 'instagram display on home page' );
 create_widget( 'Newsletter', 'newsletter', 'newsletter display in footer' );
 create_widget( 'Newsletter-Image', 'newsletter image', 'newsletter background image in footer' );

@@ -45,6 +45,7 @@
             <div class="the_content col-12 col-md-6">
                 <h1><?php the_field('intro_title'); ?></h1>
                 <p><?php the_field('intro_text'); ?></p>
+
             </div>
             <div class="nav-sections col-12 col-md-6">
                 <div class="nav-flex">
@@ -58,6 +59,9 @@
                     <a href="#section7"><h5>VI. <?php the_field('nav-box-7-title'); ?></h5></a>
                 </div>
             </div>
+        </div>
+        <div class="giveaway">
+            <div class="giveaway-body"><?php if ( dynamic_sidebar( 'giveaway' ) ); ?></div>
         </div>
     </div>
     <nav id="slideoutnav">
