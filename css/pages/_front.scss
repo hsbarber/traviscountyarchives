@@ -1,3 +1,22 @@
+.hd2021-banner {
+  display: block;
+  @media (min-width: $xl) {
+    display: flex;
+  }
+}
+.hd2021-banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: scale(1);
+  @media (min-width: $xl) {
+    transform: scale(0.85);
+  }
+}
+.hd2021-banner-img {
+  flex: 2;
+}
 .banner-text-title {
   margin: 2rem 0;
   h1 {

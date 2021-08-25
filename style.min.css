@@ -166,6 +166,9 @@ nav.verticalnav ul li a.is-selected{background-color:#004000}
 .parks-page-navigation a:hover{text-decoration:none}
 .parks-page-navigation h4:hover{color:white;background-color:#676667}
 .parks-page-header{margin-bottom:2rem}
+.hd2021-banner{display:block}
+.hd2021-banner-text{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.hd2021-banner-img{-webkit-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2}
 .banner-text-title{margin:2rem 0}
 .banner-text-title h1{margin-bottom:1rem}
 .banner-text-sub{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0 2rem 2rem 2rem}
@@ -285,6 +288,7 @@ html{scroll-behavior:smooth}
 .hd-2021-container{padding:6rem 0}
 .hd-2021-container h4{padding:2rem 0;text-align:center}
 #rafflepress-header{margin-bottom:0 !important}
+#rafflepress-giveaway-entries{display:none !important}
 .video-block-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:8rem 0}
 .video-block{display:inline-block;background-size:180%;background-position:center;background-repeat:no-repeat;background-color:gray;position:relative;height:400px;width:100%;border-radius:10px;cursor:pointer;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;list-style-type:none;margin-bottom:2rem}
 .video-block:last-child{margin-bottom:0}
@@ -429,6 +433,8 @@ p{font-size:16px}
 #mainNav .navbar .navbar-nav li{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
 #mainNav .navbar .navbar-nav li a{margin-right:2rem}
 .img-container{height:600px;width:100vw}
+.hd2021-banner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.hd2021-banner-text{-webkit-transform:scale(0.85);-ms-transform:scale(0.85);transform:scale(0.85)}
 .cards--front{padding-bottom:8rem;padding-top:8rem}
 .about .about--front{padding-bottom:8rem;padding-top:8rem}
 .contact .contact--row{padding-bottom:8rem;padding-top:8rem}

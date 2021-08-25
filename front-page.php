@@ -4,13 +4,24 @@
   <div class="banner-text-title"><h4><?php the_field('banner-text-title'); ?></h4></div>
   <div class="banner-text-sub"><?php the_field('banner-text-sub'); ?></div>
 </section> -->
-<div class="heroBackground" style="background-image: url('<?php echo $thumb;?>')">
+<div class="hd2021-banner">
+  <div class="hd2021-banner-text">
+    <div class="banner-text-title"><?php the_field('banner-text-title'); ?></div>
+    <div class="banner-text-sub"><?php the_field('banner-text-sub'); ?></div>
+  </div>
+  <div class="hd2021-banner-img">
+    <img src="<?php echo $thumb;?>"/>
+  </div>
+</div>
+
+
+<!-- <div class="heroBackground" style="background-image: url('<?php echo $thumb;?>')">
     <div class="capt front-capt">
        <?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
         <p class="caption"><?php echo $caption; ?></p>
       <?php endif; ?>
     </div>
-</div>
+</div> -->
 <section class="container-fluid">
   <div class="container">
     <div class="row cards--front">
