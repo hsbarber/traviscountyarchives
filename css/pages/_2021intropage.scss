@@ -44,7 +44,7 @@ html {
   align-items: flex-start;
   justify-content: center;
   padding-left: 2rem;
-  max-width: 400px;
+  max-width: 300px;
   @media (min-width: $medium) {
     padding-left: 8rem;
     max-width: 1000px;
@@ -311,9 +311,11 @@ svg#video-play-button {
   margin: 0;
 }
 .modal .modal-content {
-  height: 100%;
   border: 0;
   border-radius: 0;
+  @media (min-height: 860px) {
+    height: 100%;
+  }
 }
 .modal-body-wrapper {
   display: flex;
@@ -400,6 +402,10 @@ svg#video-play-button {
     h1 {
       font-size: 4vw;
       color: white;
+      padding: 0 2rem;
+      @media (min-width: $medium) {
+        padding: 0;
+      }
     }
   }
 }
@@ -519,9 +525,12 @@ svg#video-play-button {
 }
 .parks-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   grid-template-rows: auto;
   grid-gap: 30px;
+  @media (min-width: $medium) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 
   li {
     list-style-type: none;

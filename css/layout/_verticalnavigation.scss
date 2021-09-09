@@ -11,7 +11,10 @@ $darkgreen: #004000;
   top: 0;
   z-index: 1000;
   .active {
-    width: 400px;
+    width: 200px;
+    @media (min-width: $medium) {
+      width: 400px;
+    }
   }
 }
 .disappear {
@@ -22,11 +25,11 @@ $darkgreen: #004000;
 }
 button.open-nav-btn {
   z-index: 1000;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: white;
-  margin: 20px;
-  width: 65px;
-  height: 65px;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
   border-radius: 200%;
   will-change: transform, opacity;
   //transform: translateY(-100%);
@@ -35,6 +38,12 @@ button.open-nav-btn {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   border: transparent;
   cursor: pointer;
+  @media (min-width: $medium) {
+    font-size: 1.5rem;
+    margin: 20px;
+    width: 65px;
+    height: 65px;
+  }
 }
 
 .slide-content {
@@ -50,13 +59,18 @@ button.open-nav-btn {
   padding-top: 60px;
   visibility: hidden;
 }
-
+ul#link-list {
+  padding: 0;
+}
 .slide-content a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
   color: #f5f5f5;
   display: block;
+  @media (min-width: $medium) {
+    font-size: 25px;
+  }
 }
 
 .slide-content a:focus,
