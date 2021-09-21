@@ -23,13 +23,11 @@ add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 function theme_js() {
 	global $wp_scripts;
-	wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
+	//wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
-	wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
-	wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js', array('jquery'), '', false);
+	// wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
 	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendors/modernizr.js');
-	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/js/all.js','', '', false);
+	//wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendors/modernizr.js');
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
 			wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDmHd1GLs16yHEAjodIb-diEgmbpsW4HJY', '', '', true);
@@ -45,9 +43,33 @@ function theme_js() {
 		if ( is_page( 'district-clerk' ) ) {
 			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/custom/portal2.min.js',  array('jquery'), '', false );
 		}
+		if (is_page( 'hd2021' ) ) {
+			wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js', array('jquery'), '', false);
+			wp_enqueue_script( 'lazyloadvideo', get_template_directory_uri() . '/js/custom/lazyloadvideo.js');
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
+
+/**
+ * Font Awesome Kit Setup
+ *
+ * This will add your Font Awesome Kit to the front-end, the admin back-end,
+ * and the login screen area.
+ */
+if (! function_exists('fa_custom_setup_kit') ) {
+  function fa_custom_setup_kit($kit_url = '') {
+    foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+      add_action(
+        $action,
+        function () use ( $kit_url ) {
+          wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
+        }
+      );
+    }
+  }
+}
+fa_custom_setup_kit('https://kit.fontawesome.com/7d8b6130f8.js');
 
 
 

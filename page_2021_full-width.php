@@ -31,7 +31,9 @@
 <div id="historyday2021">
     <div class=" hd2021header" >
         <header class="header-video">
-            <video src="<?php the_field('header-video'); ?>" autoplay loop playsinline muted></video>
+            <video class="lazy" autoplay muted loop playsinline poster="<?php the_field('interstitial-video-placeholder-header'); ?>">
+                <source data-src="<?php the_field('header-video'); ?>" type="video/mp4">
+            </video>
             <header class="header-text-overlay">
                 <h3><?php the_field('subtitle'); ?></h3>
                 <h1><?php the_field('title'); ?></h1>
@@ -114,7 +116,9 @@
             <!-- Videos Section -->
             <section id="section1" class="cd-section">
                 <header class="interstitial-video" >
-                    <video src="<?php the_field('interstitial-video'); ?>" autoplay loop playsinline muted></video>
+                    <video class="lazy" autoplay muted loop playsinline poster="<?php the_field('interstitial-video-placeholder'); ?>">
+                        <source data-src="<?php the_field('interstitial-video'); ?>" type="video/mp4">
+                    </video>
                     <header class="viewport-header">
                         <h1>
                             Parks Videos
