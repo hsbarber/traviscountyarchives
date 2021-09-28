@@ -24,13 +24,14 @@
         font-family: $font-heading;
       }
       img {
-        transform: scale(0.8);
-        width: 65px;
+        height: 52px;
+        width: 52px;
       }
       .site-title {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-left: 0.75rem;
         h4 {
           color: darken($text-primary, 10%);
           margin: 0 0 4px 4px;
