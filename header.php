@@ -9,7 +9,6 @@
       <?php wp_title( '|', true, 'right' ); ?>
       <?php bloginfo( 'name' ); ?>
     </title>
-    <style>html{visibility: hidden;opacity:0;}</style>
  </head>
 <div id="mainNav">
   <nav class="navbar navbar-expand-xl" role="navigation">
