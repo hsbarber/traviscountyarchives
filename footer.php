@@ -1,10 +1,4 @@
-<!-- <?php
-    //   $attachmentID = 1538;
-    //   $imageSizeName = "full";
-    //   $img = wp_get_attachment_image_src($attachmentID, $imageSizeName);
-?> -->
 
-<!-- <?php echo $img[0]; ?> -->
 <footer>
 	<section class="container-fluid newsletter">
 		<div class="container newsletter-container">
