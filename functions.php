@@ -1,5 +1,10 @@
 <?php
 
+
+
+
+
+
 function theme_styles () {
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap-4.0.0/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );

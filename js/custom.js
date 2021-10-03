@@ -177,6 +177,32 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
 /**
  * map
  */
@@ -636,13 +662,13 @@ map.fitBounds(markerBounds);
           data: "",
           cache: true,
           success: function(xml){
-            
+
             var record = $(xml).find('record');
-            
+
               record.each(function(){
-            
+
                 var newTitle = $(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text();
-                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();           
+                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();
                 var dates = $(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text();
                 var subject = $(this).find("subject[qualifier='UNTL-BS'], untl\\:subject[qualifier='UNTL-BS']").text();
 
@@ -653,27 +679,27 @@ map.fitBounds(markerBounds);
                     $ul.find('li').sort(function (a, b) {
                         var upA = $(a).text().toUpperCase();
                         var upB = $(b).text().toUpperCase();
-                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;    
+                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
                     }).appendTo(selector);
                 };
-    
-          
-                if (subject.indexOf("Government and Law - Legal Documents") != -1 ) {          
+
+
+                if (subject.indexOf("Government and Law - Legal Documents") != -1 ) {
                     sortUL('#legal');
                 }
-                if (newTitle.indexOf("Travis County Naturalization Records") != -1 ) {     
+                if (newTitle.indexOf("Travis County Naturalization Records") != -1 ) {
                     sortUL('#districtNat');
                 }
-        
-               
+
+
               })
             },
-                
+
           error: function(error){
               alert("The XML File could not be processed correctly.");
           }
       });
-  
+
 })( jQuery );
 !function (t) { t.ajax({ url: "https://texashistory.unt.edu/explore/partners/TDCD/oai/?verb=ListRecords&metadataPrefix=untl", type: "GET", dataType: "xml", data: "", cache: !0, success: function (e) { t(e).find("record").each(function () { var e = t(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text(), i = t(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text(), a = t(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text(); function r(r) { var n = "<li><a href='" + i + "'><h4>" + e + "</h4></a>" + a + "</li>", l = t(r); l.append(n), l.find("li").sort(function (e, i) { var a = t(e).text().toUpperCase(), r = t(i).text().toUpperCase(); return a < r ? -1 : a > r ? 1 : 0 }).appendTo(r) } -1 != t(this).find("subject[qualifier='UNTL-BS'], untl\\:subject[qualifier='UNTL-BS']").text().indexOf("Government and Law - Legal Documents") && r("#legal"), -1 != e.indexOf("Travis County Naturalization Records") && r("#districtNat") }) }, error: function (t) { alert("The XML File could not be processed correctly.") } }) }(jQuery);
 
@@ -697,7 +723,7 @@ map.fitBounds(markerBounds);
     });
 });
 <!--jQuery to make navbar shrink on scroll -->
-	
+
 jQuery(window).scroll(function() {
 		  if (jQuery(document).scrollTop() > 100) {
 			jQuery('nav.navbar').addClass('shrink');

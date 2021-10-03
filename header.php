@@ -9,6 +9,7 @@
       <?php wp_title( '|', true, 'right' ); ?>
       <?php bloginfo( 'name' ); ?>
     </title>
+    <style>html{visibility: hidden;opacity:0;}</style>
  </head>
 <div id="mainNav">
   <nav class="navbar navbar-expand-xl" role="navigation">
@@ -23,20 +24,20 @@
         <i class="fas fa-bars"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbar-content">
-        <?php
-        wp_nav_menu( array(
-          'theme_location' => 'nav-menu',
-          'menu_id'        => 'primary',
-          'container'      => 'div',
-          'depth'          => 2,
-          'menu_class'     => 'navbar-nav',
-          'walker'         => new Bootstrap_NavWalker(),
-          'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
-        ) );
-        ?>
-        <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
-      </div>
+  <div class="collapse navbar-collapse" id="navbar-content">
+    <?php
+    wp_nav_menu( array(
+      'theme_location' => 'nav-menu',
+      'menu_id'        => 'primary',
+      'container'      => 'div',
+      'depth'          => 2,
+      'menu_class'     => 'navbar-nav',
+      'walker'         => new Bootstrap_NavWalker(),
+      'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+    ) );
+    ?>
+    <a href="#" id="searchtoggle"><i class="fas fa-search"></i></a>
+  </div>
 
   </nav>
 </div>
