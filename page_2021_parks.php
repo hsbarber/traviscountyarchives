@@ -24,44 +24,66 @@
         <div class="row">
 
             <div class="col-md-12 page-container-full-width">
-                <!-- page navigation -->
-                <?php
-                    $pagelist = get_pages("child_of=".$post->post_parent."&parent=".$post->post_parent."&sort_column=menu_order&sort_order=asc");
-                    $pages = array();
-                    foreach ($pagelist as $page) {
-                    $pages[] += $page->ID;
-                    }
 
-                    $current = array_search(get_the_ID(), $pages);
-                    $prevID = $pages[$current-1];
-                    $nextID = $pages[$current+1];
-                ?>
-
-                <div class="parks-page-navigation">
-                    <?php if (!empty($prevID)) { ?>
-                    <div class="alignleft">
-                    <a href="<?php echo get_permalink($prevID); ?>"
-                    title="<?php echo get_the_title($prevID); ?>">
-                    <h4>
-                        << <?php echo get_the_title($prevID); ?>
-                    </h4>
-                    </a>
-                    </div>
-                    <?php }
-                    if (!empty($nextID)) { ?>
-                    <div class="alignright">
-                    <a href="<?php echo get_permalink($nextID); ?>"
-                    title="<?php echo get_the_title($nextID); ?>">
-                    <h4>
-                        <?php echo get_the_title($nextID); ?> >>
-                    </h4>
-                    </a>
-                    </div>
-                    <?php } ?>
-                </div><!-- .navigation -->
 
                 <!-- Main Content -->
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                <?php
+                    function wpse5422_display_prev_next($prevID=false, $nextID=false){
+                        if( empty($prevID) && empty($nextID) )
+                        return false;
+
+                        $html = '<div class="parks-page-navigation">';
+
+                        if( !empty($prevID) ){
+                            $html .= '<div class="alignleft">';
+                            $html .= '<a href="'.get_permalink($prevID).'" title="'.get_the_title($prevID).'">
+
+                            <h4><< '.get_the_title($prevID).'</h4></a>';
+                            $html .= '</div>';
+                        }
+
+                        if( !empty($nextID) ){
+                            $html .= '<div class="alignright">';
+                            $html .= '<a href="'.get_permalink($nextID).'" title="'.get_the_title($nextID).'"><h4>'.get_the_title($nextID).' >></h4></a>';
+                            $html .= '</div>';
+                        }
+
+                        $html .= '</div><!-- .navigation -->';
+
+                        return $html;
+                    }
+                    function wpse5422_the_page_siblings(){
+                        $post_id = get_the_ID();
+                        $parent_id = wp_get_post_parent_id($post_id);
+                        $post_type = get_post_type($post_id);
+
+                        $sibling_list = get_pages(array(
+                            'sort_column'=>'menu_order title',
+                            'sort_order' =>'asc',
+                            'child_of' =>$parent_id,
+                            'post_type'=> $post_type
+                        ));
+
+                        if( !$sibling_list || is_wp_error($sibling_list) )
+                            return false;
+
+                        $pages = array();
+                        foreach ($sibling_list as $sibling ) {
+                            $pages[] = $sibling->ID;
+                        }
+
+                        $current = array_search($post_id, $pages);
+                        $prevID = isset($pages[$current-1]) ? $pages[$current-1] : false;
+                        $nextID = isset($pages[$current+1]) ? $pages[$current+1] : false;
+
+                        echo wpse5422_display_prev_next($prevID, $nextID);
+                    }
+
+
+                    wpse5422_the_page_siblings();
+                ?>
 
                 <div class="parks-page-header">
                     <h2><?php the_title(); ?></h2>
