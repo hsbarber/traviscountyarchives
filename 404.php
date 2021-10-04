@@ -1,22 +1,6 @@
 
 <?php get_header(); ?>
 
-<div class="page-banner">
-<?php
-  if ( has_post_thumbnail() ) {
-  the_post_thumbnail();
-}
-?>
-</div>
-<div class="container">
-<div class="col-md-9 capt col-xs-9">
-</div>
-<div class="col-md-3 capt col-xs-3">
-<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-    <p class="caption"><?php echo $caption; ?></p>
-<?php endif; ?>
-</div>
-</div>
 <div class="container-fluid bc-container">
   <div class="row">
     <div class="container">
