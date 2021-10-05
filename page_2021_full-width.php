@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="giveaway">
-            <div class="giveaway-body"><?php if ( dynamic_sidebar( 'giveaway' ) ); ?></div>
+            <div class="giveaway-body"><?php the_field('rafflepress'); ?></div>
         </div>
     </div>
     <nav id="slideoutnav">
