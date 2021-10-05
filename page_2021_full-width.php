@@ -62,6 +62,7 @@
                 </div>
             </div>
         </div>
+        <!-- Custom Field for Giveaway -->
         <div class="giveaway">
             <div class="giveaway-body"><?php the_field('rafflepress'); ?></div>
         </div>
