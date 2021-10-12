@@ -10,6 +10,7 @@ $darkgreen: #004000;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: inline-block;
   .active {
     width: 200px;
     @media (min-width: $medium) {
