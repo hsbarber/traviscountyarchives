@@ -67,6 +67,7 @@
             <div class="giveaway-body"><?php the_field('rafflepress'); ?></div>
         </div>
     </div>
+<!-- Slideout navigation -->
     <nav id="slideoutnav">
         <button type="button" id="hamburger-menu" class="open-nav-btn" aria-label="open navigation" aria-controls="link-list" aria-expanded="false">&#9776;</button>
         <div id="slide-nav" class="slide-content">
@@ -166,8 +167,7 @@
                             url('<?php the_field('video-3-thumbnail'); ?>')">
                                 <a href="#">
                                     <div class="video-block-content">
-
-
+                                        <h2><?php the_field('video-3-title'); ?></h2>
                                         <?php the_field('video-svg'); ?>
                                     </div>
                                 </a>
