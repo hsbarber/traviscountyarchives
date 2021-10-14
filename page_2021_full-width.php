@@ -129,6 +129,9 @@
                 </header>
                 <div class="row">
                     <div class="container">
+                        <div class="video-intro">
+                            <h5><?php the_field('video-intro'); ?></h5>
+                        </div>
                         <ul class="video-block-container">
                             <li class="video-block"
                                 data-toggle="modal"

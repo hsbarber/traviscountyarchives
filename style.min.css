@@ -296,6 +296,7 @@ html{scroll-behavior:smooth}
 .hd-2021-container h4{padding:2rem 0;text-align:center}
 #rafflepress-header{margin-bottom:0 !important}
 #rafflepress-giveaway-entries{display:none !important}
+.video-intro{margin:2rem 0 0 0}
 .video-block-container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:8rem 0}
 .video-block{display:inline-block;background-size:180%;background-position:center;background-repeat:no-repeat;background-color:gray;position:relative;height:400px;width:100%;border-radius:10px;cursor:pointer;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;list-style-type:none;margin-bottom:2rem}
 .video-block:last-child{margin-bottom:0}
