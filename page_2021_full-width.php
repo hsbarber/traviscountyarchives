@@ -74,6 +74,11 @@
             <button type="button" id="close" class="close-btn" aria-label="close navigation">&times;</button>
             <ul id="link-list">
                 <li>
+                    <a href="#" data-number="0">
+                        <?php the_field('nav-box-0-title'); ?>
+                    </a>
+                </li>
+                <li>
                     <a href="#section1" data-number="1">
                         <?php the_field('nav-box-1-title'); ?>
                     </a>

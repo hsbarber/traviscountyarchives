@@ -6,11 +6,11 @@ $darkgreen: #004000;
 
 //SLIDE OUT NAVIGATION
 #slideoutnav {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 1000;
-  display: inline-block;
+  //display: inline-block;
+  position: -webkit-sticky;
+  position: sticky;
   .active {
     width: 200px;
     @media (min-width: $medium) {

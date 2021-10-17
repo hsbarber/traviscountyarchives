@@ -141,7 +141,7 @@ p.hd-timeline-2008{margin:0;padding:0}
 .hd-header{margin:0 auto 4rem auto;text-align:center;padding:2rem 0;border-bottom:2px solid #ececec;border-top:2px solid #ececec;max-width:300px}
 .hd-content h4{margin-bottom:2rem}
 .hd-video{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
-#slideoutnav{position:-webkit-sticky;position:sticky;top:0;z-index:1000;display:inline-block}
+#slideoutnav{top:0;z-index:1000;position:-webkit-sticky;position:sticky}
 #slideoutnav .active{width:200px}
 .disappear{background-color:blue}
 .appear{background-color:red}
