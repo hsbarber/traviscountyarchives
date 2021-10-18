@@ -9,7 +9,7 @@
       <?php wp_title( '|', true, 'right' ); ?>
       <?php bloginfo( 'name' ); ?>
     </title>
- </head>
+</head>
 <div id="mainNav">
   <nav class="navbar navbar-expand-xl" role="navigation">
       <a class="navbar-brand" href="<?php echo get_home_url(); ?>">

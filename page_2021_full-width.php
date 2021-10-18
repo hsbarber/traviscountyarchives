@@ -538,10 +538,6 @@
                 </header>
                 <div class="HD2021-vertical-padding row">
                     <div class="container">
-                        <div class="imagewrap-left">
-                            <img src="<?php the_field('paragraphimage1'); ?>" />
-                            <p>Tom B. Hughes</p>
-                        </div>
                         <?php the_field('parkhistoryoverview-text'); ?>
                     </div>
                 </div>
@@ -585,7 +581,7 @@
                             <p>
                             <?php the_field('text-2'); ?>
                             </p>
-                            <a href="<?php the_field('photo-1'); ?>">
+                            <a href="<?php the_field('photo-1'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-1'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-1-caption'); ?></p>
@@ -594,7 +590,7 @@
                             <p>
                             <?php the_field('text-3'); ?>
                             </p>
-                            <a href="<?php the_field('photo-2'); ?>">
+                            <a href="<?php the_field('photo-2'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-2'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-2-caption'); ?></p>
@@ -608,7 +604,7 @@
                             <p>
                             <?php the_field('text-5'); ?>
                             </p>
-                            <a href="<?php the_field('photo-3'); ?>">
+                            <a href="<?php the_field('photo-3'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-3'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-3-caption'); ?></p>
@@ -622,7 +618,7 @@
                             <p>
                             <?php the_field('text-7'); ?>
                             </p>
-                            <a href="<?php the_field('photo-4'); ?>">
+                            <a href="<?php the_field('photo-4'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-4'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-4-caption'); ?></p>
@@ -631,7 +627,7 @@
                             <p>
                             <?php the_field('text-8'); ?>
                             </p>
-                           <a href="<?php the_field('photo-5'); ?>">
+                           <a href="<?php the_field('photo-5'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-5'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-5-caption'); ?></p>
@@ -645,7 +641,7 @@
                             <p>
                             <?php the_field('text-10'); ?>
                             </p>
-                            <a href="<?php the_field('photo-6'); ?>">
+                            <a href="<?php the_field('photo-6'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-6'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-6-caption'); ?></p>
@@ -654,7 +650,7 @@
                             <p>
                             <?php the_field('text-11'); ?>
                             </p>
-                            <a href="<?php the_field('photo-7'); ?>">
+                            <a href="<?php the_field('photo-7'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-7'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-7-caption'); ?></p>
@@ -663,7 +659,7 @@
                             <p>
                             <?php the_field('text-12'); ?>
                             </p>
-                            <a href="<?php the_field('photo-8'); ?>">
+                            <a href="<?php the_field('photo-8'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-8'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-8-caption'); ?></p>
@@ -677,7 +673,7 @@
                             <p>
                             <?php the_field('text-14'); ?>
                             </p>
-                            <a href="<?php the_field('photo-9'); ?>">
+                            <a href="<?php the_field('photo-9'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-9'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-9-caption'); ?></p>
@@ -686,7 +682,7 @@
                             <p>
                                 <?php the_field('text-15'); ?>
                             </p>
-                            <a href="<?php the_field('photo-10'); ?>">
+                            <a href="<?php the_field('photo-10'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-10'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-10-caption'); ?></p>
@@ -695,7 +691,7 @@
                             <p>
                             <?php the_field('text-16'); ?>
                             </p>
-                            <a href="<?php the_field('photo-11'); ?>">
+                            <a href="<?php the_field('photo-11'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-11'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-11-caption'); ?></p>
@@ -709,7 +705,7 @@
                             <p>
                             <?php the_field('text-18'); ?>
                             </p>
-                            <a href="<?php the_field('photo-12'); ?>">
+                            <a href="<?php the_field('photo-12'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-12'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-12-caption'); ?></p>
@@ -728,7 +724,7 @@
                             <p>
                             <?php the_field('text-21'); ?>
                             </p>
-                            <a href="<?php the_field('photo-13'); ?>">
+                            <a href="<?php the_field('photo-13'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-13'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-13-caption'); ?></p>
@@ -742,7 +738,7 @@
                             <p>
                             <?php the_field('text-23'); ?>
                             </p>
-                            <a href="<?php the_field('photo-14'); ?>">
+                            <a href="<?php the_field('photo-14'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-14'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-14-caption'); ?></p>
@@ -751,7 +747,7 @@
                             <p>
                             <?php the_field('text-24'); ?>
                             </p>
-                            <a href="<?php the_field('photo-15'); ?>">
+                            <a href="<?php the_field('photo-15'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-15'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-15-caption'); ?></p>
@@ -780,7 +776,7 @@
                             <p>
                             <?php the_field('text-29'); ?>
                             </p>
-                            <a href="<?php the_field('photo-16'); ?>">
+                            <a href="<?php the_field('photo-16'); ?>" target="_blank">
                                 <img class="timeline-photo" src="<?php the_field('photo-16'); ?>" />
                             </a>
                             <p class="timeline-caption"><?php the_field('photo-16-caption'); ?></p>
