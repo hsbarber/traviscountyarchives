@@ -22,6 +22,20 @@
       <?php endif; ?>
     </div>
 </div> -->
+<section class="container-fluid announcement" style="background: linear-gradient(
+	        rgba(37, 40, 57, 0.8),
+	        rgba(37, 40, 57, 0.95)),
+    		url('<?php the_field('announcement-image') ?>') 50% 50% no-repeat; background-size: cover;"
+  >
+  <div class="container">
+    <div class="row announcement-flex">
+      <h3><?php the_field('announcement-title'); ?></h3>
+      <h4><?php the_field('announcement-text'); ?></h4>
+
+
+    </div>
+  </div>
+</section>
 <section class="container-fluid">
   <div class="container">
     <div class="row cards--front">

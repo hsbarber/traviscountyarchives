@@ -67,6 +67,26 @@
     margin-top: 0;
   }
 }
+.announcement {
+  background-color: $background-primary;
+
+  .announcement-flex {
+    @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    color: $paragraph-secondary;
+    padding-bottom: 1.5rem;
+  }
+  h4 {
+    color: $paragraph-secondary;
+    text-align: center;
+    line-height: 2.5;
+  }
+}
 .cards--front {
   @include fluid-type(padding-bottom padding-top, $tiny, $xl, 4rem, 8rem);
 }

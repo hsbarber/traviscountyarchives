@@ -178,6 +178,10 @@ nav.verticalnav ul li a.is-selected{background-color:#004000}
 .banner-text-sub>div button:hover{color:#676667;background:transparent;cursor:pointer;border:1px solid #676667}
 .heroBackground{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:300px;background-position:center center;background-repeat:no-repeat;background-size:cover}
 .front-capt{margin-top:300px}
+.announcement{background-color:#252839}
+.announcement .announcement-flex{padding-bottom:4rem;padding-top:4rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.announcement h3{color:white;padding-bottom:1.5rem}
+.announcement h4{color:white;text-align:center;line-height:2.5}
 .cards--front{padding-bottom:4rem;padding-top:4rem}
 .cards--front-single{padding-bottom:2rem;padding-top:2rem;display:block}
 .cards--front-single .cards--front-img{text-align:center}
@@ -380,6 +384,7 @@ h3{font-size:calc(18px + 4 * (100vw - 320px) / 880)}
 h4{font-size:calc(16px + 4 * (100vw - 320px) / 880)}
 h5{font-size:calc(14px + 4 * (100vw - 320px) / 880)}
 p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
+.announcement .announcement-flex{padding-bottom:calc(4rem + 4 * (100vw - 320px) / 880);padding-top:calc(4rem + 4 * (100vw - 320px) / 880)}
 .cards--front{padding-bottom:calc(4rem + 4 * (100vw - 320px) / 880);padding-top:calc(4rem + 4 * (100vw - 320px) / 880)}
 .cards--front-single{padding-bottom:calc(2rem + -2 * (100vw - 320px) / 672);padding-top:calc(2rem + -2 * (100vw - 320px) / 672)}
 .about .about--front{padding-bottom:calc(4rem + 4 * (100vw - 320px) / 880);padding-top:calc(4rem + 4 * (100vw - 320px) / 880)}
@@ -449,6 +454,7 @@ p{font-size:16px}
 .img-container{height:600px;width:100vw}
 .hd2021-banner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .hd2021-banner-text{-webkit-transform:scale(0.85);-ms-transform:scale(0.85);transform:scale(0.85)}
+.announcement .announcement-flex{padding-bottom:8rem;padding-top:8rem}
 .cards--front{padding-bottom:8rem;padding-top:8rem}
 .about .about--front{padding-bottom:8rem;padding-top:8rem}
 .contact .contact--row{padding-bottom:8rem;padding-top:8rem}
