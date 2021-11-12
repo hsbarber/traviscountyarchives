@@ -138,7 +138,7 @@
                             <h5><?php the_field('video-intro'); ?></h5>
                         </div>
                         <ul class="video-block-container">
-                            <li class="video-block"
+                            <!-- <li class="video-block"
                                 data-toggle="modal"
                                 data-target="#Modal1"
                                 data-whatever="item 1"
@@ -151,7 +151,7 @@
                                         <?php the_field('video-svg'); ?>
                                     </div>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="video-block"
                             data-toggle="modal"
                             data-target="#Modal2"
@@ -254,7 +254,7 @@
                     </div>
                 </div>
                 <!-- First Video Modal -->
-                <div class="modal fade" id="Modal1"
+                <!-- <div class="modal fade" id="Modal1"
                     tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -286,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Second Video Modal -->
                 <div class="modal fade" id="Modal2"
                     tabindex="-1" role="dialog"
