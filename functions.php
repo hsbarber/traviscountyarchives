@@ -30,6 +30,7 @@ function theme_js() {
 	global $wp_scripts;
 	//wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
+	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.min.js');
 	// wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
 	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
 	//wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendors/modernizr.js');
@@ -48,7 +49,7 @@ function theme_js() {
 		if ( is_page( 'district-clerk' ) ) {
 			wp_enqueue_script( 'portal2_js', get_template_directory_uri() . '/js/custom/portal2.min.js',  array('jquery'), '', false );
 		}
-		if (is_page( 'hd2021' ) ) {
+		if (is_page( 'parkshistory' ) ) {
 			wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js', array('jquery'), '', false);
 			wp_enqueue_script( 'lazyloadvideo', get_template_directory_uri() . '/js/custom/lazyloadvideo.js');
 		}
