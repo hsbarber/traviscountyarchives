@@ -1,9 +1,13 @@
 #mainNav {
   .navbar-expand-xl {
-    // @media (max-width: 480px) {
-    // 	justify-content: flex-end;
-    // }
+    @media (max-width: 480px) {
+      justify-content: flex-end;
+    }
     justify-content: space-between;
+    @media (min-width: 1400px) {
+      flex-flow: row nowrap !important;
+      //justify-content: flex-start !important;
+    }
   }
   .navbar-nav {
     list-style-type: none;
@@ -11,7 +15,7 @@
   .navbar {
     // TC logo and Travis County Archives, Austin, TX text
     padding: 0.5rem 0.25rem;
-    @media (min-width: $xl) {
+    @media (min-width: 1400px) {
       padding: 0.5rem 1rem;
     }
     a.navbar-brand {
@@ -49,7 +53,7 @@
       align-items: center;
       justify-content: flex-end;
       flex-wrap: wrap;
-      @media (min-width: $xl) {
+      @media (min-width: 1400px) {
         margin-right: 6rem;
       }
     }
@@ -59,7 +63,7 @@
       align-items: center;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      @media (min-width: $xl) {
+      @media (min-width: 1400px) {
         flex-direction: row;
       }
     }
@@ -69,14 +73,15 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        @media (min-width: $xl) {
-          flex-direction: row;
-          justify-content: flex-end;
+        @media (min-width: 1400px) {
+          display: block;
+          // flex-direction: row;
+          // justify-content: flex-end;
         }
         a {
           font-family: $font-heading;
           color: darken($text-primary, 10%);
-          @media (min-width: $xl) {
+          @media (min-width: 1400px) {
             margin-right: 2rem;
           }
         }

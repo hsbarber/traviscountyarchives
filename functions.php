@@ -6,7 +6,7 @@
 
 
 function theme_styles () {
-	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/bootstrap-4.0.0/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 
 }
@@ -29,6 +29,7 @@ add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 function theme_js() {
 	global $wp_scripts;
 	//wp_enqueue_script( 'popper_js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js','', '', false);
+	//wp_enqueue_script( 'bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js','','', false);
 	wp_enqueue_script( 'bootstrap_js', get_template_directory_uri() . '/js/vendors/bootstrap.min.js');
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.min.js');
 	// wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
@@ -113,8 +114,13 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 
-// Register Custom Navigation Walker
-require_once get_template_directory() . '/bootstrap-navwalker.php';
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 
 register_nav_menus( array(
