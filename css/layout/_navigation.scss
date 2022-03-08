@@ -4,7 +4,7 @@
       justify-content: flex-end;
     }
     justify-content: space-between;
-    @media (min-width: 1400px) {
+    @media (min-width: 1200px) {
       flex-flow: row nowrap !important;
       //justify-content: flex-start !important;
     }
@@ -15,7 +15,7 @@
   .navbar {
     // TC logo and Travis County Archives, Austin, TX text
     padding: 0.5rem 0.25rem;
-    @media (min-width: 1400px) {
+    @media (min-width: 1200px) {
       padding: 0.5rem 1rem;
     }
     a.navbar-brand {
@@ -53,6 +53,9 @@
       align-items: center;
       justify-content: flex-end;
       flex-wrap: wrap;
+      @media (min-width: 1200px) {
+        margin-right: 4rem;
+      }
       @media (min-width: 1400px) {
         margin-right: 6rem;
       }
@@ -63,7 +66,7 @@
       align-items: center;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      @media (min-width: 1400px) {
+      @media (min-width: 1200px) {
         flex-direction: row;
       }
     }
@@ -73,7 +76,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        @media (min-width: 1400px) {
+        @media (min-width: 1200px) {
           display: block;
           // flex-direction: row;
           // justify-content: flex-end;
@@ -81,8 +84,14 @@
         a {
           font-family: $font-heading;
           color: darken($text-primary, 10%);
+          font-size: 0.8rem;
+          transition: transform 1s ease-in-out;
+          @media (min-width: 1200px) {
+            margin-right: 1.5rem;
+          }
           @media (min-width: 1400px) {
             margin-right: 2rem;
+            font-size: 1rem;
           }
         }
       }
@@ -90,7 +99,10 @@
     .sub-menu {
       margin-bottom: 1rem;
       a {
-        font-size: 12px;
+        font-size: 0.8rem;
+        @media (min-width: 1400px) {
+          font-size: 1rem;
+        }
       }
       .dropdown-item {
         padding: 0.5rem 1.5rem;
@@ -107,6 +119,14 @@
 #searchtoggle {
   svg path {
     fill: darken($text-primary, 10%);
+  }
+  .svg-inline--fa {
+    height: 0.8rem !important;
+    vertical-align: 0em !important;
+    @media (min-width: 1400px) {
+      height: 1rem !important;
+      vertical-align: -0.125em !important;
+    }
   }
 }
 #searchbar {
