@@ -31,6 +31,17 @@
 }
 .exhibit-block-1-text {
   padding: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  > div {
+    background-color: lightgray;
+    padding: 2rem;
+    position: absolute;
+    left: -2rem;
+  }
+
   h1 {
     padding-bottom: 1rem;
     text-transform: uppercase;

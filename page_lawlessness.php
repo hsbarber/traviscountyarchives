@@ -38,8 +38,10 @@
                             <a href="<?php the_field('block-1-image') ?>"><img src="<?php the_field('block-1-image') ?>" /></a>
                         </div>
                         <div class="exhibit-block-1-text col-sm-12 col-xl-6">
-                            <h1><?php the_field('block-1-title') ?></h1>
-                            <p><?php the_field('block-1-text') ?></p>
+                            <div>
+                                <h1><?php the_field('block-1-title') ?></h1>
+                                <p><?php the_field('block-1-text') ?></p>
+                            </div>
                         </div>
                 </div>
             </div>
