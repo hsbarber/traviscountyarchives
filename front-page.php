@@ -31,8 +31,6 @@
     <div class="row announcement-flex">
       <h3><?php the_field('announcement-title'); ?></h3>
       <h4><?php the_field('announcement-text'); ?></h4>
-
-
     </div>
   </div>
 </section>
@@ -81,7 +79,7 @@
           <p><?php the_field('contact-links'); ?></p>
         </div>
         <div class="col-lg-4 contact--image">
-          <img class="lazy-load" src="<?php the_field('contact-image'); ?>" />
+          <img src="<?php the_field('contact-image'); ?>" />
         </div>
     </div>
   </div>
