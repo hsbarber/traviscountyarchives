@@ -18,13 +18,13 @@ function google_fonts() {
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
 
-function replace_core_jquery_version() {
-    wp_deregister_script( 'jquery-core' );
-    wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
-    wp_deregister_script( 'jquery-migrate' );
-    wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
-}
-add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
+// function replace_core_jquery_version() {
+//     wp_deregister_script( 'jquery-core' );
+//     wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
+//     wp_deregister_script( 'jquery-migrate' );
+//     wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
+// }
+// add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
 
 function theme_js() {
 	global $wp_scripts;
@@ -128,6 +128,11 @@ register_nav_menus( array(
 		'hd2021-menu' => __( 'hd2021-menu' )
 ) );
 
+// deactivate new block editor
+function phi_theme_support() {
+    remove_theme_support( 'widgets-block-editor' );
+}
+add_action( 'after_setup_theme', 'phi_theme_support' );
 
 function create_widget( $name, $id, $description ) {
 
@@ -167,8 +172,6 @@ create_widget( 'Newsletter', 'newsletter', 'newsletter display in footer' );
 create_widget( 'Newsletter-Image', 'newsletter image', 'newsletter background image in footer' );
 create_widget( 'Footer Left', 'footer-left', 'Displays in the footer in the left' );
 create_widget( 'Footer Right', 'footer-right', 'Displays in the footer in the right' );
-
-
 create_widget( 'Page Sidebar top', 'page-tp', 'Displays on the top side of pages with a sidebar' );
 create_widget( 'Page Sidebar bottom', 'page-bottom', 'Displays on the bottom side of pages with a sidebar' );
 

@@ -374,13 +374,16 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .pagination{font-family:"Fjalla One",sans-serif;font-size:20px;width:100%}
 .page-numbers{border:1px solid #676667;padding:10px;color:#676667;margin-right:.5em}
 .page-numbers.current{background-color:#676667;color:white}
+.exhibit-container h1{padding-bottom:1rem;text-transform:uppercase;font-weight:bold}
 .exhibit-header{height:576px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .exhibit-intro{padding:2rem}
 .exhibit-intro h1{color:#fff;text-align:center;margin-bottom:2rem;text-shadow:1px 1px 2px #000}
 .exhibit-intro p{color:#fff;line-height:1.2rem;text-align:left;text-shadow:1px 1px 2px #000}
-.exhibit-block-1-text{padding:0 2rem 0 2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:relative}
-.exhibit-block-1-text>div{background-color:lightgray;padding:2rem;position:absolute;left:-2rem}
-.exhibit-block-1-text h1{padding-bottom:1rem;text-transform:uppercase;font-weight:bold}
+.vice{padding:4rem 0}
+.exhibit-block-1{padding:0 2rem 0 2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:relative}
+.exhibit-block-1>div{background-color:lightgray;padding:2rem;position:absolute;left:-2rem}
+.guytown{background-color:darkgrey}
+.exhibit-block-2{padding:4rem 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}

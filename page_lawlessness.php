@@ -29,26 +29,45 @@
         </div>
     </div>
 </div>
-    <div class="container hd-page-container">
-        <div class="row">
-
-            <div class="page-container-full-width">
-                <div class="row">
-                        <div class="col-sm-12 col-xl-6">
-                            <a href="<?php the_field('block-1-image') ?>"><img src="<?php the_field('block-1-image') ?>" /></a>
-                        </div>
-                        <div class="exhibit-block-1-text col-sm-12 col-xl-6">
-                            <div>
-                                <h1><?php the_field('block-1-title') ?></h1>
-                                <p><?php the_field('block-1-text') ?></p>
-                            </div>
-                        </div>
+<div class="page-container-full-width exhibit-container">
+    <section class="container-fluid vice">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xl-6">
+                    <a href="<?php the_field('block-1-image') ?>"><img src="<?php the_field('block-1-image') ?>" /></a>
+                </div>
+                <div class="exhibit-block-1 col-sm-12 col-xl-6">
+                    <div>
+                        <h1><?php the_field('block-1-title') ?></h1>
+                        <p><?php the_field('block-1-text') ?></p>
+                    </div>
                 </div>
             </div>
-            <!--end page__container#### -->
-
         </div>
-    </div>
+    </section>
+    <section class="container-fluid guytown">
+        <div class="container">
+            <div class="row">
+                <div class="exhibit-block-2 col-sm-12 col-xl-12">
+                    <div>
+                        <h1><?php the_field('block-2-title') ?></h1>
+                        <p><?php the_field('block-2-text') ?></p>
+                    </div>
+                </div>
+            </div> <!--end row -->
+            <div class="row">
+                <div class="col-sm-12 col-xl-6">
+                        <a href="<?php the_field('block-2-image-1') ?>"><img src="<?php the_field('block-2-image-1') ?>" /></a>
+                        <p><?php the_field('block-2-image-1-caption') ?></p>
+                </div>
+                <div class="col-sm-12 col-xl-6">
+                        <a href="<?php the_field('block-2-image-2') ?>"><img src="<?php the_field('block-2-image-2') ?>" /></a>
+                        <p><?php the_field('block-2-image-2-caption') ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div> <!--end page__container#### -->
 <?php get_footer(); ?>
 
 
