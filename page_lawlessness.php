@@ -265,6 +265,23 @@
                     </div>
                 </div>
             </div> <!--end row -->
+            <div class="block-gallery">
+                <div class="row">
+                    <?php
+                        $block7gallery3 = get_field('block-7-gallery-3');
+                        if( $block7gallery3): ?>
+
+                            <?php foreach( $block7gallery3 as $image ): ?>
+                                <div class="col-lg-3">
+                                    <a href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['medium']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
     </section>
 </div>
