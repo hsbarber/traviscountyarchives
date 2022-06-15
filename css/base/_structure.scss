@@ -22,3 +22,28 @@ img {
 .lazy-load.is-loaded {
   opacity: 1;
 }
+
+.imagewrap-left {
+  float: left;
+  max-width: 40%;
+  margin-right: 2rem;
+  margin-bottom: 0.5rem;
+  width: Auto;
+  height: Auto;
+  display: inline-block;
+  p {
+    margin-top: 1rem;
+    font-size: 10px !important;
+    font-style: italic;
+    line-height: 1rem !important;
+  }
+}
+.imagewrap-right {
+  float: right;
+  max-width: 40%;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  width: Auto;
+  height: Auto;
+  display: inline-block;
+}

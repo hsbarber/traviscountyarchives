@@ -1,6 +1,9 @@
 img{max-width:100%;height:auto}
 .lazy-load{-webkit-transition:opacity .15s;transition:opacity .15s;opacity:0}
 .lazy-load.is-loaded{opacity:1}
+.imagewrap-left{float:left;max-width:40%;margin-right:2rem;margin-bottom:.5rem;width:Auto;height:Auto;display:inline-block}
+.imagewrap-left p{margin-top:1rem;font-size:10px !important;font-style:italic;line-height:1rem !important}
+.imagewrap-right{float:right;max-width:40%;margin-left:2rem;margin-top:.5rem;width:Auto;height:Auto;display:inline-block}
 body{font-size:16px}
 h1,h2,h3{color:#676667;font-family:"Fjalla One",sans-serif;margin-top:0;letter-spacing:3px}
 h4,h5{color:#676667;font-family:"Fjalla One",sans-serif;margin-top:0}
@@ -325,8 +328,6 @@ svg#video-play-button{-webkit-transform:30%;-ms-transform:30%;transform:30%}
 .interstitial-video video{width:100%;height:300px;-o-object-fit:cover;object-fit:cover;-webkit-filter:brightness(50%);filter:brightness(50%)}
 .viewport-header{background:transparent;position:absolute;top:0;right:0;bottom:0;left:0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .viewport-header h1{font-size:6vw;color:white}
-.imagewrap-left{float:left;max-width:40%;margin-right:2rem;margin-bottom:.5rem;width:Auto;height:Auto;display:inline-block}
-.imagewrap-right{float:right;max-width:40%;margin-left:2rem;margin-top:.5rem;width:Auto;height:Auto;display:inline-block}
 .resize{width:40%}
 .HD2021-header{position:relative}
 .HD2021-header img{-webkit-filter:brightness(50%);filter:brightness(50%);width:100vw;height:300px;-o-object-fit:cover;object-fit:cover;-o-object-position:40% 20%;object-position:40% 20%}
@@ -375,15 +376,30 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .page-numbers{border:1px solid #676667;padding:10px;color:#676667;margin-right:.5em}
 .page-numbers.current{background-color:#676667;color:white}
 .exhibit-container h1{padding-bottom:1rem;text-transform:uppercase;font-weight:bold}
+.exhibit-container h1{color:black}
+.exhibit-container p{color:black}
 .exhibit-header{height:576px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .exhibit-intro{padding:2rem}
 .exhibit-intro h1{color:#fff;text-align:center;margin-bottom:2rem;text-shadow:1px 1px 2px #000}
 .exhibit-intro p{color:#fff;line-height:1.2rem;text-align:left;text-shadow:1px 1px 2px #000}
-.vice{padding:4rem 0}
-.exhibit-block-1{padding:0 2rem 0 2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:relative}
-.exhibit-block-1>div{background-color:lightgray;padding:2rem;position:absolute;left:-2rem}
-.guytown{background-color:darkgrey}
-.exhibit-block-2{padding:4rem 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.exhibit-chapters{background-color:lightgray;display:block}
+.exhibit-chapters .exhibit-chapters-title{background-color:#212529;padding:3rem 0 2rem 0;border-bottom:2px solid #676667}
+.exhibit-chapters .exhibit-chapters-title h2{text-align:center;margin:0}
+.exhibit-chapters .exhibit-chapters-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.exhibit-chapters .exhibit-chapters-list li{padding-right:3rem;padding-left:3rem;list-style-type:none;text-align:center}
+.exhibit-chapters .exhibit-chapters-list li a{text-decoration:none}
+.exhibit-chapters .exhibit-chapters-list li a h2{margin:0;padding:2rem 0}
+.vice{padding:8rem 0}
+.descriptiveText{line-height:2rem}
+.exhibit-block-1{padding:4rem;background-color:rgba(255,255,255,0.8)}
+.exhibit-block-1 h1{text-align:center;color:black}
+.exhibit-block-1 p{color:black;font-size:1.5rem;line-height:2.2rem}
+.first-section{padding-top:4rem}
+.exhibit-block{padding-bottom:4rem}
+.block-gallery{padding:2rem 2rem 0 2rem}
+.block-gallery a{text-decoration:none}
+.block-gallery p{margin-top:1rem;font-size:10px;font-style:italic}
+.exhibit-block-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}

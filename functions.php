@@ -7,8 +7,8 @@
 
 function theme_styles () {
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/css/vendors/magnific.css' );
 	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
-
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
@@ -34,6 +34,7 @@ function theme_js() {
 	wp_enqueue_script( 'custom', get_template_directory_uri() . '/js/custom.min.js');
 	// wp_enqueue_script( 'slideshow_js', get_template_directory_uri() . '/js/custom/slideshow.js');
 	wp_enqueue_script( 'searchbar_js', get_template_directory_uri() . '/js/custom/search.js', array('jquery'), '', false);
+	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/vendors/magnific-popup.js', array('jquery'), '', true);
 	//wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendors/modernizr.js');
 	if( !is_admin()) {
 		if ( is_page( 'lost-travis-county' ) ) {
@@ -53,6 +54,10 @@ function theme_js() {
 		if (is_page( 'parkshistory' ) ) {
 			wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js', array('jquery'), '', false);
 			wp_enqueue_script( 'lazyloadvideo', get_template_directory_uri() . '/js/custom/lazyloadvideo.js');
+		}
+		if (is_page( 'law-and-lawlessness-in-early-travis-county' ) ) {
+			wp_enqueue_script( 'image-popup', get_template_directory_uri() . '/js/custom/image-popup.js', array('jquery'), '', true);
+			wp_enqueue_script( 'fixednav', get_template_directory_uri() . '/js/custom/fixednav.js', '', '', false);
 		}
 	}
 }
