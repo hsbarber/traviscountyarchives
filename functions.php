@@ -55,7 +55,7 @@ function theme_js() {
 			wp_enqueue_script( 'vertnav_js', get_template_directory_uri() . '/js/custom/verticalnavigation.js', array('jquery'), '', false);
 			wp_enqueue_script( 'lazyloadvideo', get_template_directory_uri() . '/js/custom/lazyloadvideo.js');
 		}
-		if (is_page( 'law-and-lawlessness-in-early-travis-county' ) ) {
+		if (is_page( 'law-and-lawlessness' ) ) {
 			wp_enqueue_script( 'image-popup', get_template_directory_uri() . '/js/custom/image-popup.js', array('jquery'), '', true);
 			wp_enqueue_script( 'fixednav', get_template_directory_uri() . '/js/custom/fixednav.js', '', '', false);
 		}
