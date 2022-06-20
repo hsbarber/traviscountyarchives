@@ -19,6 +19,21 @@
     </div>
   </div>
 </div>
+<div class="exhibit-chapters">
+    <!-- <div class="exhibit-chapters-title">
+        <h5><?php the_field('exhibit-chapters-title'); ?></h5>
+    </div> -->
+    <?php if( have_rows('exhibit-chapter-titles') ): ?>
+        <nav id="exhibit-navbar" class="exhibit-navbar navbar navbar-expand-md navbar-dark bg-dark exhibit-chapters-list">
+            <?php while( have_rows('exhibit-chapter-titles') ): the_row();
+                ?>
+                <li class="<?php the_sub_field('exhibit-chapter-title'); ?>">
+                    <a href="<?php the_sub_field('exhibit-chapter-url'); ?>"><h5><?php the_sub_field('exhibit-chapter-name'); ?></h5></a>
+                </li>
+            <?php endwhile; ?>
+        </nav>
+    <?php endif; ?>
+</div>
 <div class="exhibit-header" style="background: linear-gradient(
 	        rgba(0,0,0, 0.5),
 	        rgba(0,0,0, 1.0)),
@@ -29,23 +44,9 @@
         </div>
     </div>
 </div>
-<div class="exhibit-chapters">
-    <div class="exhibit-chapters-title">
-        <h2><?php the_field('exhibit-chapters-title'); ?></h2>
-    </div>
-            <?php if( have_rows('exhibit-chapter-titles') ): ?>
-                <nav id="exhibit-navbar" class="navbar navbar-expand-md navbar-dark bg-dark exhibit-chapters-list">
-                    <?php while( have_rows('exhibit-chapter-titles') ): the_row();
-                        ?>
-                        <li>
-                            <a href="<?php the_sub_field('exhibit-chapter-url'); ?>"><h2><?php the_sub_field('exhibit-chapter-name'); ?></h2></a>
-                        </li>
-                    <?php endwhile; ?>
-                </nav>
-            <?php endif; ?>
-</div>
-<div class="exhibit-container">
-    <section id="vice" class="container-fluid vice" style="background:
+
+<section id="vice">
+    <div class="container-fluid exhibit-block-padding" style="background:
             url('<?php echo the_field('block-1-image') ?>') 50% 50% no-repeat; background-size: cover;">>
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -57,9 +58,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- GUY TOWN SECTION -->
-    <section class="container-fluid exhibit-block first-section">
+    <div class="container-fluid exhibit-block ">
         <div class="container">
             <div class="row">
                 <div class="exhibit-block-2 col-sm-12 col-xl-12">
@@ -75,9 +76,9 @@
                 </div>
             </div> <!--end row -->
         </div>
-    </section>
+    </div>
     <!-- PROSTITUTION SECTION -->
-    <section class="container-fluid exhibit-block">
+    <div class="container-fluid exhibit-block">
         <div class="container">
             <div class="row">
                 <div class="exhibit-block-3 col-sm-12 col-xl-12">
@@ -105,9 +106,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
      <!-- GAMBLING SECTION -->
-    <section class="container-fluid exhibit-block">
+    <div class="container-fluid exhibit-block">
         <div class="container">
             <div class="row">
                 <div class="exhibit-block-4 col-sm-12 col-xl-12">
@@ -158,10 +159,10 @@
                     <?php endif; ?>
                 </div>
             </div>
-    </section>
-</div> <!--end page__container#### -->
-<div class="exhibit-container">
-    <section id="gunslingers" class="container-fluid vice" style="background:
+        </div>
+</section> <!--end page__container#### -->
+<section id="crime">
+    <div  class="container-fluid exhibit-block-padding" style="background:
             url('<?php echo the_field('block-1-image') ?>') 50% 50% no-repeat; background-size: cover;">>
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -175,9 +176,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- CRIMES SECTION -->
-    <section class="container-fluid exhibit-block first-section">
+    <div class="container-fluid exhibit-block ">
         <div class="container">
             <div class="row">
                 <div class="exhibit-block-3 col-sm-12 col-xl-12">
@@ -205,9 +206,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- TRAVIS COUNTY JAIL SECTION -->
-    <section class="container-fluid exhibit-block">
+    <div class="container-fluid exhibit-block">
         <div class="container">
             <div class="row">
                 <div class="exhibit-block-3 col-sm-12 col-xl-12">
@@ -283,11 +284,11 @@
                 </div>
             </div>
         </div>
-    </section>
-</div>
-<div class="exhibit-container">
+    </div>
+</section>
+<section id="prohibition">
     <!-- Prohibition Intro -->
-    <section id="prohibition" class="container-fluid vice" style="background:
+    <div class="container-fluid exhibit-block-padding" style="background:
             url('<?php echo the_field('block-1-image') ?>') 50% 50% no-repeat; background-size: cover;">>
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -301,8 +302,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="container-fluid exhibit-block first-section">
+    </div>
+    <div class="container-fluid exhibit-block">
         <div class="container">
             <!-- Prohibition First Paragraph -->
             <div class="row">
@@ -336,7 +337,7 @@
                     </div>
                 </div>
             </div> <!--end row -->
-            <div class="block-gallery">
+            <div class="block-gallery last-section">
                 <div class="row">
                     <?php
                         $block9gallery2 = get_field('block-9-gallery-2');
@@ -354,8 +355,8 @@
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 <?php get_footer(); ?>
 
 

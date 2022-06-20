@@ -58,6 +58,7 @@ function theme_js() {
 		if (is_page( 'law-and-lawlessness' ) ) {
 			wp_enqueue_script( 'image-popup', get_template_directory_uri() . '/js/custom/image-popup.js', array('jquery'), '', true);
 			wp_enqueue_script( 'fixednav', get_template_directory_uri() . '/js/custom/fixednav.js', '', '', false);
+			wp_enqueue_script( 'highlight-on-scroll', get_template_directory_uri() . '/js/custom/highlight-on-scroll.js', '', '', false);
 		}
 	}
 }

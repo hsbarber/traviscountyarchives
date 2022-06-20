@@ -1,3 +1,21 @@
+//Bootstrap navbar sticky on scroll https://bootstrap-menu.com/detail-fixed-onscroll.html
+
+document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 142) {
+        document.getElementById('exhibit-navbar').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('exhibit-navbar').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      }
+  });
+});
+
+
 // This example displays a marker at the center of Australia.
 // When the user clicks the marker, an info window opens.
 // Initialize and add the map
@@ -177,6 +195,38 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
+
+
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll(".exhibit-chapters .exhibit-chapters-list li");
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+});
+jQuery('.block-gallery').magnificPopup({
+  delegate: 'a', // child items selector, by clicking on it popup will open
+  type: 'image',
+  gallery:{
+    enabled: true,
+    navigateByImgClick: true,
+  },
+  image: {
+    titleSrc: 'title',
+  }
+  // other options
+});
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
@@ -663,13 +713,13 @@ map.fitBounds(markerBounds);
           data: "",
           cache: true,
           success: function(xml){
-
+            
             var record = $(xml).find('record');
-
+            
               record.each(function(){
-
+            
                 var newTitle = $(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text();
-                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();
+                var address = $(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text();           
                 var dates = $(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text();
                 var subject = $(this).find("subject[qualifier='UNTL-BS'], untl\\:subject[qualifier='UNTL-BS']").text();
 
@@ -680,27 +730,27 @@ map.fitBounds(markerBounds);
                     $ul.find('li').sort(function (a, b) {
                         var upA = $(a).text().toUpperCase();
                         var upB = $(b).text().toUpperCase();
-                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;
+                        return (upA < upB) ? -1 : (upA > upB) ? 1 : 0;    
                     }).appendTo(selector);
                 };
-
-
-                if (subject.indexOf("Government and Law - Legal Documents") != -1 ) {
+    
+          
+                if (subject.indexOf("Government and Law - Legal Documents") != -1 ) {          
                     sortUL('#legal');
                 }
-                if (newTitle.indexOf("Travis County Naturalization Records") != -1 ) {
+                if (newTitle.indexOf("Travis County Naturalization Records") != -1 ) {     
                     sortUL('#districtNat');
                 }
-
-
+        
+               
               })
             },
-
+                
           error: function(error){
               alert("The XML File could not be processed correctly.");
           }
       });
-
+  
 })( jQuery );
 !function (t) { t.ajax({ url: "https://texashistory.unt.edu/explore/partners/TDCD/oai/?verb=ListRecords&metadataPrefix=untl", type: "GET", dataType: "xml", data: "", cache: !0, success: function (e) { t(e).find("record").each(function () { var e = t(this).find("title[qualifier='officialtitle'], untl\\:title[qualifier='officialtitle']").text(), i = t(this).find("identifier[qualifier='itemURL'], untl\\:identifier[qualifier='itemURL']").text(), a = t(this).find("date[qualifier='creation'], untl\\:date[qualifier='creation']").text(); function r(r) { var n = "<li><a href='" + i + "'><h4>" + e + "</h4></a>" + a + "</li>", l = t(r); l.append(n), l.find("li").sort(function (e, i) { var a = t(e).text().toUpperCase(), r = t(i).text().toUpperCase(); return a < r ? -1 : a > r ? 1 : 0 }).appendTo(r) } -1 != t(this).find("subject[qualifier='UNTL-BS'], untl\\:subject[qualifier='UNTL-BS']").text().indexOf("Government and Law - Legal Documents") && r("#legal"), -1 != e.indexOf("Travis County Naturalization Records") && r("#districtNat") }) }, error: function (t) { alert("The XML File could not be processed correctly.") } }) }(jQuery);
 
@@ -724,7 +774,7 @@ map.fitBounds(markerBounds);
     });
 });
 <!--jQuery to make navbar shrink on scroll -->
-
+	
 jQuery(window).scroll(function() {
 		  if (jQuery(document).scrollTop() > 100) {
 			jQuery('nav.navbar').addClass('shrink');
@@ -944,9 +994,6 @@ $('.modal').on('hide.bs.modal', function() {
 
 
 });
-
-
-
 
 
 

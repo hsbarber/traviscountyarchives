@@ -1,8 +1,8 @@
-// Bootstrap navbar sticky on scroll https://bootstrap-menu.com/detail-fixed-onscroll.html
+//Bootstrap navbar sticky on scroll https://bootstrap-menu.com/detail-fixed-onscroll.html
 
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
-      if (window.scrollY > 1200) {
+      if (window.scrollY > 142) {
         document.getElementById('exhibit-navbar').classList.add('fixed-top');
         // add padding top to show content behind navbar
         navbar_height = document.querySelector('.navbar').offsetHeight;
@@ -14,3 +14,4 @@ document.addEventListener("DOMContentLoaded", function(){
       }
   });
 });
+

@@ -383,23 +383,25 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .exhibit-intro h1{color:#fff;text-align:center;margin-bottom:2rem;text-shadow:1px 1px 2px #000}
 .exhibit-intro p{color:#fff;line-height:1.2rem;text-align:left;text-shadow:1px 1px 2px #000}
 .exhibit-chapters{background-color:lightgray;display:block}
-.exhibit-chapters .exhibit-chapters-title{background-color:#212529;padding:3rem 0 2rem 0;border-bottom:2px solid #676667}
-.exhibit-chapters .exhibit-chapters-title h2{text-align:center;margin:0}
+.exhibit-chapters .exhibit-chapters-title{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:#212529;padding:1rem 0;border-bottom:2px solid #676667}
+.exhibit-chapters .exhibit-chapters-title h5{margin:0}
 .exhibit-chapters .exhibit-chapters-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
-.exhibit-chapters .exhibit-chapters-list li{padding-right:3rem;padding-left:3rem;list-style-type:none;text-align:center}
+.exhibit-chapters .exhibit-chapters-list li{padding:1rem 1.25rem;list-style-type:none;text-align:center}
 .exhibit-chapters .exhibit-chapters-list li a{text-decoration:none}
-.exhibit-chapters .exhibit-chapters-list li a h2{margin:0;padding:2rem 0}
-.vice{padding:8rem 0}
-.descriptiveText{line-height:2rem}
+.exhibit-chapters .exhibit-chapters-list li a h5{margin:0;color:white;opacity:.7;font-size:.75rem !important}
+.exhibit-chapters .exhibit-chapters-list li.active h5{color:#b4a400;border-bottom:1px solid #b4a400;opacity:1;-webkit-transition:.3s ease background-color;transition:.3s ease background-color}
+.exhibit-block-padding{padding:8rem 0}
+.descriptiveText{line-height:1rem}
 .exhibit-block-1{padding:4rem;background-color:rgba(255,255,255,0.8)}
-.exhibit-block-1 h1{text-align:center;color:black}
-.exhibit-block-1 p{color:black;font-size:1.5rem;line-height:2.2rem}
-.first-section{padding-top:4rem}
-.exhibit-block{padding-bottom:4rem}
-.block-gallery{padding:2rem 2rem 0 2rem}
+.exhibit-block-1 h1{text-align:center;color:black;padding-bottom:2rem}
+.exhibit-block-1 p{color:black}
+.exhibit-block{padding-top:4rem}
+.block-gallery{padding:2rem 2rem 2rem}
 .block-gallery a{text-decoration:none}
 .block-gallery p{margin-top:1rem;font-size:10px;font-style:italic}
+.block-gallery img{box-shadow:5px 5px 5px #ccc}
 .exhibit-block-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.last-section{padding-bottom:4rem}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}
@@ -420,6 +422,10 @@ p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
 .history .history--row{padding-bottom:calc(4rem + 4 * (100vw - 320px) / 880);padding-top:calc(4rem + 4 * (100vw - 320px) / 880)}
 .history .history--row h1{padding-bottom:calc(2rem + 1 * (100vw - 320px) / 672)}
 }@media(min-width:576px){.hday .tab-content{padding-top:0}
+.exhibit-chapters .exhibit-chapters-list li{padding:1rem 3rem}
+.exhibit-chapters .exhibit-chapters-list li a h5{font-size:1rem !important}
+.descriptiveText{line-height:2rem}
+.exhibit-block-1 p{font-size:1.5rem;line-height:2.2rem}
 }@media(min-width:768px){#searchbar .search-form .search-field{width:400px}
 #accordion .card .card-header h5 .btn{text-align:left;font-size:16px}
 #accordion .card .card-header h5 .btn:after{float:right;display:inline-block;margin:0}
