@@ -356,6 +356,17 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid exhibit-block-padding" style="background:
+            url('<?php echo the_field('block-1-image') ?>') 50% 50% no-repeat; background-size: cover;">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="exhibit-block-1 col-sm-12 col-lg-8 ">
+                    <h1><?php the_field('block-10-title') ?></h1>
+                    <p class="descriptiveText"><?php the_field('block-10-text') ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <?php get_footer(); ?>
 
