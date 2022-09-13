@@ -180,8 +180,8 @@ nav.verticalnav ul li a.is-selected{background-color:#004000}
 .banner-text-sub>div{max-width:400px}
 .banner-text-sub>div button{background:#252839;cursor:pointer;border-radius:16.5px;padding:.7rem;border:1px solid transparent;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;font-family:"Open Sans",sans-serif;color:white}
 .banner-text-sub>div button:hover{color:#676667;background:transparent;cursor:pointer;border:1px solid #676667}
-.heroBackground{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;height:300px;background-position:center center;background-repeat:no-repeat;background-size:cover}
-.front-capt{margin-top:300px}
+.front-capt{position:absolute;right:0;-webkit-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%)}
+.front-text-capt{background-color:rgba(37,40,57,0.8);color:white;padding:10px;text-align:right;-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out;margin:0}
 .announcement{background-color:#252839}
 .announcement .announcement-flex{padding-bottom:4rem;padding-top:4rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
 .announcement h3{text-align:center;color:white;padding-bottom:1.5rem}
@@ -462,8 +462,7 @@ a.exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webk
 .footer .footer--quickLinks-list{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .map-container{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .sidebar-container{margin-left:1rem}
-.heroBackground{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;height:500px}
-.front-capt{margin-top:0}
+.front-text-capt{display:block;max-width:200px}
 .cards--front-single{padding-bottom:0;padding-top:0}
 .cards--front-single .cards--front-img img{-webkit-transform:scale(0.75);-ms-transform:scale(0.75);transform:scale(0.75);margin-top:-15px}
 .cards--front-single h4{padding:1rem 0}
@@ -548,7 +547,8 @@ p{font-size:16px}
 .newsletter .newsletter-container .mc4wp-form-fields p{margin-right:0;margin-bottom:2rem}
 .page-container{margin-top:2em;padding-left:1.5em;padding-right:1.5em;padding-bottom:4em}
 div.col-lg-3.sidebar{padding-top:2em;padding-left:2em;padding-right:2em;margin-top:0}
-}@media(max-width:576px){p.caption{text-align:center}
+}@media(max-width:576px){.front-text-capt{text-align:center}
+p.caption{text-align:center}
 }@media(max-width:480px){#mainNav .navbar-expand-xl{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
 .page-banner{margin-top:25px}
 }@-webkit-keyframes anchor-underline{0%,10%{left:0;right:100%}
