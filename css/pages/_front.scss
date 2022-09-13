@@ -24,9 +24,10 @@
   }
 }
 .banner-text-sub {
-  display: flex;
-  justify-content: center;
   padding: 0 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   > div {
     max-width: 400px;
     button {

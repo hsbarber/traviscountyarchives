@@ -1,0 +1,38 @@
+.hd2022-header{
+  //height: $small;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (min-width: $medium) {
+    height: $large;
+  }
+}
+
+.hd2022-header-intro{
+  padding: 2rem;
+
+  // height: 300px;
+  // width: 300px;
+  h1 {
+    color: $text-primary;
+    text-align: center;
+    margin: 2rem 0;
+    //text-shadow: 1px 1px 2px #000;
+    @media (min-width: $medium) {
+      margin: 4rem 0;
+    }
+  }
+
+  p {
+    color: $text-primary;
+    line-height: 1.2rem;
+    text-align: left;
+    //text-shadow: 1px 1px 2px #000;
+
+    @media (min-width: $medium) {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+  }
+}
