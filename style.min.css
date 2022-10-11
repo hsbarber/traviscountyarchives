@@ -402,13 +402,22 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .block-gallery img{box-shadow:5px 5px 5px #ccc}
 .exhibit-block-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .last-section{padding-bottom:4rem}
-.hd2022-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
+.hd2022-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:0}
+.hd2022-bg{background-color:#1c2a33}
+.hd2022-title-bg{background-color:rgba(0,0,0,0.6);padding:1rem}
+.hd2022-block-padding{padding:4rem 0}
+.hd2022-header-title{padding:6rem 0}
+.hd2022-header-title p{color:#f8f9fa !important}
+.hd2022-header-title h1{display:block;padding:1rem;text-align:center;margin-bottom:2rem}
+.hd2022-caption{max-width:300px}
+.hd2022-caption p{font-size:10px}
 .hd2022-header-intro{padding:2rem}
-.hd2022-header-intro h1{color:#676667;text-align:center;margin:2rem 0}
-.hd2022-header-intro p{color:#676667;line-height:1.2rem;text-align:left}
+.hd2022-header-intro p{line-height:1.2rem;text-align:left}
+.exhibit-block-padding{padding:6rem 0}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}
+h1.text-light{text-align:center}
 @media(min-width:320px){h1{font-size:calc(22px + 10 * (100vw - 320px) / 880)}
 h2{font-size:calc(20px + 4 * (100vw - 320px) / 880)}
 h3{font-size:calc(18px + 4 * (100vw - 320px) / 880)}
@@ -455,8 +464,6 @@ a.exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webk
 .parks-list{-ms-grid-columns:(minmax(400px,1fr))[auto-fit];grid-template-columns:repeat(auto-fit,minmax(400px,1fr))}
 .exhibit-header{height:992px}
 .exhibit-intro p{font-size:1.5rem;line-height:2.2rem}
-.hd2022-header{height:992px}
-.hd2022-header-intro h1{margin:4rem 0}
 .hd2022-header-intro p{font-size:1.5rem;line-height:2.2rem}
 }@media(min-width:992px){.footer .footer--address{padding-bottom:0}
 .footer .footer--quickLinks-list{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
