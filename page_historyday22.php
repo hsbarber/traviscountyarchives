@@ -18,43 +18,31 @@
         </div>
     </div>
 </div>
-<div class="exhibit-chapters">
-    <!-- <div class="exhibit-chapters-title">
-        <h5><?php the_field('exhibit-chapters-title'); ?></h5>
-    </div> -->
-    <?php if (have_rows('exhibit-chapter-titles')) : ?>
-        <nav id="exhibit-navbar" class="exhibit-navbar navbar navbar-expand-md navbar-dark bg-dark exhibit-chapters-list">
-            <?php while (have_rows('exhibit-chapter-titles')) : the_row();
-            ?>
-                <li class="<?php the_sub_field('exhibit-chapter-title'); ?>">
-                    <a href="<?php the_sub_field('exhibit-chapter-url'); ?>">
-                        <h5><?php the_sub_field('exhibit-chapter-name'); ?></h5>
-                    </a>
-                </li>
-            <?php endwhile; ?>
-        </nav>
-    <?php endif; ?>
-</div>
 
 <div class="hd2022-header">
     <img src="<?php echo $backgroundImg[0]; ?>;" />
 </div>
-<div class="container-fluid hd2022-bg">
-    <div class="container-xxl">
-        <div class="row">
-            <div class="hd2022-header-title ">
-                <h1 class="text-light"><?php the_field('hd2022-header-title'); ?></h1>
-                <div><?php the_field('hd2022-header-intro'); ?></div>
-            </div>
-        </div>
+<div class="hd2022-intro row d-flex flex-column justify-content-center align-items-center
+    " style="background:
+            linear-gradient(
+	        rgba(27,43,51,0.7),
+	        rgba(27,43,51,1.0)),
+            url('<?php echo the_field('hd2022-header-bg') ?>') 50% 50% no-repeat; background-size: cover;">
+    <div class="col-sm-4">
+        <h1><?php the_field('hd2022-header-title'); ?></h1>
+    </div>
+    <div class="col-sm-8">
+        <p><?php the_field('hd2022-header-intro'); ?></p>
     </div>
 </div>
+</div>
+
 <!-- 1918 Pandemic -->
 <section id="1918pandemic">
     <div class="container-fluid">
         <div class="container-xxl">
             <div class="row justify-content-center">
-                <div class="col-6 d-flex justify-content-center hd2022-block-padding">
+                <div class="col-8 d-flex justify-content-center hd2022-block-padding">
                     <h1><?php the_field('block-1-title') ?></h1>
                 </div>
             </div>
@@ -207,7 +195,7 @@
                         <?php foreach ($block4gallery as $image) : ?>
                             <div class="col-lg-3">
                                 <a href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
-                                    <img src="<?php echo esc_url($image['sizes']['medium']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                    <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
                                     <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
                                 </a>
                             </div>

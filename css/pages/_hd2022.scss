@@ -8,24 +8,46 @@ $hd22bg: #1C2A33;
 background-color: $hd22bg;
 }
 .hd2022-title-bg {
-  background-color: rgba(0,0, 0, 0.6);
+  background-color: rgba(21, 31, 37, 0.8);
   padding: 1rem;
+  margin: 2rem;
 
 }
 .hd2022-block-padding {
-  padding: 4rem 0;
-}
-.hd2022-header-title {
   padding: 6rem 0;
-  p {
-    color: #f8f9fa !important;
+}
+.hd2022-intro {
+  padding: 6rem 0;
+  div {
+    padding: 0 4rem;
   }
   h1 {
-    display: block;
-      padding: 1rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-align: center;
+  }
+  p {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+}
+.hd2022-header-title {
+  background-color: rgba(21, 31, 37, 1.0);
+  padding: 4rem;
+  margin-bottom: 0;
+  h1 {
+    color: rgba(255,255,255, 0.7) !important;
+  }
+  // @media (min-width: $large) {
+  //   padding: 8rem;
+  // }
+}
+.hd2022-header-title-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    color: #f8f9fa !important;
+    padding: 4rem;
+  }
 }
 .hd2022-caption {
   max-width: 300px;
