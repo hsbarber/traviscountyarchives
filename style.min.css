@@ -402,12 +402,14 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .block-gallery img{box-shadow:5px 5px 5px #ccc}
 .exhibit-block-2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .last-section{padding-bottom:4rem}
+.fb-notice>*{padding:2rem 0}
+.fb-notice p{margin:0;padding:.5rem 0;text-align:center;color:rgba(255,255,255,0.8) !important}
+.fb-notice a{color:#861409 !important}
 .hd2022-header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin-bottom:0}
 .hd2022-bg{background-color:#1c2a33}
 .hd2022-title-bg{background-color:rgba(21,31,37,0.8);padding:1rem;margin:2rem}
-.hd2022-block-padding{padding:6rem 0}
-.hd2022-intro{padding:6rem 0}
-.hd2022-intro div{padding:0 4rem}
+.hd2022-block-padding{padding:6rem 0 2rem 0}
+.hd2022-intro{padding:0 0 6rem 0}
 .hd2022-intro h1{color:rgba(255,255,255,0.8) !important;text-align:center}
 .hd2022-intro p{color:rgba(255,255,255,0.8) !important}
 .hd2022-header-title{background-color:#151f25;padding:4rem;margin-bottom:0}
@@ -419,6 +421,11 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .hd2022-header-intro{padding:2rem}
 .hd2022-header-intro p{line-height:1.2rem;text-align:left}
 .exhibit-block-padding{padding:6rem 0}
+#oralhistory{background:#f1f1f1;padding:0 0 6rem 0}
+#oralhistory h1{text-align:center}
+#oralhistory p{padding:0 0 2rem 0}
+#oralhistory .oralhistory-video{position:relative;overflow:hidden;width:100%;padding-top:56.25%}
+#oralhistory .responsive-iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}
