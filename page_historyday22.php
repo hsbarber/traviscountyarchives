@@ -317,4 +317,156 @@
         </div>
     </div>
 </section>
+<!-- Photos of the Pandemic -->
+<section>
+    <div class="container-fluid exhibit-block-padding" style="background:
+ rgb(20,30,36)">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+                <h1 class="hd2022-title-bg text-light"><?php the_field('block-7-title') ?></h1>
+            </div>
+        </div>
+    </div>
+    <div class=" container-fluid py-2">
+        <div class="container-xxl">
+            <div class="row d-flex justify-content-center py-5">
+                <div class="col-sm-8">
+                    <?php the_field('block-7-text') ?>
+                </div>
+            </div>
+            <div class="text-center">
+                <h3><?php the_field('block-7-courts-title') ?></h3>
+            </div>
+            <div class="row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $courts = get_field('block-7-courts-gallery');
+                        if ($courts) : ?>
+
+                            <?php foreach ($courts as $image) : ?>
+                                <div class="col-lg-4 py-4">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"">
+                <h3><?php the_field('block-7-streetscenes-title') ?></h3>
+            </div>
+            <div class=" row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $streetscenes = get_field('block-7-streetscenes-gallery');
+                        if ($streetscenes) : ?>
+
+                            <?php foreach ($streetscenes as $image) : ?>
+                                <div class="col-lg-4 py-5">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h3><?php the_field('block-7-art-title') ?></h3>
+            </div>
+            <div class="row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $art = get_field('block-7-art-gallery');
+                        if ($art) : ?>
+
+                            <?php foreach ($art as $image) : ?>
+                                <div class="col-lg-4 py-5">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h3><?php the_field('block-7-swearingins-title') ?></h3>
+            </div>
+            <div class="row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $swearingins = get_field('block-7-swearingins-gallery');
+                        if ($swearingins) : ?>
+
+                            <?php foreach ($swearingins  as $image) : ?>
+                                <div class="col-lg-4 py-5">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h3><?php the_field('block-7-vaccine-title') ?></h3>
+            </div>
+            <div class="row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $vaccine = get_field('block-7-vaccine-gallery');
+                        if ($vaccine) : ?>
+
+                            <?php foreach ($vaccine as $image) : ?>
+                                <div class="col-lg-4 py-5">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <h3><?php the_field('block-7-murals-title') ?></h3>
+            </div>
+            <div class="row">
+                <div class="block-gallery">
+                    <div class="row justify-content-center">
+                        <?php
+                        $murals = get_field('block-7-murals-gallery');
+                        if ($murals) : ?>
+
+                            <?php foreach ($murals as $image) : ?>
+                                <div class="col-lg-4 py-5">
+                                    <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                        <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <p class="hd2022-caption"><?php echo esc_html($image['caption']); ?></p>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>
