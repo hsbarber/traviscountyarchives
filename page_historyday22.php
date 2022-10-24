@@ -50,9 +50,9 @@
                 <div class="col-8 d-flex justify-content-center hd2022-block-padding">
                     <h1><?php the_field('oralhistory-title') ?></h1>
                 </div>
-                <div class="col-8 d-flex flex-column align-items-center">
+                <div class="col-sm-12 col-md-8 d-flex flex-column align-items-center">
                     <div class="oralhistory-text"><?php the_field('oralhistory-text') ?></div>
-                    <div class="oralhistory-video">
+                    <div class="oralhistory-video d-flex justify-content-center">
                         <?php the_field('oralhistory-iframe'); ?>
                     </div>
                 </div>

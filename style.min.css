@@ -424,7 +424,7 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 #oralhistory{background:#f1f1f1;padding:0 0 6rem 0}
 #oralhistory h1{text-align:center}
 #oralhistory p{padding:0 0 2rem 0}
-#oralhistory .oralhistory-video{position:relative;overflow:hidden;width:100%;padding-top:56.25%}
+#oralhistory .oralhistory-video{position:relative;overflow:hidden;width:100%}
 #oralhistory .responsive-iframe{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
