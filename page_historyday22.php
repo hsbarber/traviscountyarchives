@@ -55,6 +55,9 @@
                     <div class="oralhistory-video d-flex justify-content-center">
                         <?php the_field('oralhistory-iframe'); ?>
                     </div>
+                    <div class="oralhistory-link d-flex flex-column align-items-center py-5">
+                        <?php the_field('oralhistory-links'); ?>
+                    </div>
                 </div>
             </div>
         </div>
