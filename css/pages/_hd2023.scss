@@ -1,6 +1,6 @@
 $hd22bg: #1C2A33;
 $lightgrey: #f1f1f1;
-
+$grey: #c0c0c0;
 
 .hd2023-header{
   display: flex;
@@ -9,8 +9,10 @@ $lightgrey: #f1f1f1;
 .hd2023-bg {
 background-color: $hd22bg;
 }
+.hd2023-header-bg {
+  height: 600px;
+}
 .hd2023-title-bg {
-  background-color: rgba(21, 31, 37, 0.8);
   padding: 1rem;
   margin: 2rem;
 
@@ -18,14 +20,13 @@ background-color: $hd22bg;
 .hd2023-block-padding {
   padding: 6rem 0 2rem 0;
 }
+.hd2023-intro-bg {
+  background-color: $grey;
+}
 .hd2023-intro {
   padding: 0 0 6rem 0;
   h1 {
-    color: rgba(255, 255, 255, 0.8) !important;
     text-align: center;
-  }
-  p {
-    color: rgba(255, 255, 255, 0.8) !important;
   }
 }
 .hd2023-header-title {
@@ -48,8 +49,11 @@ background-color: $hd22bg;
     padding: 4rem;
   }
 }
+.image-link {
+  text-decoration: none;
+}
 .hd2023-caption {
-  max-width: 300px;
+  //max-width: 300px;
   p {
       font-size: 10px;
     }

@@ -1,0 +1,19 @@
+.mysteries-header {
+  height: $small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $medium) {
+    height: 600px;
+  }
+}
+.alt-block {
+  &:nth-of-type(odd) {
+    .col-md-6{
+      &:first-child {
+        order: 2;
+      }
+    }
+  }
+}

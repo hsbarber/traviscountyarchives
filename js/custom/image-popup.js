@@ -10,3 +10,19 @@ jQuery('.block-gallery').magnificPopup({
   }
   // other options
 });
+
+jQuery('.image-link').magnificPopup({
+		type: 'image',
+		closeBtnInside: true,
+    closeOnContentClick: true,
+    gallery: {
+       enabled: true
+   },
+   image: {
+       titleSrc: function(item) {
+          return item.el.find('img').attr('title');
+       }
+   }
+
+
+	});
