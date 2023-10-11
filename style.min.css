@@ -443,8 +443,16 @@ article.post p:nth-child(3){padding-bottom:1.5rem;margin-bottom:0}
 .hd2023-header-intro{padding:2rem}
 .hd2023-header-intro p{line-height:1.2rem;text-align:left}
 .exhibit-block-padding{padding:6rem 0}
-.mysteries-header{height:576px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.mysteries-header{height:800px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:4rem 0}
 .alt-block:nth-of-type(odd) .col-md-6:first-child{-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
+.mysteries-intro{padding:0 2rem}
+.mysteries-intro h1{color:#fff;text-align:center;margin-bottom:2rem;text-shadow:1px 1px 2px #000}
+.mysteries-intro p{color:#fff;line-height:1.2rem;text-align:left;text-shadow:1px 1px 2px #000}
+.mysteries-chapters-list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding-top:2rem}
+.mysteries-chapters-list li{padding:1rem 1.25rem;list-style-type:none;text-align:center}
+.mysteries-chapters-list li a{text-decoration:none}
+.mysteries-chapters-list li a h5{margin:0;color:white;font-size:.75rem !important;text-shadow:1px 1px 2px #000}
+.mysteries-chapters-list li a h5:hover{color:red}
 html,body{margin:0 !important;width:100%}
 body{color:#676667;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .row{margin:0}
@@ -470,6 +478,8 @@ p{font-size:calc(12px + 4 * (100vw - 320px) / 880)}
 .exhibit-chapters .exhibit-chapters-list li a h5{font-size:1rem !important}
 .descriptiveText{line-height:2rem}
 .exhibit-block-1 p{font-size:1.5rem;line-height:2.2rem}
+.mysteries-chapters-list li{padding:1rem 3rem}
+.mysteries-chapters-list li a h5{font-size:1rem !important}
 }@media(min-width:768px){#searchbar .search-form .search-field{width:400px}
 #accordion .card .card-header h5 .btn{text-align:left;font-size:16px}
 #accordion .card .card-header h5 .btn:after{float:right;display:inline-block;margin:0}
@@ -497,7 +507,7 @@ a.exhibit-block{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webk
 .exhibit-intro p{font-size:1.5rem;line-height:2.2rem}
 .hd2022-header-intro p{font-size:1.5rem;line-height:2.2rem}
 .hd2023-header-intro p{font-size:1.5rem;line-height:2.2rem}
-.mysteries-header{height:600px}
+.mysteries-intro p{font-size:1.5rem;line-height:2.2rem}
 }@media(min-width:992px){.footer .footer--address{padding-bottom:0}
 .footer .footer--quickLinks-list{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .map-container{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}

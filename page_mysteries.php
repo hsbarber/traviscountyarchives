@@ -22,18 +22,32 @@
 	        rgba(0,0,0, 0.5),
 	        rgba(0,0,0, 1.0)),
             url('<?php echo $backgroundImg[0]; ?>') 50% 50% no-repeat; background-size: cover;">
-    <div class="exhibit-intro col-sm-12 col-md-10 col-lg-7">
+    <div class="mysteries-intro col-sm-12 col-md-10 col-lg-7">
         <h1><?php the_field('exhibit-title'); ?></h1>
         <p><?php the_field('exhibit-intro'); ?></p>
     </div>
+    <div class="">
+    <?php if (have_rows('exhibit-chapter-titles')) : ?>
+        <nav class="exhibit-navbar navbar navbar-expand-md mysteries-chapters-list">
+            <?php while (have_rows('exhibit-chapter-titles')) : the_row();
+            ?>
+                <li class="<?php the_sub_field('exhibit-chapter-title'); ?>">
+                    <a href="<?php the_sub_field('exhibit-chapter-url'); ?>">
+                        <h5><?php the_sub_field('exhibit-chapter-name'); ?></h5>
+                    </a>
+                </li>
+            <?php endwhile; ?>
+        </nav>
+    <?php endif; ?>
+</div>
 </div>
 </div>
 
 <!-- BLOCK 1: The Haunting of the Old County Jail -->
 <section id="jail">
     <div class="container d-flex justify-content-center exhibit-block">
-        <div class="row ">
-              <h1><?php the_field('block-1-title') ?></h1>
+        <div class="row">
+              <h1 class="text-center"><?php the_field('block-1-title') ?></h1>
         </div>
     </div>
     <div class="container-fluid exhibit-block">
