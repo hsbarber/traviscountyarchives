@@ -64,7 +64,7 @@
                         if ($block1gallery1) : ?>
 
                             <?php foreach ($block1gallery1 as $image) : ?>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <a href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
                                         <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
                                         <p><?php echo esc_html($image['caption']); ?></p>
