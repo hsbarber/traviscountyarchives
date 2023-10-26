@@ -40,7 +40,7 @@
     </div>
 </div>
 <!-- Office of the Travis County Clerk -->
-<section id="1918pandemic">
+<section id="countyclerk">
     <div class="container-fluid">
         <div class="container-xxl">
             <div class="row justify-content-center ">
@@ -95,4 +95,194 @@
         </div>
     </div>
 </section>
+<section id="countyclerklists">
+    <div class="container-fluid">
+        <div class="container-xxl">
+            <div class="row justify-content-center ">
+                <div class="col-8 d-flex justify-content-center hd2023-block-padding">
+                    <h1><?php the_field('block-2-title') ?></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 py-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="clerk-list"><?php the_field('block-2-text-1') ?></div>
+                        </div>
+                       <div class="col-6">
+                            <div class="clerk-list"><?php the_field('block-2-text-2') ?></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="block-gallery">
+                        <div class="row justify-content-center py-5">
+                            <?php
+                            $block2gallery = get_field('block-2-gallery');
+                            if ($block2gallery) : ?>
+
+                                <?php foreach ($block2gallery as $image) : ?>
+                                    <div class="col-lg-4 py-3">
+                                        <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p class="hd2023-caption"><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Office of the Travis County District Clerk -->
+<section id="districtclerk">
+    <div class="container-fluid">
+        <div class="container-xxl">
+            <div class="row justify-content-center ">
+                <div class="col-8 d-flex justify-content-center hd2023-block-padding">
+                    <h1><?php the_field('block-3-title') ?></h1>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 px-5 mb-5">
+                    <?php the_field('block-3-text') ?>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="block-gallery">
+                        <div class="row justify-content-center py-5">
+                            <?php
+                            $block3gallery = get_field('block-3-gallery');
+                            if ($block3gallery) : ?>
+
+                                <?php foreach ($block3gallery as $image) : ?>
+                                    <div class="col-lg-4 py-3">
+                                        <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p class="hd2023-caption"><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="districtclerklists">
+    <div class="container-fluid">
+        <div class="container-xxl">
+            <div class="row justify-content-center ">
+                <div class="col-8 d-flex justify-content-center hd2023-block-padding">
+                    <h1><?php the_field('block-4-title') ?></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 py-5">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="clerk-list"><?php the_field('block-4-text-1') ?></div>
+                        </div>
+                       <div class="col-6">
+                            <div class="clerk-list"><?php the_field('block-4-text-2') ?></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="block-gallery">
+                        <div class="row justify-content-center py-5">
+                            <?php
+                            $block4gallery = get_field('block-4-gallery');
+                            if ($block4gallery) : ?>
+
+                                <?php foreach ($block4gallery as $image) : ?>
+                                    <div class="col-lg-4 py-3">
+                                        <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p class="hd2023-caption"><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="recordsofcountyclerk">
+    <div class="container-fluid">
+        <div class="container-xxl">
+            <div class="row justify-content-center ">
+                <div class="col-8 d-flex justify-content-center hd2023-block-padding">
+                    <h1><?php the_field('block-5-title') ?></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 px-5 mb-5">
+                    <?php the_field('block-5-text-1') ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="block-gallery">
+                        <div class="row justify-content-center py-5">
+                            <?php
+                            $block5gallery1 = get_field('block-5-gallery-1');
+                            if ($block5gallery1) : ?>
+
+                                <?php foreach ($block5gallery1 as $image) : ?>
+                                    <div class="col-lg-4 py-3">
+                                        <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p class="hd2023-caption"><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 px-5 mb-5">
+                        <?php the_field('block-5-text-2') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="block-gallery">
+                        <div class="row justify-content-center py-5">
+                            <?php
+                            $block5gallery2 = get_field('block-5-gallery-2');
+                            if ($block5gallery2) : ?>
+
+                                <?php foreach ($block5gallery2 as $image) : ?>
+                                    <div class="col-lg-4 py-3">
+                                        <a class="d-flex flex-column align-items-center" href="<?php echo esc_url($image['url']); ?>" title="<?php echo esc_html($image['caption']); ?>">
+                                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" class="img-fluid" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            <p class="hd2023-caption"><?php echo esc_html($image['caption']); ?></p>
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
