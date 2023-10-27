@@ -2,26 +2,47 @@ $hd22bg: #1C2A33;
 $lightgrey: #D3D3D3;
 $grey: #c0c0c0;
 
+.hd2023-overflow {
+  overflow-x: hidden;
+}
 .hd2023-header{
   display: flex;
  margin-bottom: 0;
 }
 .hd2023-bg {
-background-color: $hd22bg;
+background-color: rgba(255, 255, 255, 0.95);
+}
+.hd2023-bg-spacing {
+  height: 200px;
+  @media (min-width: $small) {
+      height: 400px;
+    }
+  @media (min-width: $medium) {
+    height: 600px;
+  }
+  @media (min-width: $large) {
+    height: 800px;
+  }
+
 }
 .hd2023-header-bg {
   height: 600px;
 }
-.hd2023-title-bg {
-  padding: 1rem;
-  margin: 2rem;
+.hd2023-title {
+  margin-top: 3rem;
+  h3 {
+    line-height: 1.8;
+  }
 
 }
 .hd2023-block-padding {
   padding: 6rem 0 4rem 0;
 }
+.hd2023-oralhistories p a{
+  word-wrap: break-word;
+}
 .hd2023-intro-bg {
-  background-color: $lightgrey;
+  background-color: lighten($lightgrey, 20%);
 }
 .hd2023-intro {
   padding: 0 0 6rem 0;
