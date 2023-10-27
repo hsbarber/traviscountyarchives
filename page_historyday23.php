@@ -91,7 +91,7 @@
                     ?>
                     <a class="image-link" href="<?php echo esc_url($img1['url']); ?>">
                         <img src="<?php echo esc_url($img1['sizes']['large']); ?>" class="img-fluid" title="<?php echo esc_html($img1['caption']); ?>" />
-                        <p class=" hd2023-caption"><?php echo esc_html($img1['caption']); ?></p>
+                        <p class="hd2023-caption"><?php echo esc_html($img1['caption']); ?></p>
                     </a>
                 </div>
 
@@ -101,7 +101,7 @@
                     ?>
                     <a class="image-link" href="<?php echo esc_url($img2['url']); ?>">
                         <img src="<?php echo esc_url($img2['sizes']['large']); ?>" class="img-fluid" title="<?php echo esc_html($img2['caption']); ?>" />
-                        <p class=" hd2023-caption"><?php echo esc_html($img2['caption']); ?></p>
+                        <p class="hd2023-caption"><?php echo esc_html($img2['caption']); ?></p>
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-8 px-5">

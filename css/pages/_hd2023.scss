@@ -52,11 +52,11 @@ background-color: $hd22bg;
 .image-link {
   text-decoration: none;
 }
-.hd2023-caption {
-  //max-width: 300px;
-  p {
+p.hd2023-caption {
+
+      margin-top: 1rem;
       font-size: 10px;
-    }
+      font-style: italic;
 }
 .hd2023-header-intro{
   padding: 2rem;
